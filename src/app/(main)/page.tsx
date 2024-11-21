@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from '@/components/ui/button'
 import vitor from './assets/VitorLostada.jpeg'
+import { Badge } from '@/components/ui/badge'
+
+const skills = ['Next.js', 'Typescript', 'Node']
 
 export default function Home() {
   return (
@@ -9,6 +12,14 @@ export default function Home() {
         <h1 className="text-4xl font-bold">
           Hello, I&apos;m a Vitor Lostada Frontend Developer
         </h1>
+        <div className="flex gap-2">
+          {skills.map((skill) => (
+            <Badge key={skill} variant={'secondary'}>
+              {skill}
+            </Badge>
+          ))}
+        </div>
+
         <div className="flex flex-col gap-4 text-muted-foreground text-justify">
           <p>Hey there! I love building and sprinkling everything with code.</p>
           <p>
@@ -42,7 +53,7 @@ export default function Home() {
       <img
         src={vitor.src}
         alt="Vitor Lostada"
-        className="w-96 rounded-xl shadow-2xl"
+        className="w-96 rounded-xl shadow-2xl h-fit"
       />
     </div>
   )
