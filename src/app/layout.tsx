@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
-import { JetBrains_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/layout/Header'
 
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono'
+const geistMono = Inter({
+  subsets: ['latin']
 })
 
 export const metadata: Metadata = {
@@ -21,10 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.className} antialiased`}>
+      <body
+        className={`${geistMono.className} antialiased max-w-screen-xl m-auto dark`}
+      >
         <SpeedInsights />
         <Analytics />
-        {children}
+
+        <Header />
+        <main className="py-16">{children}</main>
       </body>
     </html>
   )
