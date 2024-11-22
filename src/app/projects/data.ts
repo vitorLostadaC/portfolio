@@ -1,7 +1,8 @@
 import antrolAi from './assets/antrol-ai.png'
 import consai from './assets/consai.png'
 import portfolio from './assets/portfolio.png'
-const enum Tag {
+
+export const enum Tag {
   FullStack = 'Full Stack',
   NextJs = 'Next',
   Typescript = 'Typescript',
@@ -11,7 +12,7 @@ const enum Tag {
   Postgres = 'Postgres'
 }
 
-interface Project {
+export interface Project {
   slug: string
   name: string
   description: string
