@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import vitor from './assets/VitorLostada.jpeg'
 import { Badge } from '@/components/ui/badge'
 
-const skills = ['Next.js', 'Typescript', 'Node']
+const stack = ['Next.js', 'Typescript', 'Node']
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           Hello, I&apos;m a Vitor Lostada Frontend Developer
         </h1>
         <div className="flex gap-2">
-          {skills.map((skill) => (
+          {stack.map((skill) => (
             <Badge key={skill} variant={'secondary'}>
               {skill}
             </Badge>
