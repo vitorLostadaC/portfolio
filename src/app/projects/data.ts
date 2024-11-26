@@ -1,6 +1,6 @@
-import antrolAi from './assets/antrol-ai.png'
-import consai from './assets/consai.png'
-import portfolio from './assets/portfolio.png'
+import antrolAi from './assets/antrol-ai.webp'
+import consai from './assets/consai.webp'
+import portfolio from './assets/portfolio.webp'
 
 export const enum Tag {
   FullStack = 'Full Stack',
