@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.className} antialiased max-w-screen-xl m-auto dark `}
+        className={`${geistMono.className} antialiased max-w-screen-xl m-auto dark`}
       >
         <SpeedInsights />
         <Analytics />
