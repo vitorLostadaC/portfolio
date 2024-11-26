@@ -32,7 +32,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <h3 className="text-lg font-bold ">{project.name}</h3>
-        <p className="text-sm text-muted-foreground mb-2">
+        <p className="text-sm text-muted-foreground mb-2 h-10">
           {project.description}
         </p>
         <ProjectStack stack={project.tags} />
