@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Project } from '../data'
-import { ProjectStack } from './components/ProjectStack'
+import { ProjectStack } from './components/project-stack'
 import { Button } from '@/components/ui/button'
-import { GithubIcon, PlayIcon, ScrollTextIcon } from 'lucide-react'
-import { RainbowButton } from '@/components/ui/rainbow-button'
+import { GithubIcon, PlayIcon } from 'lucide-react'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
+import { MagicButton } from './components/magic-button'
 
 const linkButtons = (project: Project) => [
   {
@@ -39,10 +39,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       </CardContent>
       <CardFooter className="mt-auto">
         <div className="flex gap-2 h-full justify-between w-full">
-          <RainbowButton className="text-nowrap flex gap-2">
-            <ScrollTextIcon className="w-4 h-4" />
-            View Project
-          </RainbowButton>
+          <MagicButton slug={project.slug} />
           <div className="flex gap-2">
             {linkButtons(project).map((link) => (
               <SimpleTooltip content={link.label} key={link.label}>
