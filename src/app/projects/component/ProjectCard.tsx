@@ -3,8 +3,22 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Project } from '../data'
 import { ProjectStack } from './components/ProjectStack'
 import { Button } from '@/components/ui/button'
-import { GithubIcon, PlayIcon } from 'lucide-react'
+import { GithubIcon, PlayIcon, ScrollTextIcon } from 'lucide-react'
 import { RainbowButton } from '@/components/ui/rainbow-button'
+import { SimpleTooltip } from '@/components/ui/simple-tooltip'
+
+const linkButtons = (project: Project) => [
+  {
+    icon: PlayIcon,
+    label: 'Demo',
+    href: project.demo
+  },
+  {
+    icon: GithubIcon,
+    label: 'Github',
+    href: project.sourceCode
+  }
+]
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
@@ -24,19 +38,20 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <ProjectStack stack={project.tags} />
       </CardContent>
       <CardFooter className="mt-auto">
-        <div className="flex gap-2">
-          <RainbowButton className="text-nowrap ">
-            <PlayIcon className="w-4 h-4" />
+        <div className="flex gap-2 h-full justify-between w-full">
+          <RainbowButton className="text-nowrap flex gap-2">
+            <ScrollTextIcon className="w-4 h-4" />
             View Project
           </RainbowButton>
-          <Button variant="outline">
-            <PlayIcon className="w-4 h-4" />
-            Demo
-          </Button>
-          <Button variant="outline">
-            <GithubIcon className="w-4 h-4" />
-            Github
-          </Button>
+          <div className="flex gap-2">
+            {linkButtons(project).map((link) => (
+              <SimpleTooltip content={link.label} key={link.label}>
+                <Button variant="outline" size="icon">
+                  <link.icon className="w-4 h-4" />
+                </Button>
+              </SimpleTooltip>
+            ))}
+          </div>
         </div>
       </CardFooter>
     </Card>
