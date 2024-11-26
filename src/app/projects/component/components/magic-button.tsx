@@ -8,7 +8,8 @@ import { useRouter } from 'next/navigation'
 export const MagicButton = ({ slug }: { slug: string }) => {
   const router = useRouter()
 
-  const alreadySeenProject = localStorage.getItem(slug)
+  const alreadySeenProject =
+    typeof localStorage !== 'undefined' && localStorage.getItem(slug)
 
   const handleClick = () => {
     localStorage.setItem(slug, 'seen')
