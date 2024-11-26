@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -8,11 +8,10 @@ export const Header = () => {
       </Link>
 
       <nav className="flex gap-8 text-muted-foreground">
-        <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/talks">Talks</Link>
       </nav>
     </header>
-  )
-}
+  );
+};

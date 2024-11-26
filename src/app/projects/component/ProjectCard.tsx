@@ -4,15 +4,16 @@ import { Project } from '../data'
 import { ProjectStack } from './components/ProjectStack'
 import { Button } from '@/components/ui/button'
 import { GithubIcon, PlayIcon } from 'lucide-react'
+import { RainbowButton } from '@/components/ui/rainbow-button'
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Card>
+    <Card className="flex flex-col h-full">
       <CardHeader>
         <img
           src={project.image}
           alt={project.name}
-          className=" w-96 rounded-md aspect-video object-cover"
+          className="w-96 rounded-md aspect-video object-cover"
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
@@ -22,8 +23,12 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         </p>
         <ProjectStack stack={project.tags} />
       </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <div className="flex gap-2">
+          <RainbowButton className="text-nowrap ">
+            <PlayIcon className="w-4 h-4" />
+            View Project
+          </RainbowButton>
           <Button variant="outline">
             <PlayIcon className="w-4 h-4" />
             Demo
