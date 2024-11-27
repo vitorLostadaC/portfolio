@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Tag } from '../../data'
+import { Tag } from '../../data/project'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 

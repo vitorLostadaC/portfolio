@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Project } from '../data'
+import { Project } from '../data/project'
 import { ProjectStack } from './components/project-stack'
 import { Button } from '@/components/ui/button'
 import { GithubIcon, PlayIcon } from 'lucide-react'

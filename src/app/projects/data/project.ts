@@ -1,16 +1,8 @@
+import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
 import antrolAi from './assets/antrol-ai.webp'
 import consai from './assets/consai.webp'
 import portfolio from './assets/portfolio.webp'
-
-export const enum Tag {
-  FullStack = 'Full Stack',
-  NextJs = 'Next',
-  Typescript = 'Typescript',
-  NodeJs = 'NodeJs',
-  Sentry = 'Sentry',
-  PostHog = 'PostHog',
-  Postgres = 'Postgres'
-}
+import { Tag } from './tags'
 
 export interface Project {
   slug: string
@@ -34,14 +26,7 @@ export const projects: Project[] = [
       'AI-powered platform that creates custom icons for your projects',
     pinned: true,
     image: antrolAi.src,
-    tags: [
-      Tag.NextJs,
-      Tag.Typescript,
-      Tag.NodeJs,
-      Tag.Postgres,
-      Tag.Sentry,
-      Tag.PostHog
-    ],
+    tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
     sourceCode: 'https://github.com/vitorLostadaC/antrol-generate'
   },
