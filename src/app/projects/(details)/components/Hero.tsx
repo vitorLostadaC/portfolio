@@ -8,11 +8,14 @@ interface HeroProps {
   imageSrc: string
 }
 
+//! Record one video to show all the content rigth
+//! implement a hightlight feature using npm
+
 export const Hero = ({ title, description, stack, imageSrc }: HeroProps) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-10">
       <h1 className="text-4xl font-bold">{title}</h1>
-      <p className="text-justify max-w-3xl">{description}</p>
+      <p className="max-w-3xl text-lg text-muted-foreground">{description}</p>
       <div className="flex gap-2 flex-wrap max-w-xl">
         {stack.map((tag, index) => (
           <Badge variant={index >= 3 ? 'secondary' : 'default'} key={tag}>

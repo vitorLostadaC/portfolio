@@ -1,14 +1,24 @@
 import { Hero } from '../components/Hero'
-import { title, description, tags } from './data/project'
+import {
+  heroTitle,
+  HeroDescription,
+  tags,
+  problemsDescription,
+  problemsTitle
+} from './data/project'
 import hero from './assets/hero.webp'
+import { TextSection } from '../components/TextSection'
 
 export default function AntrolAi() {
   return (
-    <Hero
-      title={title}
-      description={description}
-      stack={tags}
-      imageSrc={hero.src}
-    />
+    <div className="flex flex-col gap-10">
+      <Hero
+        title={heroTitle}
+        description={HeroDescription}
+        stack={tags}
+        imageSrc={hero.src}
+      />
+      <TextSection title={problemsTitle} description={problemsDescription} />
+    </div>
   )
 }

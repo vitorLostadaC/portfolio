@@ -11,5 +11,7 @@ export const enum Tag {
   S3 = 'S3',
   OpenAI = 'OpenAI',
   Motion = 'Motion',
-  Tailwind = 'Tailwind'
+  Tailwind = 'Tailwind',
+  CDN = 'CDN',
+  i18n = 'i18n'
 }
