@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { Tag } from '../../data/project'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Tag } from '../../data/tags'
 
 export const ProjectStack = ({ stack }: { stack: Tag[] }) => {
   const [showMore, setShowMore] = useState(false)

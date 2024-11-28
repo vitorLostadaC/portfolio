@@ -1,7 +1,7 @@
 import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
-import antrolAi from './assets/antrol-ai.webp'
-import consai from './assets/consai.webp'
-import portfolio from './assets/portfolio.webp'
+import antrolAi from '../assets/antrol-ai.webp'
+import consai from '../assets/consai.webp'
+import portfolio from '../assets/portfolio.webp'
 import { Tag } from './tags'
 
 export interface Project {

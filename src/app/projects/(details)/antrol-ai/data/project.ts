@@ -24,10 +24,11 @@ export const tags: Tag[] = [
 
 export const goalTitle = 'Project Purpose and Goal'
 
-export const goalDescription = `I created this project for several reasons. First, to build an entire SaaS application, going through all the stages needed to ship this product. Secondly, I wanted to learn more about the new Next.js version 14, including server actions and how to do self-hosting with Next.js. I had also never used Stripe and S3 before, so I had to learn a lot of new things and implement them in this project.
-
-Event is a SaaS project, but the main purpose was not monetization. I don’t even have any ads or affiliate links in this project. It was simply an enjoyable project to build and a great opportunity to learn many new things.
-`
+export const goalDescription = [
+  'I created this project for several reasons. First, to build an entire SaaS application, going through all the stages needed to ship this product. Secondly, I wanted to learn more about the new Next.js 14, including server actions and how to do self-hosting with Next.js. I had also never used Stripe and S3 before, so I had to learn a lot of new things and implement them in this project.',
+  'Event is a SaaS project, but the main purpose was not monetization. I don’t even have any ads or affiliate links in this project. It was simply an enjoyable project to build and a great opportunity to learn many new things.',
+  'I tried to create a minimalist design with a focus on UX. Since most users struggle to write good prompts, I created a guided flow to help them achieve better results.'
+]
 
 export const problemsTitle = 'Problems and Thought Process'
 
@@ -39,4 +40,14 @@ export const problemsDescription = [
   'Performance: At first, my landing page looked fine, but when I ran Lighthouse, the results were very poor haha. I started an extensive search to understand how to improve it. I converted all images to WebP to optimize their size and resized them to match the actual rendered dimensions. This improved the performance scores significantly.',
 
   'This bug was only discovered in production. The generated images were extremely slow to render on users’ screens because I wasn’t optimizing the images. To quickly fix this, I used Sharp to resize the images on the frontend. The solution worked, but it’s not ideal because it added extra load time on the frontend. For example, if you go to the gallery, you’ll notice a long loading time because I’m resizing all images when the user opens the page. I could fix this in several ways, such as generating resized WebP images on the backend or creating a job to run after generation and save on db to show the user the result immediately. Unfortunately, I haven’t had time to fix this yet, and since we currently don’t have active users, this refactor won’t have much of an impact for now.'
+]
+
+export const lessonsTitle = 'Lessons Learned'
+
+export const lessonsDescription = [
+  'This project was really awesome because I learned a lot about all the technologies I wanted to use, and also learned about product development and how to ship a project.',
+
+  "While I didn't aim to create a lucrative business or run ads, just having users from LinkedIn and Instagram gave me great experience working with a production product. For example, when I first shipped the app, I discovered it wasn't opening properly in Safari and had to quickly fix bugs in production.",
+
+  "Being a side project, my time to work on this and create the best possible experience was limited. However, I'm really happy with the results and everything I learned. This experience contributed significantly to my growth as a developer."
 ]

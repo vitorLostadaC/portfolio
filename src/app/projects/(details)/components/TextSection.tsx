@@ -22,7 +22,7 @@ export const TextSection = ({ title, description, side }: TextProps) => {
           ))}
         </ul>
       ) : (
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground text-lg">{description}</p>
       )}
     </div>
   )
