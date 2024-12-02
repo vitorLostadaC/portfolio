@@ -39,6 +39,7 @@ body {
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -70,6 +71,9 @@ body {
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+
+    --highlight-1: #ff6b6b;
+    --highlight-2: #ffb347;
   }
 }
 

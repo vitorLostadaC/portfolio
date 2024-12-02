@@ -1,8 +1,9 @@
 import { cn } from '@/lib/utils'
+import { RoughNotationGroup as RNG } from 'react-rough-notation'
 
 interface TextProps {
   title: string
-  description: string | string[]
+  description: JSX.Element | string | (JSX.Element | string)[]
   side?: 'left' | 'right' | 'center'
 }
 
@@ -15,15 +16,17 @@ export const TextSection = ({ title, description, side }: TextProps) => {
       })}
     >
       <h2 className="text-2xl font-bold">{title}</h2>
-      {Array.isArray(description) ? (
-        <ul className="flex flex-col gap-4 text-muted-foreground text-lg">
-          {description.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-muted-foreground text-lg">{description}</p>
-      )}
+      <RNG show>
+        {Array.isArray(description) ? (
+          <ul className="flex flex-col gap-4 text-muted-foreground text-lg">
+            {description.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-muted-foreground text-lg">{description}</p>
+        )}
+      </RNG>
     </div>
   )
 }

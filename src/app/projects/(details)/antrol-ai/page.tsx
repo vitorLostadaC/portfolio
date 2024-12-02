@@ -1,7 +1,7 @@
 import { Hero } from '../components/Hero'
 import {
   heroTitle,
-  HeroDescription,
+  heroDescription,
   tags,
   problemsDescription,
   problemsTitle,
@@ -22,7 +22,7 @@ export default function AntrolAi() {
     <div className="flex flex-col gap-10">
       <Hero
         title={heroTitle}
-        description={HeroDescription}
+        description={heroDescription}
         stack={tags}
         imageSrc={hero.src}
       />
