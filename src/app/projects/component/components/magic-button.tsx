@@ -11,6 +11,10 @@ export const MagicButton = ({ slug }: { slug: string }) => {
   const alreadySeenProject =
     typeof localStorage !== 'undefined' && localStorage.getItem(slug)
 
+  const handleMouseEnter = () => {
+    router.prefetch(`/projects/${slug}`)
+  }
+
   const handleClick = () => {
     localStorage.setItem(slug, 'seen')
     router.push(`/projects/${slug}`)
@@ -18,14 +22,22 @@ export const MagicButton = ({ slug }: { slug: string }) => {
 
   if (alreadySeenProject)
     return (
-      <Button variant="outline" onClick={handleClick}>
+      <Button
+        variant="outline"
+        onMouseEnter={handleMouseEnter}
+        onClick={handleClick}
+      >
         <ScrollTextIcon className="w-4 h-4" />
         View Again
       </Button>
     )
 
   return (
-    <RainbowButton className="text-nowrap flex gap-2" onClick={handleClick}>
+    <RainbowButton
+      className="text-nowrap flex gap-2"
+      onMouseEnter={handleMouseEnter}
+      onClick={handleClick}
+    >
       <ScrollTextIcon className="w-4 h-4" />
       View Project
     </RainbowButton>

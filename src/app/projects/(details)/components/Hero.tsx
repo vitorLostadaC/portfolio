@@ -1,9 +1,8 @@
-'use client'
-
 import { Badge } from '@/components/ui/badge'
 import { Tag } from '@/app/projects/data/tags'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
-import { motion } from 'motion/react'
+import { Title } from './title'
+import Image from 'next/image'
 
 interface HeroProps {
   title: string
@@ -22,9 +21,7 @@ export const Hero = ({
 }: HeroProps) => {
   return (
     <div className="flex flex-col gap-10">
-      <motion.h1 className="text-4xl font-bold" layoutId={`title-${slug}`}>
-        {title}
-      </motion.h1>
+      <Title title={title} slug={slug} />
       <p className="max-w-3xl text-lg text-muted-foreground">
         <RNG show>{description}</RNG>
       </p>
@@ -35,10 +32,13 @@ export const Hero = ({
           </Badge>
         ))}
       </div>
-      <img
+      <Image
         src={imageSrc}
         alt={title}
-        className="w-full border rounded-md mt-5 shadow-2xl"
+        width={1000}
+        height={1000}
+        className="w-full border rounded-md mt-5 shadow-2xl h-full"
+        priority
       />
     </div>
   )
