@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { GithubIcon, PlayIcon } from 'lucide-react'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { MagicButton } from './components/magic-button'
+import { Title } from './components/title'
 
 const linkButtons = (project: Project) => [
   {
@@ -31,7 +32,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <h3 className="text-lg font-bold ">{project.name}</h3>
+        <Title project={project} />
         <p className="text-sm text-muted-foreground mb-2 h-10">
           {project.description}
         </p>
