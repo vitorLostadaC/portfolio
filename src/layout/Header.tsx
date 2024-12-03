@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export const Header = () => {
   return (
@@ -11,7 +11,8 @@ export const Header = () => {
         <Link href="/about">About</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/talks">Talks</Link>
+        <Link href="/recommendations">Recommendations</Link>
       </nav>
     </header>
-  );
-};
+  )
+}
