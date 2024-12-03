@@ -35,7 +35,7 @@ export const Hero = ({
       <Image
         src={imageSrc}
         alt={title}
-        width={1000}
+        width={1500}
         height={1000}
         className="w-full border rounded-md mt-5 shadow-2xl h-full"
         priority
