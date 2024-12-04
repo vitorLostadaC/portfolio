@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Project } from '../data/project'
 import { ProjectStack } from './components/project-stack'
 import { Button } from '@/components/ui/button'
-import { GithubIcon, PlayIcon } from 'lucide-react'
+import { CalendarIcon, GithubIcon, PlayIcon } from 'lucide-react'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { MagicButton } from './components/magic-button'
 import { Title } from './components/title'
@@ -32,10 +31,23 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <Title project={project} />
+        <div className="flex justify-between items-center">
+          <Title project={project} />
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <CalendarIcon className="w-4 h-4" />
+            <span className="text-sm">
+              {project.date.toLocaleString('pt-BR', {
+                year: 'numeric',
+                month: 'long'
+              })}
+            </span>
+          </div>
+        </div>
+
         <p className="text-sm text-muted-foreground mb-2 h-10">
           {project.description}
         </p>
+
         <ProjectStack stack={project.tags} />
       </CardContent>
       <CardFooter className="mt-auto">
