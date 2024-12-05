@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { StaticImageData } from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface ModalImageProps {
   image: StaticImageData
@@ -13,13 +13,33 @@ interface ModalImageProps {
 
 export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [windowSize, setWindowSize] = useState<{
+    width: number
+    height: number
+  }>({
+    width: 0,
+    height: 0
+  })
 
   const handleToogle = () => {
     setIsOpen(!isOpen)
   }
 
-  let newWidth = window.innerWidth * 0.85
-  let newHeight = window.innerHeight * 0.85
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  let newWidth = windowSize?.width * 0.85
+  let newHeight = windowSize?.height * 0.85
 
   const aspectRatio = image.width / image.height
 
