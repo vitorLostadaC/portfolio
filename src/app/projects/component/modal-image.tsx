@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { StaticImageData } from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -58,24 +58,26 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
         layoutId={alt}
         onClick={handleToogle}
       />
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/10 z-10 flex justify-center items-center"
-          onClick={handleToogle}
-        >
-          <motion.img
-            src={image.src}
-            alt={alt}
-            layoutId={alt}
-            style={{
-              width: newWidth,
-              height: newHeight
-            }}
-            className={'rounded-md border'}
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black/10 z-10 flex justify-center items-center"
+            onClick={handleToogle}
+          >
+            <motion.img
+              src={image.src}
+              alt={alt}
+              layoutId={alt}
+              style={{
+                width: newWidth,
+                height: newHeight
+              }}
+              className={'rounded-md border'}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

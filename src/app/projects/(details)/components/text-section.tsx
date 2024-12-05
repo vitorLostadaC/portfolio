@@ -14,7 +14,8 @@ interface TextProps {
 export const TextSection = ({ title, description, side }: TextProps) => {
   const divRef = useRef<HTMLLIElement | HTMLParagraphElement | null>(null)
   const inView = useInView(divRef, {
-    once: true
+    once: true,
+    margin: '-150px'
   })
 
   return (
