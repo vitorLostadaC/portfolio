@@ -15,9 +15,10 @@
 
 # Details Project page
 
-- [ ] add click on gallery images and allow use carrousel
+- [x] add click on gallery images
 - [x] add scroll animation to start the drawings
 - [ ] finish to write all projects details
+- [ ] allow carrousel (optional)
 
 # Details
 
@@ -27,3 +28,7 @@
 # Bugs
 
 - [ ] text transition
+
+# Generatl
+
+- [ ] responsividade
