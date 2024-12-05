@@ -16,10 +16,14 @@
 # Details Project page
 
 - [ ] add click on gallery images and allow use carrousel
-- [ ] add scroll animation to start the drawings
+- [x] add scroll animation to start the drawings
 - [ ] finish to write all projects details
 
 # Details
 
 - [ ] add a console.log to talk with guys
 - [ ] add a algorithm to start destroy anything (sand simulation)
+
+# Bugs
+
+- [ ] text transition
