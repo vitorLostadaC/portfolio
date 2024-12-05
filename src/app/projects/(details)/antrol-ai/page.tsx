@@ -16,6 +16,8 @@ import a from './assets/a.png'
 import b from './assets/b.png'
 import c from './assets/c.png'
 import e from './assets/e.png'
+import { cn } from '@/lib/utils'
+import { ModalImage } from '../../component/modal-image'
 
 export default function AntrolAi() {
   return (
@@ -30,9 +32,16 @@ export default function AntrolAi() {
       <TextSection title={goalTitle} description={goalDescription} />
 
       <div className="grid grid-cols-2 gap-6 items-center">
-        <img src={a.src} alt="a" className="border rounded-md" />
-        <img src={e.src} alt="e" className="border row-span-2 rounded-md" />
-        <img src={b.src} alt="b" className="border rounded-md" />
+        {[a, e, b].map((item, index) => (
+          <ModalImage
+            key={index}
+            image={item}
+            alt={`antrol-ai-${index}`}
+            className={cn('border rounded-md', {
+              'row-span-2': index === 1
+            })}
+          />
+        ))}
       </div>
       <TextSection
         side="center"
@@ -40,7 +49,11 @@ export default function AntrolAi() {
         description={problemsDescription}
       />
       <div className="flex flex-col gap-2">
-        <img src={c.src} alt="c" className="border rounded-md" />
+        <ModalImage
+          image={c}
+          alt={`antrol-ai-4`}
+          className={cn('border rounded-md')}
+        />
         <p className="flex items-center gap-2 text-muted-foreground">
           Let&apos;s check this generation!
           <a
