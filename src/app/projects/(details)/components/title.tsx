@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 export const Title = ({ title, slug }: { title: string; slug: string }) => {
   return (

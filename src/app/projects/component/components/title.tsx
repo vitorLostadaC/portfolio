@@ -1,7 +1,7 @@
 'use client'
 
 import { Project } from '../../data/project'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 export const Title = ({ project }: { project: Project }) => {
   return (
