@@ -7,6 +7,7 @@ export const enum Tag {
   PostHog = 'PostHog',
   Postgres = 'Postgres',
   Prisma = 'Prisma',
+  Drizzle = 'Drizzle',
   Stripe = 'Stripe',
   S3 = 'S3',
   OpenAI = 'OpenAI',

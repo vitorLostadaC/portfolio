@@ -6,6 +6,7 @@ import { CalendarIcon, GithubIcon, PlayIcon } from 'lucide-react'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { MagicButton } from './components/magic-button'
 import { Title } from './components/title'
+import { cn } from '@/lib/utils'
 
 const linkButtons = (project: Project) => [
   {
@@ -54,13 +55,19 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <div className="flex gap-2 h-full justify-between w-full">
           <MagicButton slug={project.slug} />
           <div className="flex gap-2">
-            {linkButtons(project).map((link) => (
-              <SimpleTooltip content={link.label} key={link.label}>
-                <Button variant="outline" size="icon">
-                  <link.icon className="w-4 h-4" />
-                </Button>
-              </SimpleTooltip>
-            ))}
+            {linkButtons(project).map((link) => {
+              const isAvailable = link.href
+
+              return (
+                <SimpleTooltip content={link.label} key={link.label}>
+                  <Button variant="outline" size="icon" disabled={!isAvailable}>
+                    <a href={link.href} target="_blank">
+                      <link.icon className={cn('size-4', {})} />
+                    </a>
+                  </Button>
+                </SimpleTooltip>
+              )
+            })}
           </div>
         </div>
       </CardFooter>
