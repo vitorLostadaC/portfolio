@@ -21,7 +21,7 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
     height: 0
   })
 
-  const handleToogle = () => {
+  const handleToggle = () => {
     setIsOpen(!isOpen)
   }
 
@@ -37,6 +37,19 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        handleToggle()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen])
 
   let newWidth = windowSize?.width * 0.85
   let newHeight = windowSize?.height * 0.85
@@ -56,13 +69,13 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
         alt={alt}
         className={cn(className, 'cursor-pointer')}
         layoutId={alt}
-        onClick={handleToogle}
+        onClick={handleToggle}
       />
       <AnimatePresence>
         {isOpen && (
           <div
             className="fixed inset-0 bg-black/10 z-10 flex justify-center items-center"
-            onClick={handleToogle}
+            onClick={handleToggle}
           >
             <motion.img
               src={image.src}

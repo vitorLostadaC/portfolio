@@ -9,6 +9,7 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-3 gap-4">
         {projects
           .filter((project) => project.pinned)
+          .sort((a, b) => b.date.getTime() - a.date.getTime())
           .map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
@@ -18,6 +19,7 @@ export default function ProjectsPage() {
       <div className="flex gap-4">
         {projects
           .filter((project) => !project.pinned)
+          .sort((a, b) => b.date.getTime() - a.date.getTime())
           .map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
