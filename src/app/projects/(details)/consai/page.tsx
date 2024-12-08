@@ -8,7 +8,9 @@ import {
   goalDescription,
   goalTitle,
   lessonsDescription,
-  lessonsTitle
+  lessonsTitle,
+  keyFeaturesTitle,
+  keyFeaturesDescription
 } from './data/project'
 import hero from './assets/hero.webp'
 import { TextSection } from '../components/text-section'
@@ -30,6 +32,11 @@ export default function Consai() {
         slug="consai"
       />
       <TextSection title={goalTitle} description={goalDescription} />
+      <TextSection
+        title={keyFeaturesTitle}
+        description={keyFeaturesDescription}
+        side="center"
+      />
 
       <div className="grid grid-cols-2 gap-6 items-center">
         {[a, e, b].map((item, index) => (
