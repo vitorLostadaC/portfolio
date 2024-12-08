@@ -28,6 +28,9 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0"
   },
+"resolutions": {
+    "@radix-ui/react-portal": "1.0.2"
+},
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",

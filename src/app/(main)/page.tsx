@@ -1,22 +1,94 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
+import { anim, CustomVariant } from '@/lib/utils'
+import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
-const Gradient = dynamic(() => import('./test').then((mod) => mod.Gradient), {
-  ssr: false,
-  loading: () => <div>Loading...</div>
-})
+const Gradient = dynamic(
+  () => import('./components/gradient').then((mod) => mod.Gradient),
+  {
+    ssr: false,
+    loading: () => <div>Loading...</div>
+  }
+)
+
+const MotionLink = motion(Link)
+
+const buttonsAnim: CustomVariant = {
+  enter: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.6
+    }
+  }
+}
+
+const buttonChild: CustomVariant = {
+  initial: {
+    opacity: 0,
+    y: 50
+  },
+  enter: {
+    opacity: 1,
+    y: 0
+  }
+}
 
 export default function Home() {
   return (
     <>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-8xl font-bold">Vitor Lostada</h1>
-        <h4 className="text-4xl text-muted-foreground">
+      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 space-y-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 0.3,
+            type: 'spring',
+            mass: 1
+          }}
+          className="text-8xl font-bold"
+        >
+          Vitor Lostada
+        </motion.h1>
+        <motion.h4
+          className="text-4xl text-muted-foreground"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3
+          }}
+        >
           Pixel Perfect Frontend Developer
-        </h4>
-      </div>
-      <Gradient />
+        </motion.h4>
+        <motion.div
+          className="flex items-center gap-4 justify-center"
+          {...anim(buttonsAnim)}
+        >
+          <Button asChild variant={'outline'} size={'lg'}>
+            <MotionLink href={'about'} variants={buttonChild}>
+              About me
+            </MotionLink>
+          </Button>
+          <Button asChild size={'lg'}>
+            <MotionLink href={'projects'} variants={buttonChild}>
+              Projects
+            </MotionLink>
+          </Button>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.6,
+          duration: 3
+        }}
+        className="fixed inset-0 -z-10"
+      >
+        <Gradient />
+      </motion.div>
     </>
   )
 }
