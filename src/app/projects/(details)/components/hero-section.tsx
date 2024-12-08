@@ -25,7 +25,7 @@ export const Hero = ({
       <p className="max-w-3xl text-lg text-muted-foreground">
         <RNG show>{description}</RNG>
       </p>
-      <div className="flex gap-2 flex-wrap max-w-xl">
+      <div className="flex max-w-xl flex-wrap gap-2">
         {stack.map((tag, index) => (
           <Badge key={tag} variant={index >= 3 ? 'secondary' : 'default'}>
             {tag}
@@ -37,7 +37,7 @@ export const Hero = ({
         alt={title}
         width={1500}
         height={1000}
-        className="w-full border rounded-md mt-5 shadow-2xl h-full"
+        className="mt-5 h-full w-full rounded-md border shadow-2xl"
         priority
       />
     </div>

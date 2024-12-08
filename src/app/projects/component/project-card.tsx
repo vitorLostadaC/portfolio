@@ -23,19 +23,19 @@ const linkButtons = (project: Project) => [
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Card className="flex flex-col h-full">
+    <Card className="flex h-full flex-col">
       <CardHeader>
         <img
           src={project.image}
           alt={project.name}
-          className="w-96 rounded-md aspect-video object-cover"
+          className="aspect-video w-96 rounded-md object-cover"
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <Title project={project} />
           <div className="flex items-center gap-2 text-muted-foreground">
-            <CalendarIcon className="w-4 h-4" />
+            <CalendarIcon className="h-4 w-4" />
             <span className="text-sm">
               {project.date.toLocaleString('pt-BR', {
                 year: 'numeric',
@@ -45,14 +45,14 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </div>
 
-        <p className="text-sm text-muted-foreground mb-2 h-10">
+        <p className="mb-2 h-10 text-sm text-muted-foreground">
           {project.description}
         </p>
 
         <ProjectStack stack={project.tags} />
       </CardContent>
       <CardFooter className="mt-auto">
-        <div className="flex gap-2 h-full justify-between w-full">
+        <div className="flex h-full w-full justify-between gap-2">
           <MagicButton slug={project.slug} />
           <div className="flex gap-2">
             {linkButtons(project).map((link) => {

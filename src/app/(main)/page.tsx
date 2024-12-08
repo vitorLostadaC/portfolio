@@ -39,7 +39,7 @@ const buttonChild: CustomVariant = {
 export default function Home() {
   return (
     <>
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 space-y-4">
+      <motion.div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 space-y-4 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -63,7 +63,7 @@ export default function Home() {
           Pixel Perfect Frontend Developer
         </motion.h4>
         <motion.div
-          className="flex items-center gap-4 justify-center"
+          className="flex items-center justify-center gap-4"
           {...anim(buttonsAnim)}
         >
           <Button asChild variant={'outline'} size={'lg'}>

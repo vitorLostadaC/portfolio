@@ -38,13 +38,13 @@ export default function Consai() {
         side="center"
       />
 
-      <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="grid grid-cols-2 items-center gap-6">
         {[a, e, b].map((item, index) => (
           <ModalImage
             key={index}
             image={item}
             alt={`antrol-ai-${index}`}
-            className={cn('border rounded-md', {
+            className={cn('rounded-md border', {
               'row-span-2': index === 1
             })}
           />
@@ -59,7 +59,7 @@ export default function Consai() {
         <ModalImage
           image={c}
           alt={`antrol-ai-4`}
-          className={cn('border rounded-md')}
+          className={cn('rounded-md border')}
         />
         <p className="flex items-center gap-2 text-muted-foreground">
           Let&apos;s check this generation!

@@ -10,7 +10,7 @@ export const MainImage = ({ project }: { project: Project }) => {
       transition={{ duration: 1 }}
       src={project.image}
       alt={project.name}
-      className="w-96 rounded-md aspect-video object-cover"
+      className="aspect-video w-96 rounded-md object-cover"
     />
   )
 }

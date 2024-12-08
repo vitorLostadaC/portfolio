@@ -74,7 +74,7 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
       <AnimatePresence>
         {isOpen && (
           <div
-            className="fixed inset-0 bg-black/10 z-10 flex justify-center items-center"
+            className="fixed inset-0 z-10 flex items-center justify-center bg-black/10"
             onClick={handleToggle}
           >
             <motion.img

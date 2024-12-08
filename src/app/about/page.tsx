@@ -6,7 +6,7 @@ export default function About() {
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl font-bold">Summary</h1>
 
-        <div className="flex flex-col gap-4 text-muted-foreground text-justify">
+        <div className="flex flex-col gap-4 text-justify text-muted-foreground">
           <p>Hey there! I love building and sprinkling everything with code.</p>
           <p>
             My first experience with programming was when I was 13. Like most
@@ -35,7 +35,7 @@ export default function About() {
       <img
         src={vitor.src}
         alt="Vitor Lostada"
-        className="w-96 rounded-xl shadow-2xl h-fit"
+        className="h-fit w-96 rounded-xl shadow-2xl"
       />
     </div>
   )

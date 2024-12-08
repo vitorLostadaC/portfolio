@@ -27,18 +27,18 @@ export const MagicButton = ({ slug }: { slug: string }) => {
         onMouseEnter={handleMouseEnter}
         onClick={handleClick}
       >
-        <ScrollTextIcon className="w-4 h-4" />
+        <ScrollTextIcon className="h-4 w-4" />
         View Again
       </Button>
     )
 
   return (
     <RainbowButton
-      className="text-nowrap flex gap-2"
+      className="flex gap-2 text-nowrap"
       onMouseEnter={handleMouseEnter}
       onClick={handleClick}
     >
-      <ScrollTextIcon className="w-4 h-4" />
+      <ScrollTextIcon className="h-4 w-4" />
       View Project
     </RainbowButton>
   )

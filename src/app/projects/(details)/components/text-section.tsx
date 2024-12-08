@@ -20,15 +20,15 @@ export const TextSection = ({ title, description, side }: TextProps) => {
 
   return (
     <div
-      className={cn('flex flex-col gap-4 max-w-4xl', {
+      className={cn('flex max-w-4xl flex-col gap-4', {
         'ml-auto': side === 'right',
-        'text-center mx-auto': side === 'center'
+        'mx-auto text-center': side === 'center'
       })}
     >
       <h2 className="text-2xl font-bold">{title}</h2>
       <RNG show={inView}>
         {Array.isArray(description) ? (
-          <ul className="flex flex-col gap-4 text-muted-foreground text-lg">
+          <ul className="flex flex-col gap-4 text-lg text-muted-foreground">
             {description.map((item, index) => (
               <li
                 key={index}
@@ -44,7 +44,7 @@ export const TextSection = ({ title, description, side }: TextProps) => {
           </ul>
         ) : (
           <p
-            className="text-muted-foreground text-lg"
+            className="text-lg text-muted-foreground"
             ref={(e) => {
               divRef.current = e
             }}

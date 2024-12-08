@@ -14,6 +14,7 @@ export function Gradient() {
 const ShaderPlane = () => {
   const shaderRef = React.useRef<ShaderMaterial | null>(null)
 
+  // leva (just for tests)
   const {
     timeSpeed,
     flowSpeed,
