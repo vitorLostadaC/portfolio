@@ -128,47 +128,20 @@ export const problemsTitle = 'Problems and Thought Process'
 export const problemsDescription = [
   <>
     <RN type="underline" multiline color="var(--highlight-1)">
-      We built
-    </RN>{' '}
-    the project like it was for a{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      big company with a madure product
+      We built the project like it was for a big company with a mature product
     </RN>
-    . At the start, I used the best practices and design patterns, but the
-    project took too long to build and ship. Because of that, we couldn&apos;t
-    release or test it to see if the product was{' '}
+    . At the start, I used best practices and design patterns, but the project
+    took too long to build and ship. Because of that, we couldn&apos;t test if
+    the product was useful. The first thing I changed was moving to a{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
-      useful.
-    </RN>{' '}
-    The first thing I changed was moving from{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      SOLID
-    </RN>{' '}
-    principles and{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      use cases
-    </RN>{' '}
-    to a{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
       simple MVC
     </RN>
-    , and this made everything faster to build.
+    approach, which made everything faster to build.
   </>,
   <>
-    Since we were working in our free time, we{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      hired
-    </RN>{' '}
-    an intern to{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      speed things up
-    </RN>
-    . I planned their tasks so they could work on things that{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      weren&apos;t worth our time
-    </RN>
-    , like improving the UI and making it responsive. Meanwhile, I focused on
-    the{' '}
+    Since we were working in our free time, we hired an intern. I planned their
+    tasks so they could work on things like improving the UI and making it
+    responsive. Meanwhile, I focused on the{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
       core logic and main features
     </RN>{' '}
@@ -177,21 +150,10 @@ export const problemsDescription = [
   <>
     Another challenge was{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
-      selling the product
+      figuring out how to sell the product
     </RN>
-    . We had to figure out how to do it. We started{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      talking to people
-    </RN>{' '}
-    who could join us as affiliates and{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      sell the product for us
-    </RN>
-    . This was an interesting step because it helped us{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      connect
-    </RN>{' '}
-    with many people in the market.
+    . We started by initiating affiliate partnerships to have others sell the
+    product for us, which helped us connect with key market players.
   </>
 ]
 
@@ -210,39 +172,39 @@ export const lessonsDescription = [
     </RN>
     . If it&apos;s an MVP to test an idea, some things are{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
-      more important
+      more critical than perfection
     </RN>{' '}
-    than creating perfect, maintainable code.
+    in coding.
   </>,
   <>
     When you{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      teach people
+    <RN type="underline" multiline color="var(--highlight-2)">
+      mentor people
     </RN>
     , their performance{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      doesn&apos;t just double
-    </RN>
-    , it{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
-      grows even more
+      doesn&apos;t just double
+    </RN>{' '}
+    it{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      grows exponentially
     </RN>
     . Over time with your guidance, the people you hire start to understand how
     to get things done, and they become{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      self-driven
+    <RN type="box" multiline color="var(--highlight-2)">
+      self-driven leaders
     </RN>{' '}
-    to complete tasks and even create their own tasks.
+    who complete tasks and even create their own goals.
   </>,
   <>
     Focus on{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
       strategic priorities
     </RN>{' '}
-    that can truly{' '}
+    that can{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
-      grow the product
+      significantly grow the product
     </RN>
-    , instead of just working on things I personally want to do or create.
+    , rather than just following personal interests or whims.
   </>
 ]
