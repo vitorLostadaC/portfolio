@@ -6,7 +6,7 @@
 
 # Project page
 
-- [ ] add all projects
+- [ ] add retouch feature
 - [x] add date to projects
 
 # About page
