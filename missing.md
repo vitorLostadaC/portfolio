@@ -25,10 +25,25 @@
 - [ ] add a console.log to talk with guys
 - [ ] add a algorithm to start destroy anything (sand simulation)
 
+# Recommendations page
+
+- [x] create all datas
+- [ ] create cards with animation
+
+# Talk card
+
+- [ ] create card
+- [ ] create descriptions
+
 # Bugs
 
 - [ ] text transition
 
-# Generatl
+# General
 
 - [ ] responsividade
+- [ ] feedback button
+- [ ] change name and logo
+- [ ] feedback button
+
+- Talk card
