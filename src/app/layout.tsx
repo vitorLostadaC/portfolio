@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/layout/Header'
+import { Feedback } from '@/components/feedback/feedback'
 
 const geistMono = Inter({
   subsets: ['latin']
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <SpeedInsights />
         <Analytics />
+        <Feedback />
 
         <Header />
         <main className="py-16">{children}</main>

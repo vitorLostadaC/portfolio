@@ -73,8 +73,17 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
       />
       <AnimatePresence>
         {isOpen && (
-          <div
-            className="fixed inset-0 z-10 flex items-center justify-center bg-black/10"
+          <motion.div
+            className="fixed inset-0 z-10 flex items-center justify-center"
+            initial={{
+              backgroundColor: 'rgba(0,0,0,0)'
+            }}
+            animate={{
+              backgroundColor: 'rgba(0,0,0,0.8)'
+            }}
+            exit={{
+              backgroundColor: 'rgba(0,0,0,0)'
+            }}
             onClick={handleToggle}
           >
             <motion.img
@@ -88,7 +97,7 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
               className={'rounded-md border'}
               onClick={(e) => e.stopPropagation()}
             />
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

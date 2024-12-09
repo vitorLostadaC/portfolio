@@ -20,7 +20,7 @@ const buttonsAnim: CustomVariant = {
   enter: {
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.6
+      delayChildren: 0.8
     }
   }
 }
@@ -32,7 +32,10 @@ const buttonChild: CustomVariant = {
   },
   enter: {
     opacity: 1,
-    y: 0
+    y: 0,
+    transition: {
+      duration: 0.4
+    }
   }
 }
 
@@ -44,9 +47,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
-            duration: 0.3,
-            type: 'spring',
-            mass: 1
+            duration: 0.3
           }}
           className="text-8xl font-bold"
         >
@@ -57,7 +58,8 @@ export default function Home() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3
+            delay: 0.4,
+            type: 'spring'
           }}
         >
           Pixel Perfect Frontend Developer
