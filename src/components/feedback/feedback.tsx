@@ -7,6 +7,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 import { Textarea } from '../ui/textarea'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { sendTemplate } from './email-template/send-template'
 
 const MessageCircleMotion = motion(MessageCircle)
 
@@ -132,6 +133,15 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
     }
   }
 
+  const handleSendFeedback = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    sendTemplate({
+      feedback: input.feedback,
+      email: input.email
+    })
+  }
+
   return (
     <motion.div
       className="fixed bottom-5 right-5 z-10 h-60 cursor-pointer border bg-background p-2 shadow-lg"
@@ -140,6 +150,7 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
     >
       <motion.form
         className="flex h-full flex-col items-center gap-2"
+        onSubmit={handleSendFeedback}
         {...anim(contentAnim)}
       >
         <Textarea
@@ -148,12 +159,11 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
           value={input.feedback}
           onChange={(e) => setInput({ ...input, feedback: e.target.value })}
         />
-
         <Input
           placeholder="Email (optional)"
           value={input.email}
           onChange={(e) => setInput({ ...input, email: e.target.value })}
-        />
+        />{' '}
         <motion.div className="flex gap-2">
           <Button
             onClick={() => setIsOpen(false)}
@@ -162,7 +172,9 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
           >
             Cancel
           </Button>
-          <Button type="button">Send feedback</Button>
+          <Button type="submit" disabled={!input.feedback}>
+            Send feedback
+          </Button>
         </motion.div>
         {!input.feedback && (
           <motion.span
