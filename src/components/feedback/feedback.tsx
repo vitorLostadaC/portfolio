@@ -2,7 +2,7 @@
 
 import { anim, CustomVariant } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
+import { CheckIcon, Loader2, MessageCircle, XIcon } from 'lucide-react'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { Textarea } from '../ui/textarea'
 import { Input } from '../ui/input'
@@ -10,15 +10,24 @@ import { Button } from '../ui/button'
 import { sendTemplate } from './email-template/send-template'
 
 const MessageCircleMotion = motion(MessageCircle)
+const Loader2Motion = motion(Loader2)
+const ButtonMotion = motion(Button)
 
 export const Feedback = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [alreadyInteracted, setAlreadyInterected] = useState(false)
+  const [userEmail, setUserEmail] = useState('')
 
   return (
     <>
       <AnimatePresence>
-        {isOpen && <FeedbackDialog setIsOpen={setIsOpen} />}
+        {isOpen && (
+          <FeedbackDialog
+            setIsOpen={setIsOpen}
+            userEmail={userEmail}
+            setUserEmail={setUserEmail}
+          />
+        )}
       </AnimatePresence>
       {!isOpen && (
         <FeedbackButton
@@ -99,13 +108,20 @@ export const FeedbackButton = ({
 
 interface FeedbackDialogProps {
   setIsOpen: Dispatch<SetStateAction<boolean>>
+  userEmail: string
+  setUserEmail: Dispatch<SetStateAction<string>>
 }
 
-export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
-  const [input, setInput] = useState({
-    feedback: '',
-    email: ''
-  })
+export const FeedbackDialog = ({
+  setIsOpen,
+  userEmail,
+  setUserEmail
+}: FeedbackDialogProps) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [result, setResult] = useState<'success' | 'error' | null>(null)
+  const [feedback, setFeedback] = useState('')
+
+  // do the screen about error or success and look ease on button, fun with ease animation on container
 
   const containerAnim: CustomVariant = {
     initial: { scale: 0.8 },
@@ -136,10 +152,19 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
   const handleSendFeedback = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    sendTemplate({
-      feedback: input.feedback,
-      email: input.email
+    setIsLoading(true)
+
+    const response = await sendTemplate({
+      feedback,
+      email: userEmail
     })
+
+    setIsLoading(false)
+    setResult(response.success ? 'success' : 'error')
+
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 2000)
   }
 
   return (
@@ -156,33 +181,102 @@ export const FeedbackDialog = ({ setIsOpen }: FeedbackDialogProps) => {
         <Textarea
           className="w-full flex-1 resize-none rounded-md p-2 focus-visible:outline-none"
           autoFocus
-          value={input.feedback}
-          onChange={(e) => setInput({ ...input, feedback: e.target.value })}
+          value={feedback}
+          onChange={(e) => setFeedback(e.target.value)}
         />
         <Input
           placeholder="Email (optional)"
-          value={input.email}
-          onChange={(e) => setInput({ ...input, email: e.target.value })}
+          value={userEmail}
+          type="email"
+          onChange={(e) => setUserEmail(e.target.value)}
         />{' '}
         <motion.div className="flex gap-2">
           <Button
             onClick={() => setIsOpen(false)}
             variant={'outline'}
             type="button"
+            disabled={isLoading}
           >
             Cancel
           </Button>
-          <Button type="submit" disabled={!input.feedback}>
-            Send feedback
-          </Button>
+          <ButtonMotion
+            type="submit"
+            className="relative flex w-36 overflow-hidden"
+            disabled={!feedback || isLoading}
+          >
+            <AnimatePresence mode="popLayout">
+              {!isLoading && (
+                <motion.p exit={{ y: -50, filter: 'blur(40px)' }}>
+                  Send feedback
+                </motion.p>
+              )}
+            </AnimatePresence>
+
+            {isLoading && (
+              <Loader2Motion
+                initial={{ y: 50 }}
+                className="h-4 w-4"
+                animate={{
+                  rotate: 360,
+                  y: 0
+                }}
+                transition={{
+                  rotate: {
+                    duration: 0.6,
+                    ease: 'linear',
+                    repeat: Infinity
+                  }
+                }}
+              />
+            )}
+          </ButtonMotion>
         </motion.div>
-        {!input.feedback && (
+        {!feedback && (
           <motion.span
             layoutId="feedback"
             className="pointer-events-none absolute left-2 top-2 text-muted-foreground"
           >
             Feedback
           </motion.span>
+        )}
+        {result && (
+          <motion.div
+            className="absolute inset-0 flex cursor-default bg-background"
+            initial={{ filter: 'blur(5px)', opacity: 0 }}
+            animate={{ filter: 'blur(0px)', opacity: 1 }}
+          >
+            <motion.div
+              initial={{ y: -40 }}
+              animate={{
+                y: 0
+              }}
+              className="flex w-full flex-col items-center justify-center gap-2"
+            >
+              {result === 'success' ? (
+                <>
+                  <CheckIcon className="size-5 text-emerald-400" />
+
+                  <div className="flex flex-col items-center">
+                    <h6 className="font-medium">Feedback sent</h6>
+                    <p className="text-center text-sm text-muted-foreground">
+                      Thanks for helping me improve
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <XIcon className="size-5 text-red-400" />
+
+                  <div className="flex flex-col items-center">
+                    <h6 className="font-medium">Feedback not sent</h6>
+                    <p className="text-center text-sm text-muted-foreground">
+                      Please try again later
+                    </p>
+                  </div>
+                </>
+              )}
+            </motion.div>
+          </motion.div>
         )}
       </motion.form>
     </motion.div>

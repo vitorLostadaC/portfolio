@@ -25,11 +25,20 @@ export const sendEmail = async ({
     })
 
     if (error) {
-      return new Response(JSON.stringify({ error }), { status: 500 })
+      return {
+        success: false,
+        error: error?.message
+      }
     }
 
-    return new Response(JSON.stringify(data))
+    return {
+      success: true,
+      data
+    }
   } catch (error) {
-    return new Response(JSON.stringify({ error }), { status: 500 })
+    return {
+      success: false,
+      error: (error as Error)?.message
+    }
   }
 }

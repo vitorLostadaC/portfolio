@@ -9,7 +9,7 @@ interface SendTemplateProps {
 }
 
 export const sendTemplate = async ({ feedback, email }: SendTemplateProps) => {
-  await sendEmail({
+  return await sendEmail({
     email: 'vitorlostada@hotmail.com',
     subject: 'Feedback Received',
     template: EmailTemplate({
