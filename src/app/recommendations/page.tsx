@@ -37,7 +37,7 @@ export default function Recommendations() {
   )
 }
 
-export const RecommendationCard = ({
+const RecommendationCard = ({
   recommendation
 }: {
   recommendation: Recommendation
