@@ -4,8 +4,8 @@ import { ProjectStack } from './components/project-stack'
 import { Button } from '@/components/ui/button'
 import { CalendarIcon, GithubIcon, PlayIcon } from 'lucide-react'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
-import { MagicButton } from './components/magic-button'
-import { Title } from './components/title'
+import { MagicButtonView } from '../../../components/ui/magic-button-view'
+import { DynamicTitle } from '../../../components/ui/dynamic-title'
 import { cn } from '@/lib/utils'
 
 const linkButtons = (project: Project) => [
@@ -33,11 +33,11 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <Title project={project} />
+          <DynamicTitle title={project.name} slug={project.slug} />
           <div className="flex items-center gap-2 text-muted-foreground">
             <CalendarIcon className="h-4 w-4" />
             <span className="text-sm">
-              {project.date.toLocaleString('pt-BR', {
+              {project.date.toLocaleString('en-US', {
                 year: 'numeric',
                 month: 'long'
               })}
@@ -53,7 +53,11 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       </CardContent>
       <CardFooter className="mt-auto">
         <div className="flex h-full w-full justify-between gap-2">
-          <MagicButton slug={project.slug} />
+          <MagicButtonView
+            slug={project.slug}
+            nestedPath="projects"
+            label="Project"
+          />
           <div className="flex gap-2">
             {linkButtons(project).map((link) => {
               const isAvailable = link.href
