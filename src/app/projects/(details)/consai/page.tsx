@@ -1,4 +1,4 @@
-import { Hero } from '../components/hero-section'
+import { Hero } from '../_components/hero-section'
 import {
   heroTitle,
   heroDescription,
@@ -13,13 +13,13 @@ import {
   keyFeaturesDescription
 } from './data/project'
 import hero from './assets/hero.webp'
-import { TextSection } from '../components/text-section'
+import { TextSection } from '../_components/text-section'
 import a from './assets/a.png'
 import b from './assets/b.png'
 import c from './assets/c.png'
 import e from './assets/e.png'
 import { cn } from '@/lib/utils'
-import { ModalImage } from '../../component/modal-image'
+import { ModalImage } from '../../components/modal-image'
 
 export default function Consai() {
   return (
