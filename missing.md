@@ -32,7 +32,7 @@
 # Talk card
 
 - [x] create card
-- [ ] create descriptions
+- [x] create descriptions
 
 # Bugs
 

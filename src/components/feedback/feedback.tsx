@@ -144,7 +144,7 @@ export const FeedbackDialog = ({
     },
     exit: {
       opacity: 0,
-      y: 40,
+      y: 60,
       filter: 'blur(40px)'
     }
   }
@@ -169,7 +169,7 @@ export const FeedbackDialog = ({
 
   return (
     <motion.div
-      className="fixed bottom-5 right-5 z-10 h-60 cursor-pointer border bg-background p-2 shadow-lg"
+      className="fixed bottom-5 right-5 z-10 h-60 cursor-pointer overflow-hidden border bg-background p-2 shadow-lg"
       layoutId="container"
       {...anim(containerAnim)}
     >
