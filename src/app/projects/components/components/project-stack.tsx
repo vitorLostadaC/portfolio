@@ -75,7 +75,7 @@ export const ProjectStack = ({ stack }: { stack: Tag[] }) => {
             exit={{
               opacity: 0,
               y: -10,
-              transition: { delay: 0.1 * (stack.length - SHOWED_BADGES + 1) }
+              transition: { delay: 0.1 * (stack.length - SHOWED_BADGES) }
             }}
             key={showMore ? 'show-less' : 'show-more'}
             variant={'link'}
