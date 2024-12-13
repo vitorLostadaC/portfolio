@@ -7,7 +7,7 @@ import Image from 'next/image'
 interface HeroProps {
   title: string
   description: JSX.Element
-  stack: Tag[]
+  stack?: Tag[]
   imageSrc: string
   slug: string
 }
@@ -25,13 +25,15 @@ export const Hero = ({
       <p className="max-w-3xl text-lg text-muted-foreground">
         <RNG show>{description}</RNG>
       </p>
-      <div className="flex max-w-xl flex-wrap gap-2">
-        {stack.map((tag, index) => (
-          <Badge key={tag} variant={index >= 3 ? 'secondary' : 'default'}>
-            {tag}
-          </Badge>
-        ))}
-      </div>
+      {stack && (
+        <div className="flex max-w-xl flex-wrap gap-2">
+          {stack.map((tag, index) => (
+            <Badge key={tag} variant={index >= 3 ? 'secondary' : 'default'}>
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      )}
       <Image
         src={imageSrc}
         alt={title}

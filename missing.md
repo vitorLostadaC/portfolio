@@ -17,8 +17,7 @@
 
 - [x] add click on gallery images
 - [x] add scroll animation to start the drawings
-- [ ] finish to write all projects details
-- [ ] allow carrousel (optional)
+- [x] finish to write all projects details
 
 # Details
 
@@ -28,11 +27,11 @@
 # Recommendations page
 
 - [x] create all datas
-- [ ] create cards with animation
+- [x] create cards with animation
 
 # Talk card
 
-- [ ] create card
+- [x] create card
 - [ ] create descriptions
 
 # Bugs
@@ -42,8 +41,8 @@
 # General
 
 - [ ] responsividade
-- [ ] feedback button
+- [x] feedback button
 - [ ] change name and logo
-- [ ] feedback button
+- [ ] SEO
 
 - Talk card

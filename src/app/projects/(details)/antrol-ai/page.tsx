@@ -1,4 +1,4 @@
-import { Hero } from '../_components/hero-section'
+import { Hero } from '../../../../components/details/hero-section'
 import {
   heroTitle,
   heroDescription,
@@ -11,11 +11,11 @@ import {
   lessonsTitle
 } from './data/project'
 import hero from './assets/hero.webp'
-import { TextSection } from '../_components/text-section'
-import a from './assets/a.png'
-import b from './assets/b.png'
-import c from './assets/c.png'
-import e from './assets/e.png'
+import { TextSection } from '../../../../components/details/text-section'
+import a from './assets/a.webp'
+import b from './assets/b.webp'
+import c from './assets/c.webp'
+import e from './assets/e.webp'
 import { cn } from '@/lib/utils'
 import { ModalImage } from '../../components/modal-image'
 

@@ -1,4 +1,4 @@
-import { Hero } from '../_components/hero-section'
+import { Hero } from '../../../../components/details/hero-section'
 import {
   heroTitle,
   heroDescription,
@@ -13,7 +13,7 @@ import {
   keyFeaturesDescription
 } from './data/project'
 import hero from './assets/hero.webp'
-import { TextSection } from '../_components/text-section'
+import { TextSection } from '../../../../components/details/text-section'
 import a from './assets/a.png'
 import b from './assets/b.png'
 import c from './assets/c.png'
