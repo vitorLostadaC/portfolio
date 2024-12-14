@@ -5,17 +5,17 @@ export const heroTitle = 'Retouch'
 
 export const heroDescription = [
   <>
-    This is the core feature from resleeve, where we have one infinit canvas
-    where you can generate images with AI, and you have the retouch integrated,
-    where you can edit the image like a photoshop, so have layers, masks, draw
-    tools, image processing and more.
+    This is the core feature of Resleeve, an infinite canvas where you can
+    generate images using AI. It also has integrated retouch tools, allowing you
+    to edit images like in Photoshop. You get layers, masks, drawing tools,
+    image processing, and more.
   </>,
   <>
-    At the moment as I am writing this, the main features are completed so now
-    the focus is design and UX so plese dw if you see some thing very ungly
-    haha. This feature was the most cool and harder to build, I really needed
-    learn a lot of things about graphics, image, canvas, webgl, and other
-    stuffs, but make this opened the doors to the canvas world for me.
+    As I'm writing this, the main features are complete, so the focus now is on
+    design and UX. So please don't worry if you see something that looks a bit
+    ugly, haha. This feature was the coolest and hardest to build. I had to
+    learn a lot about graphics, images, canvas, WebGL, and other stuff, but
+    working on this opened the door to the canvas world for me.
   </>
 ]
 
@@ -33,14 +33,14 @@ export const goalTitle = 'Project Purpose and Goal'
 
 export const goalDescription = [
   <>
-    The first version was just a simple retouch, like what we have on openai
-    when you generate some image, but with the time we wanted start to improve
-    the ux to our users, and the CEO had the idea to convert our application in
-    a infinite canvas with generations, the retouch view integrate. Ando to make
-    more sense with the users that we want we needed implement some features
-    like photoshop, layers, masks, draw and other things. So In sumary we wanted
-    gave to the user the best experience with ai and a good ambiente to dont
-    limit you criativity
+    The first version was just a simple retouch tool, similar to what OpenAI
+    offers when you generate an image. But over time, we wanted to improve the
+    user experience. The CEO had the idea to turn our application into an
+    infinite canvas with integrated generations and retouch tools. To make it
+    more useful for our target users, we had to add features like Photoshop
+    layers, masks, drawing tools, and more. In summary, we wanted to give users
+    the best AI experience and a great environment that wouldn't limit their
+    creativity.
   </>
 ]
 
@@ -91,36 +91,36 @@ export const problemsTitle = 'Problems and Thought Process'
 
 export const problemsDescription = [
   <>
-    Here I had all issues that you can imagined hahah, so I will just talk por
-    cima some of them.
+    I ran into all the issues you can imagine, haha. So I'll just briefly go
+    over some of them.
   </>,
   <>
-    How start, when I receive this task I was really perdido, and I had no idea
-    how to build it, I think the incremental implementation really helped to me
-    built it, have not so much content on web about this, because is more niche.
-    I started try understand better what is canvas, and library that we can use
-    to faciliate the development, and start build with Konva.js in baby steps,
-    one thing at a time.
+    Starting out, when I got this task, I was really lost and had no idea how to
+    build it. I think the incremental implementation approach really helped me
+    figure things out. There isn't much content online about this since it's a
+    niche area. I started by trying to understand what a canvas is and exploring
+    libraries that could make development easier. I ended up starting with
+    Konva.js, taking baby steps and building one feature at a time.
   </>,
   <>
-    Structure, when I started to think on build this project, the another think
-    that I had on mind is, how I can build a good structure, that we can have a
-    good maintainance, so what I did was, look on open source projects like
-    excalidraw, to understand how they organize your structure, and I build
-    something similar
+    Structure wise, one of the things I had in mind when planning this project
+    was how to create a maintainable structure. To figure this out, I looked at
+    open-source projects like Excalidraw to see how they organize their
+    structure, and I built something similar.
   </>,
   <>
-    Performance, with the time we started to had a big project with a lot of
-    states,and we start to had issues with performance, so what I did was, use
-    Zustand to manage the states and just render the components that need to be
-    render, and use useMemo and useCallback to optimize the performance. To be
-    hones is not perfect yet, because we was with other priorities, but now how
-    we have the core features completed, our focus will be improve it
+    Performance became a challenge as the project grew bigger and more complex
+    with lots of states. We started having performance issues, so I decided to
+    use Zustand for state management and ensured that only the components
+    needing updates were re-rendered. I also used `useMemo` and `useCallback` to
+    optimize performance. To be honest, it's not perfect yet because we had
+    other priorities, but now that the core features are done, improving
+    performance will be our next focus.
   </>,
   <>
-    And yes I can write more than 4 pages about issues, but I think will be
-    boring, so I will stop here and if you have some question, please contanct
-    me I will be the pleasure to talk about it 🙂
+    Honestly, I could write more than four pages about the issues I faced, but I
+    think that might be boring. If you have any questions, feel free to contact
+    me I'd be happy to talk about it! 🙂
   </>
 ]
 
@@ -128,24 +128,24 @@ export const lessonsTitle = 'Lessons Learned'
 
 export const lessonsDescription = [
   <>
-    This project, really teaches me a lot of things, dont even about technicall
-    programing, but about priority. So I will split this section in two pieces{' '}
+    This project really taught me a lot of things, not just about technical
+    programming, but about priority. So I'll split this section into two parts.
   </>,
   <>
-    First, this project excijate from me a good knolegbe from graphics that I
-    din't had before, so I needed study a lot, I really take all of my day to
-    learn a lot of bases that I will needed I already had this dicipline on the
-    univercity, but not so strong. So now I had a good base about graphics and I
-    continue learning and tring use more canva but in normal things, like the
-    shaders on my hero
+    First, this project required me to have good knowledge of graphics, which I
+    didn't have before. So I needed to study a lot, and I spent most of my day
+    learning the basics I needed. I already had this discipline from university,
+    but not as strong. Now I have a good base about graphics, and I keep
+    learning and trying to use canvas more, even in small things like shaders on
+    my hero.
   </>,
   <>
-    Second, to build this project I needed learn a lot but how resleeve is one
-    startup, I need priority the things, because I was working alone and I
-    needed ship the things at the same time I learn, so what I did is really
-    understand what is the features that I really need crete with a very well
-    engenharia and what I can just put some fita that will not interferir on the
-    project. So understand the time from the enterprise the recourses and direct
-    my studies and priorities on the same direction.
+    Second, to build this project I had to learn a lot, but because Resleeve is
+    a startup, I needed to prioritize things. I was working alone and had to
+    ship stuff while learning at the same time. What I did was understand what
+    features really needed to be built with solid engineering and what could
+    just have a duct tape fix that wouldn't cause problems later. I had to think
+    about the company's timing, resources, and focus my studies and priorities
+    in the same direction.
   </>
 ]

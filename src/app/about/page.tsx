@@ -27,8 +27,8 @@ export default function About() {
   //           last five years.
   //         </p>
   //         <p>
-  //           I’m also finding more time to record videos and create technical
-  //           content, always trying to share everything I’ve learned along the
+  //           I'm also finding more time to record videos and create technical
+  //           content, always trying to share everything I've learned along the
   //           way.
   //         </p>
   //       </div>

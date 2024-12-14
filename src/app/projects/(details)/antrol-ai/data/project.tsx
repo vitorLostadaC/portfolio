@@ -84,7 +84,7 @@ export const problemsTitle = 'Problems and Thought Process'
 
 export const problemsDescription = [
   <>
-    I don’t even know where to start because I really faced several challenges
+    I don't even know where to start because I really faced several challenges
     when starting this project. The first issue I encountered was{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
       authentication in Next.js
