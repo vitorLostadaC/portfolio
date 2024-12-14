@@ -11,11 +11,11 @@ export const heroDescription = [
     image processing, and more.
   </>,
   <>
-    As I'm writing this, the main features are complete, so the focus now is on
-    design and UX. So please don't worry if you see something that looks a bit
-    ugly, haha. This feature was the coolest and hardest to build. I had to
-    learn a lot about graphics, images, canvas, WebGL, and other stuff, but
-    working on this opened the door to the canvas world for me.
+    As I&apos;m writing this, the main features are complete, so the focus now
+    is on design and UX. So please don&apos;t worry if you see something that
+    looks a bit ugly, haha. This feature was the coolest and hardest to build. I
+    had to learn a lot about graphics, images, canvas, WebGL, and other stuff,
+    but working on this opened the door to the canvas world for me.
   </>
 ]
 
@@ -39,8 +39,8 @@ export const goalDescription = [
     infinite canvas with integrated generations and retouch tools. To make it
     more useful for our target users, we had to add features like Photoshop
     layers, masks, drawing tools, and more. In summary, we wanted to give users
-    the best AI experience and a great environment that wouldn't limit their
-    creativity.
+    the best AI experience and a great environment that wouldn&apos;t limit
+    their creativity.
   </>
 ]
 
@@ -81,9 +81,9 @@ export const keyFeaturesDescription = [
   <>Colors, to really change the colors of the imgea</>,
   <>Clipping mask, just one place to you put your logo in the images</>,
   <>
-    And have more, of course have a lot of things under the hood, that are'nt
-    features but is how the things works, but about the features I think that is
-    the most important
+    And have more, of course have a lot of things under the hood, that
+    are&apos;nt features but is how the things works, but about the features I
+    think that is the most important
   </>
 ]
 
@@ -91,16 +91,17 @@ export const problemsTitle = 'Problems and Thought Process'
 
 export const problemsDescription = [
   <>
-    I ran into all the issues you can imagine, haha. So I'll just briefly go
-    over some of them.
+    I ran into all the issues you can imagine, haha. So I&apos;ll just briefly
+    go over some of them.
   </>,
   <>
     Starting out, when I got this task, I was really lost and had no idea how to
     build it. I think the incremental implementation approach really helped me
-    figure things out. There isn't much content online about this since it's a
-    niche area. I started by trying to understand what a canvas is and exploring
-    libraries that could make development easier. I ended up starting with
-    Konva.js, taking baby steps and building one feature at a time.
+    figure things out. There isn&apos;t much content online about this since
+    it&apos;s a niche area. I started by trying to understand what a canvas is
+    and exploring libraries that could make development easier. I ended up
+    starting with Konva.js, taking baby steps and building one feature at a
+    time.
   </>,
   <>
     Structure wise, one of the things I had in mind when planning this project
@@ -113,14 +114,14 @@ export const problemsDescription = [
     with lots of states. We started having performance issues, so I decided to
     use Zustand for state management and ensured that only the components
     needing updates were re-rendered. I also used `useMemo` and `useCallback` to
-    optimize performance. To be honest, it's not perfect yet because we had
+    optimize performance. To be honest, it&apos;s not perfect yet because we had
     other priorities, but now that the core features are done, improving
     performance will be our next focus.
   </>,
   <>
     Honestly, I could write more than four pages about the issues I faced, but I
     think that might be boring. If you have any questions, feel free to contact
-    me I'd be happy to talk about it! 🙂
+    me I&apos;d be happy to talk about it! 🙂
   </>
 ]
 

@@ -8,7 +8,7 @@ export const heroDescription = (
     <RN type="underline" multiline color="var(--highlight-2)">
       first talk at a conference
     </RN>
-    . I don't have issues with anxiety, but I was a bit nervous not about
+    . I don&apos;t have issues with anxiety, but I was a bit nervous not about
     speaking in public, but about{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
       keeping the audience engaged
@@ -34,8 +34,8 @@ export const keyInsigthsDescription = [
     <RN type="box" multiline color="var(--highlight-2)">
       most exciting part
     </RN>{' '}
-    I noticed is that when you're a speaker, other speakers want to talk with
-    you, and other people also want to{' '}
+    I noticed is that when you&apos;re a speaker, other speakers want to talk
+    with you, and other people also want to{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
       talk with you.
     </RN>{' '}
@@ -63,7 +63,7 @@ export const aboutDescription = [
     </RN>{' '}
     works under the hood and how I built it. I explained concepts like relative
     positioning and the canvas view, how movement and scaling work, how to
-    interact with the canvas from the client's perspective, the future of
+    interact with the canvas from the client&apos;s perspective, the future of
     infinite canvas, the UX perspective, and more. But my{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
       main focus
