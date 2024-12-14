@@ -13,7 +13,7 @@ export const Star = () => {
         scale: [0.8, 1.2, 1],
         rotate: 215,
         transition: {
-          duration: 1
+          duration: 0.8
         }
       }}
       whileHover={{
