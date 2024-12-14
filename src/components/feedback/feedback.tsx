@@ -9,9 +9,9 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { sendTemplate } from './email-template/send-template'
 
-const MessageCircleMotion = motion(MessageCircle)
-const Loader2Motion = motion(Loader2)
-const ButtonMotion = motion(Button)
+const MessageCircleMotion = motion.create(MessageCircle)
+const Loader2Motion = motion.create(Loader2)
+const ButtonMotion = motion.create(Button)
 
 export const Feedback = () => {
   const [isOpen, setIsOpen] = useState(false)

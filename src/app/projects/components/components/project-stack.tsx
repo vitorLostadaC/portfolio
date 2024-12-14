@@ -7,8 +7,8 @@ import { Tag } from '../../data/tags'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
 
-const BadgeMotion = motion(Badge)
-const ButtonMotion = motion(Button)
+const BadgeMotion = motion.create(Badge)
+const ButtonMotion = motion.create(Button)
 
 const SHOWED_BADGES = 3
 
@@ -47,7 +47,10 @@ export const ProjectStack = ({ stack }: { stack: Tag[] }) => {
                 exit={{
                   opacity: 0,
                   y: -10,
-                  transition: { delay: (array.length - 1 - index) * 0.1, duration: 0.2 }
+                  transition: {
+                    delay: (array.length - 1 - index) * 0.1,
+                    duration: 0.2
+                  }
                 }}
                 key={tag}
                 variant={'secondary'}

@@ -14,7 +14,7 @@ const Gradient = dynamic(
   }
 )
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const buttonsAnim: CustomVariant = {
   enter: {
