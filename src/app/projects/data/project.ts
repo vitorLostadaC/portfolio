@@ -29,7 +29,7 @@ export const projects: Project[] = [
     date: new Date('2024-05-01'),
     name: 'Antrol AI',
     description:
-      'AI powered platform that creates custom icons for your projects',
+      'An AI-powered platform that creates custom icons for your projects',
     pinned: false,
     image: antrolAi.src,
     tags: antrolAiTags,
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     date: new Date('2024-08-01'),
     name: 'Consai',
     description:
-      'Smart chatbot that helps visitors find information on your website',
+      'A smart chatbot that helps visitors find information on your website',
     pinned: true,
     image: consai.src,
     tags: consaiTags,
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     date: new Date('2024-11-01'),
     name: 'Portfolio',
     description:
-      'My personal portfolio showcasing my experience with a modern stack',
+      'My personal portfolio showcasing my experience with modern technologies',
     pinned: true,
     image: portfolio.src,
     tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     date: new Date('2024-10-01'),
     name: 'Base 64 to Image',
     description:
-      'a raycast extenstion to convert base64 to image and the contrario',
+      'A Raycast extension to convert between base64 and image formats',
     image: base64toImage.src,
     pinned: false,
     tags: [],
