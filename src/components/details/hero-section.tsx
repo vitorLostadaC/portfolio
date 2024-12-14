@@ -1,8 +1,8 @@
 import { Badge } from '@/components/ui/badge'
-import { ProjectTag } from '@/app/projects/data/tags'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
 import { Title } from './title'
 import Image from 'next/image'
+import { ProjectTag } from '@/app/projects/data/projectTag'
 
 interface HeroProps {
   title: string
