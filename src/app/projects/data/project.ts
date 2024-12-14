@@ -1,4 +1,5 @@
 import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
+import { tags as consaiTags } from '../(details)/consai/data/project'
 import antrolAi from '../assets/antrol-ai.webp'
 import consai from '../assets/consai.webp'
 import portfolio from '../assets/portfolio.webp'
@@ -26,7 +27,7 @@ export const projects: Project[] = [
     date: new Date('2024-05-01'),
     name: 'Antrol AI',
     description:
-      'AI-powered platform that creates custom icons for your projects',
+      'AI powered platform that creates custom icons for your projects',
     pinned: false,
     image: antrolAi.src,
     tags: antrolAiTags,
@@ -42,14 +43,7 @@ export const projects: Project[] = [
       'Smart chatbot that helps visitors find information on your website',
     pinned: true,
     image: consai.src,
-    tags: [
-      ProjectTag.NextJs,
-      ProjectTag.Typescript,
-      ProjectTag.NodeJs,
-      ProjectTag.Postgres,
-      ProjectTag.Sentry,
-      ProjectTag.PostHog
-    ],
+    tags: consaiTags,
     demo: 'https://consai.com.br/',
     type: ProjectType.SideProject
   },
@@ -71,7 +65,7 @@ export const projects: Project[] = [
     date: new Date('2024-09-01'),
     name: 'Retouch',
     description:
-      'An infinite canvas with an AI-powered image editor, built for Resleeve as a core feature',
+      'An infinite canvas with an AI powered image editor, built for Resleeve as a core feature',
     pinned: true,
     image: retouch.src,
     tags: [
@@ -80,6 +74,7 @@ export const projects: Project[] = [
       ProjectTag.Motion,
       ProjectTag.PostHog
     ],
-    type: ProjectType.WorkProject
+    type: ProjectType.WorkProject,
+    demo: 'https://resleeve.ai'
   }
 ]
