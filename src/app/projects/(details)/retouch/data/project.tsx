@@ -9,16 +9,33 @@ export const heroDescription = [
     <RN type="box" multiline color="var(--highlight-1)">
       core feature
     </RN>{' '}
-    of Resleeve, an infinite canvas where you can generate images using AI. It
-    also has integrated retouch tools, allowing you to edit images like in
-    Photoshop. You get layers, masks, drawing tools, image processing, and more.
+    of Resleeve, an{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      infinite canvas
+    </RN>{' '}
+    where you can generate images using{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      AI
+    </RN>
+    . It also has integrated retouch tools, allowing you to edit images like in
+    <RN type="underline" multiline color="var(--highlight-2)">
+      Photoshop
+    </RN>
+    . You get layers, masks, drawing tools, image processing, and more.
   </>,
   <>
     As I&apos;m writing this, the main features are complete, so the focus now
-    is on design and UX. So please don&apos;t worry if you see something that
-    looks a bit ugly, haha. This feature was the coolest and hardest to build. I
-    had to learn a lot about graphics, images, canvas, WebGL, and other stuff,
-    but working on this opened the door to the canvas world for me.
+    is on{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      design and UX
+    </RN>
+    . So please don&apos;t worry if you see something that looks a bit ugly,
+    haha. This feature was the{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      coolest and hardest
+    </RN>{' '}
+    to build. I had to learn a lot about graphics, images, canvas, WebGL, and
+    other stuff, but working on this opened the door to the canvas world for me.
   </>
 ]
 
@@ -36,14 +53,27 @@ export const goalTitle = 'Project Purpose and Goal'
 
 export const goalDescription = [
   <>
-    The first version was just a simple retouch tool, similar to what OpenAI
-    offers when you generate an image. But over time, we wanted to improve the
-    user experience. The CEO had the idea to turn our application into an
-    infinite canvas with integrated generations and retouch tools. To make it
-    more useful for our target users, we had to add features like Photoshop
-    layers, masks, drawing tools, and more. In summary, we wanted to give users
-    the best AI experience and a great environment that wouldn&apos;t limit
-    their creativity.
+    The{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      first version
+    </RN>{' '}
+    was just a{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      simple retouch tool
+    </RN>{' '}
+    , similar to what OpenAI offers when you generate an image. But over time,
+    we wanted to improve the user experience. The CEO had the idea to turn our
+    application into an{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      infinite canvas
+    </RN>{' '}
+    with integrated generations and retouch tools. To make it more useful for
+    our target users, we had to add features like Photoshop layers, masks,
+    drawing tools, and more. In summary, we wanted to give users the{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      best AI experience
+    </RN>{' '}
+    and a great environment that wouldn&apos;t limit their creativity.
   </>
 ]
 
@@ -51,42 +81,83 @@ export const keyFeaturesTitle = 'Key Features'
 
 export const keyFeaturesDescription = [
   <>
-    This project had a lot of features based on ai, but how this is my portfolio
-    and the objective is show my skills, I will just talk about features that I
-    implemented
+    This project has a lot of AI-based features, but since this is my portfolio
+    and the goal is to show my skills, I&apos;ll only talk about the features
+    that{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      I implemented
+    </RN>{' '}
+    on front-end.
   </>,
   <>
-    Starting on infinite canvas, you can generate images with loading state, and
-    organize your images in several frames
+    Starting with the{' '}
+    <RN type="box" multiline color="var(--highlight-2)">
+      infinite canvas
+    </RN>
+    : you can generate images with a loading state and organize them into
+    several frames.
   </>,
 
   <>
-    you can access the frame with retouch view (double click on the frame),
-    there you have a lot of things like
+    You can access a frame using the retouch view (double-click on the frame).
+    There, you have a lot of tools, like:
   </>,
   <>
-    Draw tools that you really change the pixel from the image, and you can
-    eraser some piece too
+    <RN type="underline" multiline color="var(--highlight-2)">
+      Draw tools
+    </RN>
+    : These let you directly edit the pixels of the image, and you can erase
+    parts of it too.
   </>,
   <>
-    Selection tools, where you can select a part of the image and create a mask
-    or just sent to ai
+    <RN type="underline" multiline color="var(--highlight-1)">
+      Selection tools
+    </RN>
+    : These allow you to select a part of the image to create a mask or send it
+    to AI.
   </>,
   <>
-    Layers, where you can works with several images at the same time, and do
-    some operations like merge, duplicate, etc
+    <RN type="underline" multiline color="var(--highlight-1)">
+      Layers
+    </RN>
+    : Work with multiple images at the same time and perform operations like
+    merge, duplicate, etc.
   </>,
   <>
-    Masks, where you can create a mask from some piece of your image, we use it
-    to isolate the area that we want the ai changes
+    <RN type="underline" multiline color="var(--highlight-2)">
+      Masks
+    </RN>
+    : Create masks for specific parts of your image to isolate areas you want
+    the AI to modify.
   </>,
-  <>undo redo system</>,
-  <>Colors, to really change the colors of the imgea</>,
-  <>Clipping mask, just one place to you put your logo in the images</>,
   <>
-    And have more, of course have a lot of things under the hood, that
-    aren&apos;t features but is how the things works, but about the features I
-    think that is the most important
+    <RN type="underline" multiline color="var(--highlight-2)">
+      Undo/Redo system
+    </RN>
+    : This allows you to undo and redo your actions.
+  </>,
+  <>
+    <RN type="underline" multiline color="var(--highlight-1)">
+      Colors
+    </RN>
+    : Adjust and change the colors of the image.
+  </>,
+  <>
+    <RN type="underline" multiline color="var(--highlight-2)">
+      Clipping mask
+    </RN>
+    : A tool to easily place your logo on images.
+  </>,
+  <>
+    And there&apos;s more! Of course, there&apos;s a lot happening{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      under the hood
+    </RN>{' '}
+    that isn&apos;t directly visible as features but is crucial for making{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      everything work
+    </RN>
+    . These are the main features I believe are the most important to highlight.
   </>
 ]
 
@@ -94,37 +165,68 @@ export const problemsTitle = 'Problems and Thought Process'
 
 export const problemsDescription = [
   <>
-    I ran into all the issues you can imagine, haha. So I&apos;ll just briefly
-    go over some of them.
+    I ran into{' '}
+    <RN type="circle" multiline color="var(--highlight-1)">
+      all
+    </RN>{' '}
+    the issues you can imagine, haha. So I&apos;ll just briefly go over some of
+    them.
   </>,
   <>
-    Starting out, when I got this task, I was really lost and had no idea how to
-    build it. I think the incremental implementation approach really helped me
-    figure things out. There isn&apos;t much content online about this since
-    it&apos;s a niche area. I started by trying to understand what a canvas is
-    and exploring libraries that could make development easier. I ended up
-    starting with Konva.js, taking baby steps and building one feature at a
-    time.
+    Starting out, when I got this task, I was{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      really lost
+    </RN>{' '}
+    and had no idea how to build it. I think the incremental implementation
+    approach really helped me figure things out. There isn&apos;t much content
+    online about this since it&apos;s a niche area. I started by trying to
+    understand what a canvas is, the{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      concepts under the hood
+    </RN>
+    , and exploring libraries that could make development easier. I ended up
+    starting with Konva.js, taking{' '}
+    <RN type="box" multiline color="var(--highlight-2)">
+      baby steps
+    </RN>{' '}
+    and building one feature at a time.
   </>,
   <>
     Structure wise, one of the things I had in mind when planning this project
-    was how to create a maintainable structure. To figure this out, I looked at
-    open-source projects like Excalidraw to see how they organize their
-    structure, and I built something similar.
+    was how to create a{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      maintainable structure
+    </RN>
+    . To figure this out, I looked at{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      open-source projects
+    </RN>{' '}
+    like Excalidraw to see how they organize their structure, and I built
+    something similar.
   </>,
   <>
     Performance became a challenge as the project grew bigger and more complex
-    with lots of states. We started having performance issues, so I decided to
-    use Zustand for state management and ensured that only the components
-    needing updates were re-rendered. I also used `useMemo` and `useCallback` to
-    optimize performance. To be honest, it&apos;s not perfect yet because we had
-    other priorities, but now that the core features are done, improving
-    performance will be our next focus.
+    with{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      lots of states
+    </RN>
+    . We started having performance issues, so I decided to use{' '}
+    <RN type="box" multiline color="var(--highlight-1)">
+      Zustand
+    </RN>{' '}
+    for state management and ensured that only the components needing updates
+    were re-rendered. I also used `useMemo` and `useCallback` to optimize
+    performance. To be honest, it&apos;s not perfect yet because we had other
+    priorities, but now that the core features are done, improving performance
+    will be our next focus.
   </>,
   <>
     Honestly, I could write more than four pages about the issues I faced, but I
-    think that might be boring. If you have any questions, feel free to contact
-    me I&apos;d be happy to talk about it! 🙂
+    think that might be boring. If you have any questions, feel free to{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      contact me
+    </RN>{' '}
+    I&apos;d be happy to talk about it! 🙂
   </>
 ]
 
@@ -132,25 +234,54 @@ export const lessonsTitle = 'Lessons Learned'
 
 export const lessonsDescription = [
   <>
-    This project really taught me a lot of things, not just about technical
-    programming, but about priority. So I&apos;ll split this section into two
-    parts.
+    This project really taught me a lot of things,{' '}
+    <RN type="box" multiline color="var(--highlight-1)">
+      not just
+    </RN>{' '}
+    about{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      technical
+    </RN>{' '}
+    programming, but about{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      priority
+    </RN>
+    . So I&apos;ll split this section into two parts.
   </>,
   <>
     First, this project required me to have good knowledge of graphics, which I
-    didn&apos;t have before. So I needed to study a lot, and I spent most of my
-    day learning the basics I needed. I already had this discipline from
-    university, but not as strong. Now I have a good base about graphics, and I
-    keep learning and trying to use canvas more, even in small things like
-    shaders on my hero.
+    didn&apos;t have before. So I needed to{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      study a lot
+    </RN>
+    , and I spent most of my day learning the basics I needed. I already had
+    this discipline from university, but not as strong. Now I have a{' '}
+    <RN type="circle" multiline color="var(--highlight-1)">
+      good base
+    </RN>{' '}
+    about graphics, and I keep learning and trying to use canvas more, even
+    casually like with the shaders on my hero or for 3d things.
   </>,
   <>
     Second, to build this project I had to learn a lot, but because Resleeve is
-    a startup, I needed to prioritize things. I was working alone and had to
-    ship stuff while learning at the same time. What I did was understand what
-    features really needed to be built with solid engineering and what could
-    just have a duct tape fix that wouldn&apos;t cause problems later. I had to
-    think about the company&apos;s timing, resources, and focus my studies and
-    priorities in the same direction.
+    a startup, I needed to prioritize things. I was working alone and had to{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      ship stuff while learning
+    </RN>{' '}
+    at the same time. What I did was understand what features really needed to
+    be built with{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      solid engineering
+    </RN>{' '}
+    and what could just have a{' '}
+    <RN type="underline" multiline color="var(--highlight-2)">
+      duct tape fix
+    </RN>{' '}
+    that wouldn&apos;t cause problems later. I had to think about the
+    company&apos;s timing, resources, and focus my studies and priorities in the{' '}
+    <RN type="box" multiline color="var(--highlight-1)">
+      same direction
+    </RN>
+    .
   </>
 ]
