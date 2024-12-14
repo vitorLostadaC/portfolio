@@ -47,7 +47,7 @@ export const ProjectStack = ({ stack }: { stack: Tag[] }) => {
                 exit={{
                   opacity: 0,
                   y: -10,
-                  transition: { delay: (array.length - 1 - index) * 0.1 }
+                  transition: { delay: (array.length - 1 - index) * 0.1, duration: 0.2 }
                 }}
                 key={tag}
                 variant={'secondary'}

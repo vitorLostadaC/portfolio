@@ -10,12 +10,16 @@ export const heroDescription = (
       fullstack
     </RN>{' '}
     Next.js application that allows users to create icons for their projects. I
-    built this project from scratch to learn more about{' '}
+    built this project{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
-      Next.js, Stripe, CDN,GPT API, and S3.
+      from scratch
     </RN>{' '}
-    I really enjoyed working on this, because I really tried to implement the
-    robust application for production, with self-hosting and all.
+    to learn more about Next.js, Stripe, CDN, GPT API, and S3. I really enjoyed
+    working on this, because I really tried to implement the{' '}
+    <RN type="underline" multiline color="var(--highlight-1)">
+      robust application
+    </RN>{' '}
+    for production, with self-hosting and all.
   </>
 )
 
@@ -55,9 +59,9 @@ export const goalDescription = [
   </>,
 
   <>
-    Event is a SaaS project, but{' '}
+    While this is a SaaS project,{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
-      the main purpose was not monetization.
+      monetization was not the main goal.
     </RN>{' '}
     I don&apos;t even have any ads or affiliate links in this project. It was
     simply an{' '}
