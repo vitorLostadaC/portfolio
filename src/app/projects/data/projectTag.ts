@@ -1,6 +1,7 @@
 export const enum ProjectTag {
   FullStack = 'Full Stack',
   NextJs = 'Next.js',
+  React = 'React',
   Typescript = 'Typescript',
   NodeJs = 'Node.js',
   Sentry = 'Sentry',

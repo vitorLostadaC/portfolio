@@ -9,13 +9,19 @@ interface TextProps {
   title: string
   description: JSX.Element | string | (JSX.Element | string)[]
   side?: 'left' | 'right' | 'center'
+  marginView?: string
 }
 
-export const TextSection = ({ title, description, side }: TextProps) => {
+export const TextSection = ({
+  title,
+  description,
+  side,
+  marginView: margin
+}: TextProps) => {
   const divRef = useRef<HTMLLIElement | HTMLParagraphElement | null>(null)
   const inView = useInView(divRef, {
     once: true,
-    margin: '-150px'
+    margin: margin ?? ('-150px' as any) // framer-motion MarginType are not exported
   })
 
   return (
