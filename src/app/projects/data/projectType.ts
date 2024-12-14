@@ -1,6 +1,6 @@
 export enum ProjectType {
   PersonalProject = 'Personal Project',
-  WorkProject = 'Work Project',
+  Job = 'Job',
   OpenSource = 'Open Source',
   SideProject = 'Side Project'
 }

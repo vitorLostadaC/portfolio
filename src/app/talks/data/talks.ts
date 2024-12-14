@@ -7,6 +7,7 @@ export type Talk = {
   date: Date
   image: string
   site: string
+  conference: string
 }
 
 export const talks: Talk[] = [
@@ -17,6 +18,7 @@ export const talks: Talk[] = [
       'I talk about how an infinite canvas works, starting from the math behind it, to understand and recreate one with interactions',
     date: new Date('2024-11-16'),
     image: frontInFloripa.src,
-    site: 'https://frontin.floripa.br/'
+    site: 'https://frontin.floripa.br/',
+    conference: 'Front in Floripa'
   }
 ]

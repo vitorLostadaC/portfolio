@@ -7,6 +7,7 @@ import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { MagicButtonView } from '../../../components/ui/magic-button-view'
 import { DynamicTitle } from '../../../components/ui/dynamic-title'
 import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
 
 const linkButtons = (project: Project) => [
   {
@@ -32,8 +33,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
+        <DynamicTitle title={project.name} slug={project.slug} />
         <div className="flex items-center justify-between">
-          <DynamicTitle title={project.name} slug={project.slug} />
+          <Badge variant={project.type}>{project.type}</Badge>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CalendarIcon className="h-4 w-4" />
             <span className="text-sm">
@@ -59,19 +61,19 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             label="Project"
           />
           <div className="flex gap-2">
-            {linkButtons(project).map((link) => {
-              const isAvailable = link.href
-
-              return (
-                <SimpleTooltip content={link.label} key={link.label}>
-                  <Button variant="outline" size="icon" disabled={!isAvailable}>
-                    <a href={link.href} target="_blank">
-                      <link.icon className={cn('size-4', {})} />
-                    </a>
-                  </Button>
-                </SimpleTooltip>
-              )
-            })}
+            {linkButtons(project)
+              .filter((link) => link.href)
+              .map((link) => {
+                return (
+                  <SimpleTooltip content={link.label} key={link.label}>
+                    <Button variant="outline" size="icon">
+                      <a href={link.href} target="_blank">
+                        <link.icon className={cn('size-4', {})} />
+                      </a>
+                    </Button>
+                  </SimpleTooltip>
+                )
+              })}
           </div>
         </div>
       </CardFooter>

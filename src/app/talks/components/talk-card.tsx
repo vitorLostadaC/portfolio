@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { cn } from '@/lib/utils'
 import { MagicButtonView } from '@/components/ui/magic-button-view'
+import { Badge } from '@/components/ui/badge'
 
 export const TalkCard = ({ talk }: { talk: Talk }) => {
   return (
@@ -18,12 +19,13 @@ export const TalkCard = ({ talk }: { talk: Talk }) => {
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        <div className="flex items-center justify-between">
-          <DynamicTitle
-            className="text-base"
-            title={talk.title}
-            slug={talk.slug}
-          />
+        <DynamicTitle
+          className="text-base"
+          title={talk.title}
+          slug={talk.slug}
+        />
+        <div className="flex items-center justify-between gap-4">
+          <Badge variant="outline">{talk.conference}</Badge>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CalendarIcon className="h-4 w-4" />
             <span className="text-sm">

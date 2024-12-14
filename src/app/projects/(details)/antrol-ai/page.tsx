@@ -15,7 +15,7 @@ import { TextSection } from '../../../../components/details/text-section'
 import a from './assets/a.webp'
 import b from './assets/b.webp'
 import c from './assets/c.webp'
-import e from './assets/e.webp'
+import d from './assets/d.webp'
 import { cn } from '@/lib/utils'
 import { ModalImage } from '../../components/modal-image'
 
@@ -32,7 +32,7 @@ export default function AntrolAi() {
       <TextSection title={goalTitle} description={goalDescription} />
 
       <div className="grid grid-cols-2 items-center gap-6">
-        {[a, e, b].map((item, index) => (
+        {[a, b, c].map((item, index) => (
           <ModalImage
             key={index}
             image={item}
@@ -50,7 +50,7 @@ export default function AntrolAi() {
       />
       <div className="flex flex-col gap-2">
         <ModalImage
-          image={c}
+          image={d}
           alt={`antrol-ai-4`}
           className={cn('rounded-md border')}
         />

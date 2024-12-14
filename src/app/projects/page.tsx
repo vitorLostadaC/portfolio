@@ -4,8 +4,8 @@ import { projects } from './data/project'
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col gap-4">
-      <h1 className="flex items-center gap-2 text-2xl font-bold">
+    <div className="flex flex-col gap-10">
+      <h1 className="flex items-center gap-2 text-3xl font-bold">
         Best Projects <Star />
       </h1>
 

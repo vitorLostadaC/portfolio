@@ -74,7 +74,7 @@ export const projects: Project[] = [
       ProjectTag.Motion,
       ProjectTag.PostHog
     ],
-    type: ProjectType.WorkProject,
+    type: ProjectType.Job,
     demo: 'https://resleeve.ai'
   }
 ]
