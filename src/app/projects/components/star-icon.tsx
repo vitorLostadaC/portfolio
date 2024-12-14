@@ -30,7 +30,7 @@ export const Star = () => {
           duration: 0.2
         }
       }}
-      className="cursor-pointer select-none fill-yellow-600 text-yellow-600 focus:outline-none focus:ring-0"
+      className="cursor-pointer select-none fill-yellow-500 text-yellow-500 focus:outline-none focus:ring-0"
     />
   )
 }
