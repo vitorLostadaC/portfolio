@@ -5,10 +5,13 @@ export const heroTitle = 'Retouch'
 
 export const heroDescription = [
   <>
-    This is the core feature of Resleeve, an infinite canvas where you can
-    generate images using AI. It also has integrated retouch tools, allowing you
-    to edit images like in Photoshop. You get layers, masks, drawing tools,
-    image processing, and more.
+    This is the{' '}
+    <RN type="box" multiline color="var(--highlight-1)">
+      core feature
+    </RN>{' '}
+    of Resleeve, an infinite canvas where you can generate images using AI. It
+    also has integrated retouch tools, allowing you to edit images like in
+    Photoshop. You get layers, masks, drawing tools, image processing, and more.
   </>,
   <>
     As I&apos;m writing this, the main features are complete, so the focus now
@@ -82,7 +85,7 @@ export const keyFeaturesDescription = [
   <>Clipping mask, just one place to you put your logo in the images</>,
   <>
     And have more, of course have a lot of things under the hood, that
-    are&apos;nt features but is how the things works, but about the features I
+    aren&apos;t features but is how the things works, but about the features I
     think that is the most important
   </>
 ]
@@ -130,23 +133,24 @@ export const lessonsTitle = 'Lessons Learned'
 export const lessonsDescription = [
   <>
     This project really taught me a lot of things, not just about technical
-    programming, but about priority. So I'll split this section into two parts.
+    programming, but about priority. So I&apos;ll split this section into two
+    parts.
   </>,
   <>
     First, this project required me to have good knowledge of graphics, which I
-    didn't have before. So I needed to study a lot, and I spent most of my day
-    learning the basics I needed. I already had this discipline from university,
-    but not as strong. Now I have a good base about graphics, and I keep
-    learning and trying to use canvas more, even in small things like shaders on
-    my hero.
+    didn&apos;t have before. So I needed to study a lot, and I spent most of my
+    day learning the basics I needed. I already had this discipline from
+    university, but not as strong. Now I have a good base about graphics, and I
+    keep learning and trying to use canvas more, even in small things like
+    shaders on my hero.
   </>,
   <>
     Second, to build this project I had to learn a lot, but because Resleeve is
     a startup, I needed to prioritize things. I was working alone and had to
     ship stuff while learning at the same time. What I did was understand what
     features really needed to be built with solid engineering and what could
-    just have a duct tape fix that wouldn't cause problems later. I had to think
-    about the company's timing, resources, and focus my studies and priorities
-    in the same direction.
+    just have a duct tape fix that wouldn&apos;t cause problems later. I had to
+    think about the company&apos;s timing, resources, and focus my studies and
+    priorities in the same direction.
   </>
 ]
