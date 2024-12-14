@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { useInView } from 'framer-motion'
+import { useInView, UseInViewOptions } from 'framer-motion'
 import { useRef } from 'react'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
 
@@ -9,7 +9,7 @@ interface TextProps {
   title: string
   description: JSX.Element | string | (JSX.Element | string)[]
   side?: 'left' | 'right' | 'center'
-  marginView?: string
+  marginView?: UseInViewOptions['margin']
 }
 
 export const TextSection = ({
@@ -21,7 +21,7 @@ export const TextSection = ({
   const divRef = useRef<HTMLLIElement | HTMLParagraphElement | null>(null)
   const inView = useInView(divRef, {
     once: true,
-    margin: margin ?? ('-150px' as any) // framer-motion MarginType are not exported
+    margin: margin ?? '-150px'
   })
 
   return (
