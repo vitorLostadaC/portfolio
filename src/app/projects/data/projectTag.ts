@@ -1,4 +1,4 @@
-export const enum Tag {
+export const enum ProjectTag {
   FullStack = 'Full Stack',
   NextJs = 'Next.js',
   Typescript = 'Typescript',

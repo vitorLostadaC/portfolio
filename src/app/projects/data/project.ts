@@ -2,7 +2,9 @@ import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
 import antrolAi from '../assets/antrol-ai.webp'
 import consai from '../assets/consai.webp'
 import portfolio from '../assets/portfolio.webp'
-import { Tag } from './tags'
+import retouch from '../assets/retouch.webp'
+import { ProjectTag } from './projectTag'
+import { ProjectType } from './projectType'
 
 export interface Project {
   slug: string
@@ -14,7 +16,8 @@ export interface Project {
   demo?: string
   sourceCode?: string
   image: string
-  tags: Tag[]
+  type: ProjectType
+  tags: ProjectTag[]
 }
 
 export const projects: Project[] = [
@@ -28,7 +31,8 @@ export const projects: Project[] = [
     image: antrolAi.src,
     tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
-    sourceCode: 'https://github.com/vitorLostadaC/antrol-generate'
+    sourceCode: 'https://github.com/vitorLostadaC/antrol-generate',
+    type: ProjectType.PersonalProject
   },
   {
     slug: 'consai',
@@ -39,14 +43,15 @@ export const projects: Project[] = [
     pinned: true,
     image: consai.src,
     tags: [
-      Tag.NextJs,
-      Tag.Typescript,
-      Tag.NodeJs,
-      Tag.Postgres,
-      Tag.Sentry,
-      Tag.PostHog
+      ProjectTag.NextJs,
+      ProjectTag.Typescript,
+      ProjectTag.NodeJs,
+      ProjectTag.Postgres,
+      ProjectTag.Sentry,
+      ProjectTag.PostHog
     ],
-    demo: 'https://consai.com.br/'
+    demo: 'https://consai.com.br/',
+    type: ProjectType.SideProject
   },
   {
     slug: 'portfolio',
@@ -56,9 +61,10 @@ export const projects: Project[] = [
       'My personal portfolio showcasing my experience with a modern stack',
     pinned: true,
     image: portfolio.src,
-    tags: [Tag.NextJs, Tag.Typescript, Tag.PostHog],
+    tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
     demo: 'https://vitorlostada.com',
-    sourceCode: 'https://github.com/vitorLostadaC/portfolio'
+    sourceCode: 'https://github.com/vitorLostadaC/portfolio',
+    type: ProjectType.PersonalProject
   },
   {
     slug: 'retouch',
@@ -67,7 +73,13 @@ export const projects: Project[] = [
     description:
       'An infinite canvas with an AI-powered image editor, built for Resleeve as a core feature',
     pinned: true,
-    image: antrolAi.src,
-    tags: [Tag.NextJs, Tag.Typescript, Tag.Motion, Tag.PostHog]
+    image: retouch.src,
+    tags: [
+      ProjectTag.NextJs,
+      ProjectTag.Typescript,
+      ProjectTag.Motion,
+      ProjectTag.PostHog
+    ],
+    type: ProjectType.WorkProject
   }
 ]

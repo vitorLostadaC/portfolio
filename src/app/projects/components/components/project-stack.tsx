@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Tag } from '../../data/tags'
+import { ProjectTag } from '../../data/projectTag'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
 
@@ -12,7 +12,7 @@ const ButtonMotion = motion.create(Button)
 
 const SHOWED_BADGES = 3
 
-export const ProjectStack = ({ stack }: { stack: Tag[] }) => {
+export const ProjectStack = ({ stack }: { stack: ProjectTag[] }) => {
   const [showMore, setShowMore] = useState(false)
   const alreadyInteracted = useRef(false)
 

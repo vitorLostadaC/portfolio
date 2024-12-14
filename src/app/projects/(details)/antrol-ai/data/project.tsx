@@ -1,4 +1,4 @@
-import { Tag } from '@/app/projects/data/tags'
+import { ProjectTag } from '@/app/projects/data/projectTag'
 import { RoughNotation as RN } from 'react-rough-notation'
 
 export const heroTitle = 'Antrol AI'
@@ -23,21 +23,21 @@ export const heroDescription = (
   </>
 )
 
-export const tags: Tag[] = [
-  Tag.NextJs,
-  Tag.NodeJs,
-  Tag.Typescript,
-  Tag.Stripe,
-  Tag.S3,
-  Tag.OpenAI,
-  Tag.Postgres,
-  Tag.Prisma,
-  Tag.Motion,
-  Tag.Tailwind,
-  Tag.Sentry,
-  Tag.PostHog,
-  Tag.i18n,
-  Tag.CDN
+export const tags: ProjectTag[] = [
+  ProjectTag.NextJs,
+  ProjectTag.NodeJs,
+  ProjectTag.Typescript,
+  ProjectTag.Stripe,
+  ProjectTag.S3,
+  ProjectTag.OpenAI,
+  ProjectTag.Postgres,
+  ProjectTag.Prisma,
+  ProjectTag.Motion,
+  ProjectTag.Tailwind,
+  ProjectTag.Sentry,
+  ProjectTag.PostHog,
+  ProjectTag.i18n,
+  ProjectTag.CDN
 ]
 
 export const goalTitle = 'Project Purpose and Goal'

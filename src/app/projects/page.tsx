@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       </div>
 
       <h1 className="text-2xl font-bold">All Projects</h1>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {projects
           .filter((project) => !project.pinned)
           .sort((a, b) => b.date.getTime() - a.date.getTime())
