@@ -14,5 +14,7 @@ export const enum ProjectTag {
   Motion = 'Motion',
   Tailwind = 'Tailwind',
   CDN = 'CDN',
-  i18n = 'i18n'
+  i18n = 'i18n',
+  Zustand = 'Zustand',
+  Konva = 'Konva'
 }

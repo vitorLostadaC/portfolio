@@ -6,7 +6,7 @@ import { ProjectTag } from '@/app/projects/data/projectTag'
 
 interface HeroProps {
   title: string
-  description: JSX.Element
+  description: JSX.Element | JSX.Element[]
   stack?: ProjectTag[]
   imageSrc: string
   slug: string
@@ -19,12 +19,21 @@ export const Hero = ({
   imageSrc,
   slug
 }: HeroProps) => {
+  const descriptionElements = Array.isArray(description)
+    ? description
+    : [description]
   return (
     <div className="flex flex-col gap-10">
       <Title title={title} slug={slug} />
-      <p className="max-w-3xl text-lg text-muted-foreground">
-        <RNG show>{description}</RNG>
-      </p>
+      <RNG show>
+        <div className="flex flex-col gap-4">
+          {descriptionElements.map((element, index) => (
+            <p className="max-w-3xl text-lg text-muted-foreground" key={index}>
+              {element}
+            </p>
+          ))}
+        </div>
+      </RNG>
       {stack && (
         <div className="flex max-w-xl flex-wrap gap-2">
           {stack.map((tag, index) => (

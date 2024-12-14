@@ -1,71 +1,46 @@
 import { ProjectTag } from '@/app/projects/data/projectTag'
 import { RoughNotation as RN } from 'react-rough-notation'
 
-export const heroTitle = 'Consai'
+export const heroTitle = 'Retouch'
 
-export const heroDescription = (
+export const heroDescription = [
   <>
-    Consai is my{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      first SaaS
-    </RN>{' '}
-    application, made to{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      try and earn money
-    </RN>
-    , and this changed all our decisions. I built it with my friend{' '}
-    <a className="underline" href="https://www.linkedin.com/in/leomconti/">
-      Leo
-    </a>
-    . We found an opportunity with AI and decided to create this SaaS to try
-    selling it to other businesses. We needed to{' '}
-    <RN type="box" multiline color="var(--highlight-1)">
-      ship fast
-    </RN>{' '}
-    to get our space in the market. I built the whole application (backend and
-    frontend), and he worked on the AI API. We had many challenges and had to
-    stop thinking{' '}
-    <RN type="strike-through" multiline color="var(--highlight-2)">
-      like developers
-    </RN>{' '}
-    and start thinking like{' '}
-    <RN type="circle" multiline color="var(--highlight-2)">
-      CEOs
-    </RN>
-    .
+    This is the core feature from resleeve, where we have one infinit canvas
+    where you can generate images with AI, and you have the retouch integrated,
+    where you can edit the image like a photoshop, so have layers, masks, draw
+    tools, image processing and more.
+  </>,
+  <>
+    At the moment as I am writing this, the main features are completed so now
+    the focus is design and UX so plese dw if you see some thing very ungly
+    haha. This feature was the most cool and harder to build, I really needed
+    learn a lot of things about graphics, image, canvas, webgl, and other
+    stuffs, but make this opened the doors to the canvas world for me.
   </>
-)
+]
 
 export const tags: ProjectTag[] = [
   ProjectTag.NextJs,
-  ProjectTag.NodeJs,
   ProjectTag.Typescript,
-  ProjectTag.Stripe,
-  ProjectTag.Postgres,
-  ProjectTag.Drizzle,
   ProjectTag.Tailwind,
   ProjectTag.Sentry,
   ProjectTag.PostHog,
-  ProjectTag.CDN
+  ProjectTag.Zustand,
+  ProjectTag.Konva
 ]
 
 export const goalTitle = 'Project Purpose and Goal'
 
 export const goalDescription = [
   <>
-    Our main goal was try get{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      max money as possible
-    </RN>
-    , and build a{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      strong
-    </RN>{' '}
-    alternative for the solutions already existents, we wanted understand more
-    about{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      market, sales, marketing, and how to grow a product
-    </RN>
+    The first version was just a simple retouch, like what we have on openai
+    when you generate some image, but with the time we wanted start to improve
+    the ux to our users, and the CEO had the idea to convert our application in
+    a infinite canvas with generations, the retouch view integrate. Ando to make
+    more sense with the users that we want we needed implement some features
+    like photoshop, layers, masks, draw and other things. So In sumary we wanted
+    gave to the user the best experience with ai and a good ambiente to dont
+    limit you criativity
   </>
 ]
 
@@ -73,53 +48,42 @@ export const keyFeaturesTitle = 'Key Features'
 
 export const keyFeaturesDescription = [
   <>
-    Created a{' '}
-    <RN type="box" multiline color="var(--highlight-1)">
-      strong SaaS template
-    </RN>{' '}
-    with authentication, Stripe integration for plan limits, organization and
-    project management, team invites, a basic landing page/app structure , and a{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      fast script
-    </RN>{' '}
-    to configure a{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      new project structure
-    </RN>{' '}
-    in literally{' '}
-    <RN type="circle" multiline color="var(--highlight-2)">
-      2 seconds
-    </RN>
-    .
+    This project had a lot of features based on ai, but how this is my portfolio
+    and the objective is show my skills, I will just talk about features that I
+    implemented
   </>,
   <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      An embed
-    </RN>{' '}
-    that can be added to your website,{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      fully customized
-    </RN>{' '}
-    to match your brand.
+    Starting on infinite canvas, you can generate images with loading state, and
+    organize your images in several frames
+  </>,
+
+  <>
+    you can access the frame with retouch view (double click on the frame),
+    there you have a lot of things like
   </>,
   <>
-    A{' '}
-    <RN type="box" multiline color="var(--highlight-2 )">
-      real-time chat
-    </RN>{' '}
-    where clients can pause the AI and take over the conversation themselves.
+    Draw tools that you really change the pixel from the image, and you can
+    eraser some piece too
   </>,
   <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      A playground page
-    </RN>{' '}
-    to test the agents.
+    Selection tools, where you can select a part of the image and create a mask
+    or just sent to ai
   </>,
   <>
-    <RN type="circle" multiline color="var(--highlight-2)">
-      Beautiful animations
-    </RN>{' '}
-    to make the experience smoother 🤩.
+    Layers, where you can works with several images at the same time, and do
+    some operations like merge, duplicate, etc
+  </>,
+  <>
+    Masks, where you can create a mask from some piece of your image, we use it
+    to isolate the area that we want the ai changes
+  </>,
+  <>undo redo system</>,
+  <>Colors, to really change the colors of the imgea</>,
+  <>Clipping mask, just one place to you put your logo in the images</>,
+  <>
+    And have more, of course have a lot of things under the hood, that are'nt
+    features but is how the things works, but about the features I think that is
+    the most important
   </>
 ]
 
@@ -127,33 +91,36 @@ export const problemsTitle = 'Problems and Thought Process'
 
 export const problemsDescription = [
   <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      We built the project like it was for a big company with a mature product
-    </RN>
-    . At the start, I used best practices and design patterns, but the project
-    took too long to build and ship. Because of that, we couldn&apos;t test if
-    the product was useful. The first thing I changed was moving to a{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      simple MVC
-    </RN>
-    approach, which made everything faster to build.
+    Here I had all issues that you can imagined hahah, so I will just talk por
+    cima some of them.
   </>,
   <>
-    Since we were working in our free time, we hired an intern. I planned their
-    tasks so they could work on things like improving the UI and making it
-    responsive. Meanwhile, I focused on the{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      core logic and main features
-    </RN>{' '}
-    of the product.
+    How start, when I receive this task I was really perdido, and I had no idea
+    how to build it, I think the incremental implementation really helped to me
+    built it, have not so much content on web about this, because is more niche.
+    I started try understand better what is canvas, and library that we can use
+    to faciliate the development, and start build with Konva.js in baby steps,
+    one thing at a time.
   </>,
   <>
-    Another challenge was{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      figuring out how to sell the product
-    </RN>
-    . We started by initiating affiliate partnerships to have others sell the
-    product for us, which helped us connect with key market players.
+    Structure, when I started to think on build this project, the another think
+    that I had on mind is, how I can build a good structure, that we can have a
+    good maintainance, so what I did was, look on open source projects like
+    excalidraw, to understand how they organize your structure, and I build
+    something similar
+  </>,
+  <>
+    Performance, with the time we started to had a big project with a lot of
+    states,and we start to had issues with performance, so what I did was, use
+    Zustand to manage the states and just render the components that need to be
+    render, and use useMemo and useCallback to optimize the performance. To be
+    hones is not perfect yet, because we was with other priorities, but now how
+    we have the core features completed, our focus will be improve it
+  </>,
+  <>
+    And yes I can write more than 4 pages about issues, but I think will be
+    boring, so I will stop here and if you have some question, please contanct
+    me I will be the pleasure to talk about it 🙂
   </>
 ]
 
@@ -161,50 +128,24 @@ export const lessonsTitle = 'Lessons Learned'
 
 export const lessonsDescription = [
   <>
-    I learned a lot about{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      business
-    </RN>{' '}
-    because the final user doesn&apos;t even know which technology we are using.
-    One big takeaway for me is{' '}
-    <RN type="box" multiline color="var(--highlight-2)">
-      understanding the timing of a product
-    </RN>
-    . If it&apos;s an MVP to test an idea, some things are{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      more critical than perfection
-    </RN>{' '}
-    in coding.
+    This project, really teaches me a lot of things, dont even about technicall
+    programing, but about priority. So I will split this section in two pieces{' '}
   </>,
   <>
-    When you{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      mentor people
-    </RN>
-    , their performance{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      doesn&apos;t just double
-    </RN>{' '}
-    it{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      grows exponentially
-    </RN>
-    . Over time with your guidance, the people you hire start to understand how
-    to get things done, and they become{' '}
-    <RN type="box" multiline color="var(--highlight-2)">
-      self-driven leaders
-    </RN>{' '}
-    who complete tasks and even create their own goals.
+    First, this project excijate from me a good knolegbe from graphics that I
+    din't had before, so I needed study a lot, I really take all of my day to
+    learn a lot of bases that I will needed I already had this dicipline on the
+    univercity, but not so strong. So now I had a good base about graphics and I
+    continue learning and tring use more canva but in normal things, like the
+    shaders on my hero
   </>,
   <>
-    Focus on{' '}
-    <RN type="underline" multiline color="var(--highlight-2)">
-      strategic priorities
-    </RN>{' '}
-    that can{' '}
-    <RN type="underline" multiline color="var(--highlight-1)">
-      significantly grow the product
-    </RN>
-    , rather than just following personal interests or whims.
+    Second, to build this project I needed learn a lot but how resleeve is one
+    startup, I need priority the things, because I was working alone and I
+    needed ship the things at the same time I learn, so what I did is really
+    understand what is the features that I really need crete with a very well
+    engenharia and what I can just put some fita that will not interferir on the
+    project. So understand the time from the enterprise the recourses and direct
+    my studies and priorities on the same direction.
   </>
 ]

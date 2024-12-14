@@ -1,9 +1,11 @@
 import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
 import { tags as consaiTags } from '../(details)/consai/data/project'
+import { tags as retouchTags } from '../(details)/retouch/data/project'
 import antrolAi from '../assets/antrol-ai.webp'
 import consai from '../assets/consai.webp'
 import portfolio from '../assets/portfolio.webp'
 import retouch from '../assets/retouch.webp'
+import base64toImage from '../assets/base64-to-image.webp'
 import { ProjectTag } from './projectTag'
 import { ProjectType } from './projectType'
 
@@ -68,13 +70,21 @@ export const projects: Project[] = [
       'An infinite canvas with an AI powered image editor, built for Resleeve as a core feature',
     pinned: true,
     image: retouch.src,
-    tags: [
-      ProjectTag.NextJs,
-      ProjectTag.Typescript,
-      ProjectTag.Motion,
-      ProjectTag.PostHog
-    ],
+    tags: retouchTags,
     type: ProjectType.Job,
     demo: 'https://resleeve.ai'
+  },
+  {
+    slug: 'base64-to-image',
+    date: new Date('2024-10-01'),
+    name: 'Base 64 to Image',
+    description:
+      'a raycast extenstion to convert base64 to image and the contrario',
+    image: base64toImage.src,
+    pinned: false,
+    tags: [],
+    type: ProjectType.OpenSource,
+    demo: 'https://www.raycast.com/vitorlostada/image-base64',
+    sourceCode: 'https://github.com/vitorLostadaC/image-base64'
   }
 ]

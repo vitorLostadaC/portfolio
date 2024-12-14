@@ -30,7 +30,7 @@ export default function Consai() {
         description={heroDescription}
         stack={tags}
         imageSrc={hero.src}
-        slug="consai"
+        slug="retouch"
       />
       <TextSection title={goalTitle} description={goalDescription} />
       <TextSection
