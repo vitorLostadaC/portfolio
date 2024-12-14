@@ -1,13 +1,14 @@
 # Home page
 
-- [ ] add a style on texts
-- [ ] add a sand simulation algorithm
-- [ ] add a 3d model of the app (maybe with glass effect)
+- [x] add a style on texts
+- [x] add a 3d model of the app (maybe with glass effect)
 
 # Project page
 
-- [ ] add retouch feature
+- [x] add retouch feature
 - [x] add date to projects
+- [ ] portifolio page
+- [ ] fix design from retouch clip mask
 
 # About page
 
@@ -44,5 +45,4 @@
 - [x] feedback button
 - [ ] change name and logo
 - [ ] SEO
-
-- Talk card
+- [ ] contact page
