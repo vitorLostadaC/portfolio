@@ -9,7 +9,11 @@ export const heroDescription = [
     <RN type="box" multiline color="var(--highlight-1)">
       core feature
     </RN>{' '}
-    of Resleeve, an{' '}
+    of{' '}
+    <a className="underline" href="https://resleeve.ai" target="_blank">
+      Resleeve
+    </a>
+    , an{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
       infinite canvas
     </RN>{' '}
@@ -263,8 +267,11 @@ export const lessonsDescription = [
     casually like with the shaders on my hero or for 3d things.
   </>,
   <>
-    Second, to build this project I had to learn a lot, but because Resleeve is
-    a startup, I needed to prioritize things. I was working alone and had to{' '}
+    Second, to build this project I had to learn a lot, but because{' '}
+    <a className="underline" href="https://resleeve.ai" target="_blank">
+      Resleeve
+    </a>{' '}
+    is a startup, I needed to prioritize things. I was working alone and had to{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
       ship stuff while learning
     </RN>{' '}

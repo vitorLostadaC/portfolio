@@ -14,7 +14,11 @@ export const heroDescription = (
       try and earn money
     </RN>
     , and this changed all our decisions. I built it with my friend{' '}
-    <a className="underline" href="https://www.linkedin.com/in/leomconti/">
+    <a
+      className="underline"
+      href="https://www.linkedin.com/in/leomconti/"
+      target="_blank"
+    >
       Leo
     </a>
     . We found an opportunity with AI and decided to create this SaaS to try
