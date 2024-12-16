@@ -16,6 +16,7 @@ export default function Portfolio() {
         <li>Responsive</li>
         <li>Analytics</li>
         <li>Some micro animations and improvements</li>
+        <li>Adjusts on design</li>
         <li>SEO</li>
       </ul>
     </div>
