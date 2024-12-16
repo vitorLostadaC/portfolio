@@ -47,3 +47,5 @@
 - [ ] SEO
 - [ ] contact page
 - [ ] posthog
+
+- [ ] books in the future
