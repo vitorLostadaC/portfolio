@@ -46,3 +46,4 @@
 - [ ] change name and logo
 - [ ] SEO
 - [ ] contact page
+- [ ] posthog
