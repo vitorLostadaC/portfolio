@@ -159,10 +159,10 @@ export const FeedbackDialog = ({
       email: userEmail
     })
 
-    setIsLoading(false)
     setResult(response.success ? 'success' : 'error')
 
     setTimeout(() => {
+      setIsLoading(false)
       setIsOpen(false)
     }, 2000)
   }
