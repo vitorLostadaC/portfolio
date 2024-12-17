@@ -1,11 +1,13 @@
+import vitor from './assets/VitorLostada.webp'
+
 export default function About() {
   return (
     <div className="flex gap-16">
-      <div className="flex flex-col gap-4">
+      <div className="flex w-full flex-col gap-4">
         <h1 className="text-3xl font-bold">Hello, I&apos;m Vitor! 👋</h1>
 
-        <div className="flex gap-8">
-          <div className="flex max-w-xl flex-col gap-4 text-justify text-lg text-muted-foreground">
+        <div className="flex w-full justify-between gap-24">
+          <div className="flex max-w-4xl flex-col gap-4 text-justify text-lg text-muted-foreground">
             <p>
               I&apos;m Vitor, a software engineer from Brazil. I&apos;m really
               passionate with ui and build beautiful things with great
@@ -33,10 +35,19 @@ export default function About() {
 
             <p>
               I always teaching what I learn, these is one of the reasons to me
-              created a youtube channel, I really like to teach and share my
-              knowledge with others and as a bonus I can learn more when I teach
+              created a{' '}
+              <a
+                href="https://www.youtube.com/@vitorlostada"
+                target="_blank"
+                className="underline"
+              >
+                youtube channel
+              </a>
+              , I really like to teach and share my knowledge with others and as
+              a bonus I can learn more when I teach
             </p>
           </div>
+          <img src={vitor.src} alt="Vitor" className="w-96 rounded-xl border" />
         </div>
       </div>
     </div>
