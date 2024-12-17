@@ -1,4 +1,7 @@
+'use client'
+
 import vitor from './assets/VitorLostada.webp'
+import { motion } from 'framer-motion'
 
 export default function About() {
   return (
@@ -10,12 +13,25 @@ export default function About() {
           <div className="flex max-w-4xl flex-col gap-4 text-justify text-lg text-muted-foreground">
             <p>
               I&apos;m Vitor, a software engineer from Brazil. I&apos;m really
-              passionate with ui and build beautiful things with great
-              animations 😍, I start my journey as the most developers, I wanted
-              to create games, but as you&apos;re looking at this portfolio,
-              maybe some things have changed, haha. I still love games, and
-              probably will create games one day, but just on the veeery distant
-              future.
+              passionate with UI and build beautiful things with{' '}
+              {Array.from('great animations').map((char, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block"
+                  initial={{ y: 0 }}
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1
+                  }}
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+              😍, I started my journey like most developers, I wanted to create
+              games, but as you&apos;re looking at this portfolio, maybe some
+              things have changed, haha. I still love games, and probably will
+              create games one day, but just on the veeery distant future.
             </p>
 
             <p>
