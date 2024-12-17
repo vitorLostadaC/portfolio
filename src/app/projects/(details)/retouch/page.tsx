@@ -32,7 +32,11 @@ export default function Consai() {
         imageSrc={hero.src}
         slug="retouch"
       />
-      <TextSection title={goalTitle} description={goalDescription} />
+      <TextSection
+        side="center"
+        title={goalTitle}
+        description={goalDescription}
+      />
       <TextSection
         title={keyFeaturesTitle}
         description={keyFeaturesDescription}
