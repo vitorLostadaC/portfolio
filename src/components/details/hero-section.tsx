@@ -21,6 +21,7 @@ export const Hero = ({ title, description, stack, image, slug }: HeroProps) => {
   const descriptionElements = Array.isArray(description)
     ? description
     : [description]
+
   return (
     <div className="flex flex-col gap-10">
       <Title title={title} slug={slug} />

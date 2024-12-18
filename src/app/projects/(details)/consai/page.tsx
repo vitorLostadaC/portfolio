@@ -32,7 +32,11 @@ export default function Consai() {
         image={hero}
         slug="consai"
       />
-      <TextSection title={goalTitle} description={goalDescription} />
+      <TextSection
+        side="center"
+        title={goalTitle}
+        description={goalDescription}
+      />
       <TextSection
         title={keyFeaturesTitle}
         description={keyFeaturesDescription}

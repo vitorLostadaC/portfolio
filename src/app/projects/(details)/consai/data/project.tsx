@@ -3,7 +3,7 @@ import { RoughNotation as RN } from 'react-rough-notation'
 
 export const heroTitle = 'Consai'
 
-export const heroDescription = (
+export const heroDescription = [
   <>
     Consai is my{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
@@ -38,7 +38,7 @@ export const heroDescription = (
     </RN>
     .
   </>
-)
+]
 
 export const tags: ProjectTag[] = [
   ProjectTag.NextJs,

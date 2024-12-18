@@ -3,7 +3,7 @@ import { RoughNotation as RN } from 'react-rough-notation'
 
 export const heroTitle = 'Antrol AI'
 
-export const heroDescription = (
+export const heroDescription = [
   <>
     Antrol AI is a{' '}
     <RN type="circle" multiline color="var(--highlight-1)">
@@ -21,7 +21,7 @@ export const heroDescription = (
     </RN>{' '}
     for production, with self-hosting and all.
   </>
-)
+]
 
 export const tags: ProjectTag[] = [
   ProjectTag.NextJs,

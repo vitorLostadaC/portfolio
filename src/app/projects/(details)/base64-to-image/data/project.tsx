@@ -3,7 +3,7 @@ import { RoughNotation as RN } from 'react-rough-notation'
 
 export const heroTitle = 'Base 64 to Image'
 
-export const heroDescription = (
+export const heroDescription = [
   <>
     This is a{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
@@ -16,7 +16,7 @@ export const heroDescription = (
     </RN>
     .
   </>
-)
+]
 
 export const tags: ProjectTag[] = [ProjectTag.React, ProjectTag.Typescript]
 
