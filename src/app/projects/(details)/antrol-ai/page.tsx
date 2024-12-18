@@ -26,7 +26,7 @@ export default function AntrolAi() {
         title={heroTitle}
         description={heroDescription}
         stack={tags}
-        imageSrc={hero.src}
+        image={hero}
         slug="antrol-ai"
       />
       <TextSection title={goalTitle} description={goalDescription} />

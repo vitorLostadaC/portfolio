@@ -1,17 +1,24 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { Slot } from '@radix-ui/react-slot'
 import { AnimatePresence, motion } from 'framer-motion'
 import { StaticImageData } from 'next/image'
 import { useEffect, useState } from 'react'
 
-interface ModalImageProps {
-  image: StaticImageData
+type ModalImageProps = {
   alt: string
   className?: string
+  image: StaticImageData
+  children?: React.ReactNode
 }
 
-export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
+export const ModalImage = ({
+  image,
+  alt,
+  className,
+  children
+}: ModalImageProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [windowSize, setWindowSize] = useState<{
     width: number
@@ -64,13 +71,17 @@ export const ModalImage = ({ image, alt, className }: ModalImageProps) => {
 
   return (
     <>
-      <motion.img
-        src={image.src}
-        alt={alt}
-        className={cn(className, 'cursor-pointer')}
-        layoutId={alt}
-        onClick={handleToggle}
-      />
+      {children ? (
+        <Slot onClick={handleToggle}>{children}</Slot>
+      ) : (
+        <motion.img
+          src={image.src}
+          alt={alt}
+          className={cn(className, 'cursor-pointer')}
+          layoutId={alt}
+          onClick={handleToggle}
+        />
+      )}
       <AnimatePresence>
         {isOpen && (
           <motion.div

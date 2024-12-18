@@ -23,7 +23,7 @@ export default function AoCanvasInfinitoEAlem() {
       <Hero
         title={heroTitle}
         description={heroDescription}
-        imageSrc={hero.src}
+        image={hero}
         slug="ao-canvas-infinito-e-alem"
       />
       <TextSection

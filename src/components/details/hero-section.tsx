@@ -1,24 +1,23 @@
+'use client'
 import { Badge } from '@/components/ui/badge'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
 import { Title } from './title'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { ProjectTag } from '@/app/projects/data/projectTag'
+import { ModalImage } from '@/app/projects/components/modal-image'
+import { motion } from 'framer-motion'
 
 interface HeroProps {
   title: string
   description: JSX.Element | JSX.Element[]
   stack?: ProjectTag[]
-  imageSrc: string
+  image: StaticImageData
   slug: string
 }
 
-export const Hero = ({
-  title,
-  description,
-  stack,
-  imageSrc,
-  slug
-}: HeroProps) => {
+const ImageMotion = motion.create(Image)
+
+export const Hero = ({ title, description, stack, image, slug }: HeroProps) => {
   const descriptionElements = Array.isArray(description)
     ? description
     : [description]
@@ -43,14 +42,17 @@ export const Hero = ({
           ))}
         </div>
       )}
-      <Image
-        src={imageSrc}
-        alt={title}
-        width={1500}
-        height={1000}
-        className="mt-5 h-full w-full rounded-md border shadow-2xl"
-        priority
-      />
+      <ModalImage image={image} alt={title}>
+        <ImageMotion
+          src={image}
+          alt={title}
+          width={1500}
+          height={1000}
+          className="mt-5 h-full w-full cursor-pointer rounded-md border shadow-2xl"
+          priority
+          layoutId={title}
+        />
+      </ModalImage>
     </div>
   )
 }
