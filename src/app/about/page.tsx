@@ -42,16 +42,18 @@ export default function About() {
     <div className="flex flex-col gap-16">
       <Hero />
 
-      <div className="flex w-full flex-col gap-4">
-        <h1 className="text-3xl font-bold">Rules of my life</h1>
-        <p className="max-w-2xl text-muted-foreground">
-          Some phrases that summarize my way of thinking and approaching life.
-          These are principles I&pos;ve developed over time through experience
-          and reflection, helping me stay focused and productive in both
-          personal and professional endeavors.
-        </p>
+      <div className="flex w-full flex-col gap-8">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-bold">Rules of my life</h1>
+          <p className="max-w-2xl text-muted-foreground">
+            Some phrases that summarize my way of thinking and approaching life.
+            These are principles I&pos;ve developed over time through experience
+            and reflection, helping me stay focused and productive in both
+            personal and professional endeavors.
+          </p>
+        </div>
         <div className="flex gap-4">
-          <div className="flex max-w-2xl flex-col gap-4">
+          <div className="flex max-w-2xl flex-col gap-8">
             {rules.map((rule) => (
               <div key={rule.title}>
                 <blockquote className="my-4 border-l-4 border-muted-foreground pl-4 text-lg font-semibold italic">
