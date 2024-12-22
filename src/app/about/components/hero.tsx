@@ -162,7 +162,7 @@ export const Hero = () => {
         <motion.path
           d="M12 6v4"
           animate={{
-            y: [0, 5, 0],
+            y: [0, 3, 0],
             opacity: [1, 0, 1, 0],
             transition: {
               y: {
