@@ -1,4 +1,4 @@
-import statue from '../assets/statue.png'
+import statue from '../assets/statue.webp'
 import { motion } from 'framer-motion'
 
 const rules: {
@@ -34,6 +34,8 @@ const rules: {
   }
 ]
 
+//! add here a sticky animation
+
 export const Rules = () => {
   return (
     <div className="flex w-full flex-col gap-8">
@@ -41,7 +43,7 @@ export const Rules = () => {
         <h1 className="text-3xl font-bold">Rules of my life</h1>
         <p className="max-w-2xl text-muted-foreground">
           Some phrases that summarize my way of thinking and approaching life.
-          These are principles I&pos;ve developed over time through experience
+          These are principles I&apos;ve developed over time through experience
           and reflection, helping me stay focused and productive in both
           personal and professional endeavors.
         </p>
