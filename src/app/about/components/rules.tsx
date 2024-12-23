@@ -62,25 +62,12 @@ export const Rules = () => {
         <motion.img
           src={statue.src}
           alt="statue"
-          className="h-full w-1/2"
-          initial={{ opacity: 0, scale: 0.8, rotateX: 45, perspective: 1000 }}
+          className="sticky top-40 h-full w-1/2"
+          initial={{ opacity: 0, scale: 0.8, rotateX: 45 }}
           animate={{ opacity: 1, scale: 1, rotateX: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}
           style={{
-            transformStyle: 'preserve-3d',
             filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.1))'
-          }}
-          onMouseMove={(e) => {
-            const { currentTarget, clientX, clientY } = e
-            const { left, top, width, height } =
-              currentTarget.getBoundingClientRect()
-            const x = (clientX - left - width / 2) / 25
-            const y = (clientY - top - height / 2) / 25
-            currentTarget.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg) scale(1)`
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform =
-              'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)'
           }}
         />
       </div>

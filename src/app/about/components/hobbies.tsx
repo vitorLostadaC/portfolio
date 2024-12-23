@@ -13,7 +13,7 @@ export const Hobbies = () => {
         <div className="flex max-w-2xl flex-col gap-4 text-lg text-muted-foreground">
           <p>
             In my childhood, I spent a lot of time playing games, and my
-            favorites were Minecraft, CS:GO, and League of Legends. Each of them
+            favorites were Minecraft, csgo, and League of Legends. Each of them
             was my most played game at different stages of my life. Nowadays, I
             don&apos;t have many skills for competitive games every time I try
             to play, I get crushed by kids hahaha.
