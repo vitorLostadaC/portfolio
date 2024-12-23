@@ -11,13 +11,13 @@ export default function Portfolio() {
         <li className="line-through">Write and hightlight all Talks</li>
         <li className="line-through">Recommendations Page</li>
         <li className="line-through">Feedback Button</li>
-        <li>About Page (in progress)</li>
-        <li>Contact Page</li>
+        <li className="line-through">About Page </li>
+        <li>Contact Page [in progress]</li>
         <li>Responsive</li>
         <li>Analytics</li>
         <li>Some micro animations and improvements</li>
-        <li>Adjusts on design</li>
         <li>SEO</li>
+        <li>Adjusts on design (redesign somethings)</li>
       </ul>
     </div>
   )
