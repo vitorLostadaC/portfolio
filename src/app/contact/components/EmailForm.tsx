@@ -17,15 +17,13 @@ import { Button } from '@/components/ui/button'
 
 export const EmailForm = () => {
   const formSchema = z.object({
-    name: z.string().min(2),
     email: z.string().email(),
-    message: z.string().min(2)
+    message: z.string().min(1)
   })
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
       email: '',
       message: ''
     }
@@ -43,26 +41,12 @@ export const EmailForm = () => {
       >
         <FormField
           control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn" {...field} />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="your@email.com" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -77,7 +61,7 @@ export const EmailForm = () => {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="shadcn"
+                  placeholder="Hi Vitor, lets talk about..."
                   className="min-h-60 resize-none"
                   {...field}
                 />
@@ -87,7 +71,11 @@ export const EmailForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={!form.formState.isValid || form.formState.isSubmitting}
+        >
           Send
         </Button>
       </form>

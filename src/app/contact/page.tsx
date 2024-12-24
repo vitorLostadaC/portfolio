@@ -1,4 +1,4 @@
-import { MailIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon } from 'lucide-react'
 import { EmailForm } from './components/EmailForm'
 
 export default function Contact() {
@@ -8,9 +8,9 @@ export default function Contact() {
         <p className="font-semibold text-muted-foreground">Contact me </p>
         <h1 className="text-4xl font-bold">Get in touch</h1>
         <p className="max-w-lg text-muted-foreground">
-          Write a welcoming sentence that encourage contact. Include your
-          response time commitment and highlight your team&apos;s readiness to
-          help.
+          Hey! Feel free to contact me through the form or by email. I&apos;m
+          always open to discussing new opportunities, collaborations, or just
+          having a friendly chat about software development.
         </p>
 
         <a
@@ -19,6 +19,10 @@ export default function Contact() {
         >
           <MailIcon strokeWidth={1.5} />
           <p className="group-hover:underline">vitorlostada@hotmail.com</p>
+        </a>
+        <a href="tel:+5548996241180" className="group flex items-center gap-2">
+          <PhoneIcon strokeWidth={1.5} />
+          <p className="group-hover:underline">+55 48 9 9624-1180</p>
         </a>
       </div>
       <div className="flex-1">
