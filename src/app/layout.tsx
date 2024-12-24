@@ -29,8 +29,10 @@ export default function RootLayout({
         <Analytics />
         <Feedback />
 
-        <Header />
-        <main className="py-16">{children}</main>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1 py-16">{children}</main>
+        </div>
       </body>
     </html>
   )
