@@ -22,7 +22,7 @@
 
 # Details
 
-- [ ] add a console.log to talk with guys
+- [x] add a console.log to talk with guys
 - [ ] add a algorithm to start destroy anything (sand simulation)
 
 # Recommendations page

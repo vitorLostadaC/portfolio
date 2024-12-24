@@ -40,6 +40,10 @@ const buttonChild: CustomVariant = {
 }
 
 export default function Home() {
+  console.log(
+    'Hello! This is my portfolio. If you want to discuss anything I implemented, please send me an email at vitorlostada@hotmail.com'
+  )
+
   return (
     <>
       <motion.div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 space-y-4 text-center">
