@@ -57,7 +57,7 @@ export const FeedbackButton = ({
       y: alreadyInteracted ? 0 : 20,
       scale: alreadyInteracted ? 1 : 0.8
     },
-    enter: {
+    animate: {
       opacity: 1,
       y: 0,
       scale: 1,
@@ -73,7 +73,7 @@ export const FeedbackButton = ({
     initial: {
       width: alreadyInteracted ? '68px' : 0
     },
-    enter: {
+    animate: {
       width: '68px',
 
       transition: {
@@ -125,7 +125,7 @@ export const FeedbackDialog = ({
 
   const containerAnim: CustomVariant = {
     initial: { scale: 0.8 },
-    enter: {
+    animate: {
       scale: 1,
       borderRadius: '14px'
     }
@@ -137,7 +137,7 @@ export const FeedbackDialog = ({
       opacity: 0,
       filter: 'blur(40px)'
     },
-    enter: {
+    animate: {
       y: 0,
       opacity: 1,
       filter: 'blur(0px)'

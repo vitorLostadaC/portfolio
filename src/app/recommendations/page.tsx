@@ -6,7 +6,7 @@ import { anim, CustomVariant } from '@/lib/utils'
 
 export default function Recommendations() {
   const recommendationsAnim: CustomVariant = {
-    enter: {
+    animate: {
       transition: {
         staggerChildren: 0.3
       }
@@ -47,7 +47,7 @@ const RecommendationCard = ({
       opacity: 0,
       y: -20
     },
-    enter: {
+    animate: {
       opacity: 1,
       y: 0,
       transition: {

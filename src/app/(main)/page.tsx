@@ -17,7 +17,7 @@ const Gradient = dynamic(
 const MotionLink = motion.create(Link)
 
 const buttonsAnim: CustomVariant = {
-  enter: {
+  animate: {
     transition: {
       staggerChildren: 0.2,
       delayChildren: 0.8
@@ -30,7 +30,7 @@ const buttonChild: CustomVariant = {
     opacity: 0,
     y: 50
   },
-  enter: {
+  animate: {
     opacity: 1,
     y: 0,
     transition: {

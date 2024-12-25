@@ -14,8 +14,21 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import { CheckIcon, Loader2Icon } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { anim } from '@/lib/utils'
+import { useState } from 'react'
+
+const textAnim = anim({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20, scale: 0.95 }
+})
 
 export const EmailForm = () => {
+  const [formState, setFormState] = useState<'send' | 'loading' | 'sent'>(
+    'send'
+  )
   const formSchema = z.object({
     email: z.string().email(),
     message: z.string().min(1)
@@ -29,8 +42,15 @@ export const EmailForm = () => {
     }
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setFormState('loading')
+    await new Promise((resolve) => setTimeout(resolve, 3000))
     console.log(values)
+    setFormState('sent')
+    setTimeout(() => {
+      setFormState('send')
+      form.reset()
+    }, 2000)
   }
 
   return (
@@ -74,9 +94,29 @@ export const EmailForm = () => {
         <Button
           type="submit"
           className="w-full"
-          disabled={!form.formState.isValid || form.formState.isSubmitting}
+          disabled={!form.formState.isValid || formState === 'loading'}
         >
-          Send
+          <AnimatePresence mode="popLayout">
+            {formState === 'send' && (
+              <motion.span key="send" {...textAnim}>
+                Send
+              </motion.span>
+            )}
+            {formState === 'loading' && (
+              <motion.span key="loading" {...textAnim}>
+                <Loader2Icon className="h-4 w-4 animate-spin" />
+              </motion.span>
+            )}
+            {formState === 'sent' && (
+              <motion.span
+                className="flex items-center gap-2"
+                key="sent"
+                {...textAnim}
+              >
+                Message sent <CheckIcon className="size-4 text-green-700" />
+              </motion.span>
+            )}
+          </AnimatePresence>
         </Button>
       </form>
     </Form>

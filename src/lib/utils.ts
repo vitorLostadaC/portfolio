@@ -8,14 +8,14 @@ export function cn(...inputs: ClassValue[]) {
 
 export type CustomVariant = {
   initial?: Variant
-  enter: Variant
+  animate: Variant
   exit?: Variant
 }
 
 export function anim(variants: CustomVariant) {
   return {
     initial: 'initial',
-    animate: 'enter',
+    animate: 'animate',
     exit: 'exit',
     variants
   }
