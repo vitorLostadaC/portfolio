@@ -1,7 +1,7 @@
 'use server'
 
 import { sendEmail } from '@/actions/sendEmail'
-import { EmailTemplate } from '../email-template/email-template'
+import { ContactEmailTemplate } from '../contact-email-template/contact-email-template'
 
 interface SendTemplateProps {
   message: string
@@ -12,7 +12,7 @@ export const sendTemplate = async ({ message, email }: SendTemplateProps) => {
   return await sendEmail({
     email: 'vitorlostada@hotmail.com',
     subject: 'Contact Received',
-    template: EmailTemplate({
+    template: ContactEmailTemplate({
       message,
       email
     })

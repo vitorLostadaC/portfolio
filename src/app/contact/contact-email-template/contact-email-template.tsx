@@ -5,7 +5,10 @@ interface EmailTemplateProps {
   message?: string
 }
 
-export const EmailTemplate = ({ email, message }: EmailTemplateProps) => (
+export const ContactEmailTemplate = ({
+  email,
+  message
+}: EmailTemplateProps) => (
   <div
     style={{
       padding: '20px',

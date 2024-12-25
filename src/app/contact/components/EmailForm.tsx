@@ -18,7 +18,7 @@ import { CheckIcon, Loader2Icon } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { anim } from '@/lib/utils'
 import { useState } from 'react'
-import { sendTemplate } from '../actions/send-template'
+import { sendTemplate as sendEmail } from '../actions/send-contact-email'
 
 const textAnim = anim({
   initial: { opacity: 0, y: 20 },
@@ -45,7 +45,7 @@ export const EmailForm = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setFormState('loading')
-    await sendTemplate({
+    await sendEmail({
       message: values.message,
       email: values.email
     })
