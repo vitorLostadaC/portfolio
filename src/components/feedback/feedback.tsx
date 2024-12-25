@@ -7,7 +7,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 import { Textarea } from '../ui/textarea'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
-import { sendTemplate } from './email-template/send-template'
+import { sendTemplate } from './actions/send-template'
 
 const MessageCircleMotion = motion.create(MessageCircle)
 const Loader2Motion = motion.create(Loader2)

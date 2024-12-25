@@ -1,7 +1,7 @@
 'use server'
 
 import { sendEmail } from '@/actions/sendEmail'
-import { EmailTemplate } from './email-template'
+import { EmailTemplate } from '../email-template/email-template'
 
 interface SendTemplateProps {
   feedback: string
