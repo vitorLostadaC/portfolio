@@ -50,6 +50,7 @@ export default function Consai() {
             image={item}
             alt={`antrol-ai-${index}`}
             className={cn('rounded-md border')}
+            slug="consai"
           />
         ))}
       </div>
@@ -63,6 +64,7 @@ export default function Consai() {
           image={e}
           alt={`antrol-ai-4`}
           className={cn('rounded-md border')}
+          slug="consai"
         />
       </div>
       <TextSection

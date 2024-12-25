@@ -13,5 +13,3 @@ export default function About() {
     </div>
   )
 }
-
-//! fazer o grid, imagem minh malhado, minha da e minha mulher, kingdown two crowns, foto jogando beatch tenning, running,

@@ -1,5 +1,5 @@
-import { MailIcon, PhoneIcon } from 'lucide-react'
-import { EmailForm } from './components/EmailForm'
+import { EmailForm } from './components/email-form'
+import { ContactsLinks } from './components/contacts-links'
 
 export default function Contact() {
   return (
@@ -13,17 +13,7 @@ export default function Contact() {
           having a friendly chat about software development.
         </p>
 
-        <a
-          href="mailto:vitorlostada@hotmail.com"
-          className="group flex items-center gap-2"
-        >
-          <MailIcon strokeWidth={1.5} />
-          <p className="group-hover:underline">vitorlostada@hotmail.com</p>
-        </a>
-        <a href="tel:+5548996241180" className="group flex items-center gap-2">
-          <PhoneIcon strokeWidth={1.5} />
-          <p className="group-hover:underline">+55 48 9 9624-1180</p>
-        </a>
+        <ContactsLinks />
       </div>
       <div className="flex-1">
         <EmailForm />

@@ -2,7 +2,7 @@ import { RoughNotation as RN } from 'react-rough-notation'
 
 export const heroTitle = 'Ao Canvas infinito e além'
 
-export const heroDescription = (
+export const heroDescription = [
   <>
     This was my{' '}
     <RN type="underline" multiline color="var(--highlight-2)">
@@ -24,7 +24,7 @@ export const heroDescription = (
       Feedback helps us keep improving.
     </RN>
   </>
-)
+]
 
 export const keyInsigthsTitle = 'Key Insights'
 

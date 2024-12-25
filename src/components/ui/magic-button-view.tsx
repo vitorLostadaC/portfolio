@@ -3,7 +3,8 @@
 import { Button } from '@/components/ui/button'
 import { RainbowButton } from '@/components/ui/rainbow-button'
 import { ScrollTextIcon } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import posthog from 'posthog-js'
 
 interface MagicButtonProps {
   slug: string
@@ -17,6 +18,7 @@ export const MagicButtonView = ({
   label
 }: MagicButtonProps) => {
   const router = useRouter()
+  const pathname = usePathname()
 
   const alreadySeenProject =
     typeof localStorage !== 'undefined' && localStorage.getItem(slug)
@@ -28,6 +30,7 @@ export const MagicButtonView = ({
   const handleClick = () => {
     localStorage.setItem(slug, 'seen')
     router.push(`/${nestedPath}/${slug}`)
+    posthog.capture('magic_button_clicked', { slug, pathname })
   }
 
   if (alreadySeenProject)

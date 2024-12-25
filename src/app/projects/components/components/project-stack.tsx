@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { ProjectTag } from '../../data/projectTag'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
+import posthog from 'posthog-js'
 
 const BadgeMotion = motion.create(Badge)
 const ButtonMotion = motion.create(Button)
@@ -84,6 +85,9 @@ export const ProjectStack = ({ stack }: { stack: ProjectTag[] }) => {
             variant={'link'}
             onClick={() => {
               setShowMore(!showMore)
+              if (!showMore) {
+                posthog.capture('project_stack_clicked')
+              }
               alreadyInteracted.current = true
             }}
             className="h-fit p-0"

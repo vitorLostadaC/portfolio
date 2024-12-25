@@ -8,6 +8,8 @@ import { Textarea } from '../ui/textarea'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { sendTemplate } from './actions/send-template'
+import posthog from 'posthog-js'
+import { usePathname } from 'next/navigation'
 
 const MessageCircleMotion = motion.create(MessageCircle)
 const Loader2Motion = motion.create(Loader2)
@@ -51,6 +53,8 @@ export const FeedbackButton = ({
   alreadyInteracted,
   setAlreadyInterected
 }: FeedbackButtonProps) => {
+  const pathname = usePathname()
+
   const mainAnim: CustomVariant = {
     initial: {
       opacity: 0,
@@ -90,6 +94,9 @@ export const FeedbackButton = ({
       layoutId="container"
       onClick={() => {
         setIsOpen(true)
+        posthog.capture('feedback_button_clicked', {
+          pathname
+        })
         if (!alreadyInteracted) setAlreadyInterected(true)
       }}
       {...anim(mainAnim)}
@@ -151,6 +158,7 @@ export const FeedbackDialog = ({
 
   const handleSendFeedback = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    posthog.capture('feedback_sent')
 
     setIsLoading(true)
 
@@ -192,7 +200,10 @@ export const FeedbackDialog = ({
         />{' '}
         <motion.div className="flex gap-2">
           <Button
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false)
+              posthog.capture('feedback_canceled')
+            }}
             variant={'outline'}
             type="button"
             disabled={isLoading}

@@ -39,6 +39,7 @@ export default function AoCanvasInfinitoEAlem() {
             image={item}
             alt={`antrol-ai-${index}`}
             className={cn('rounded-md border', {})}
+            slug="ao-canvas-infinito-e-alem"
           />
         ))}
       </div>
@@ -53,6 +54,7 @@ export default function AoCanvasInfinitoEAlem() {
           image={e}
           alt={`antrol-ai-4`}
           className={cn('rounded-md border')}
+          slug="ao-canvas-infinito-e-alem"
         />
       </div>
     </div>

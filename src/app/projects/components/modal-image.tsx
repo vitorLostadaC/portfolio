@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
 import { AnimatePresence, motion } from 'framer-motion'
 import { StaticImageData } from 'next/image'
+import posthog from 'posthog-js'
 import { useEffect, useState } from 'react'
 
 type ModalImageProps = {
@@ -11,13 +12,15 @@ type ModalImageProps = {
   className?: string
   image: StaticImageData
   children?: React.ReactNode
+  slug: string
 }
 
 export const ModalImage = ({
   image,
   alt,
   className,
-  children
+  children,
+  slug
 }: ModalImageProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [windowSize, setWindowSize] = useState<{
@@ -29,6 +32,12 @@ export const ModalImage = ({
   })
 
   const handleToggle = () => {
+    if (!isOpen) {
+      posthog.capture('project_image_clicked', {
+        image_name: alt,
+        project_slug: slug
+      })
+    }
     setIsOpen(!isOpen)
   }
 

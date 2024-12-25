@@ -8,19 +8,7 @@ import { MagicButtonView } from '../../../components/ui/magic-button-view'
 import { DynamicTitle } from '../../../components/ui/dynamic-title'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
-
-const linkButtons = (project: Project) => [
-  {
-    icon: PlayIcon,
-    label: 'Demo',
-    href: project.demo
-  },
-  {
-    icon: GithubIcon,
-    label: 'Github',
-    href: project.sourceCode
-  }
-]
+import { LinkButtons } from './components/link-buttons'
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
@@ -60,21 +48,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             nestedPath="projects"
             label="Project"
           />
-          <div className="flex gap-2">
-            {linkButtons(project)
-              .filter((link) => link.href)
-              .map((link) => {
-                return (
-                  <SimpleTooltip content={link.label} key={link.label}>
-                    <Button variant="outline" size="icon">
-                      <a href={link.href} target="_blank">
-                        <link.icon className={cn('size-4', {})} />
-                      </a>
-                    </Button>
-                  </SimpleTooltip>
-                )
-              })}
-          </div>
+          <LinkButtons project={project} />
         </div>
       </CardFooter>
     </Card>

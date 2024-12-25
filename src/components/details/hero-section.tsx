@@ -43,7 +43,7 @@ export const Hero = ({ title, description, stack, image, slug }: HeroProps) => {
           ))}
         </div>
       )}
-      <ModalImage image={image} alt={title}>
+      <ModalImage image={image} alt={title} slug={slug}>
         <ImageMotion
           src={image}
           alt={title}

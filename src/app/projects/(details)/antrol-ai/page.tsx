@@ -37,6 +37,7 @@ export default function AntrolAi() {
             key={index}
             image={item}
             alt={`antrol-ai-${index}`}
+            slug="antrol-ai"
             className={cn('rounded-md border', {
               'row-span-2': index === 1
             })}
@@ -53,6 +54,7 @@ export default function AntrolAi() {
           image={d}
           alt={`antrol-ai-4`}
           className={cn('rounded-md border')}
+          slug="antrol-ai"
         />
         <p className="flex items-center gap-2 text-muted-foreground">
           Let&apos;s check this generation!

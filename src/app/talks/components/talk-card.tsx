@@ -7,6 +7,7 @@ import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { cn } from '@/lib/utils'
 import { MagicButtonView } from '@/components/ui/magic-button-view'
 import { Badge } from '@/components/ui/badge'
+import { LinkButton } from './link-button'
 
 export const TalkCard = ({ talk }: { talk: Talk }) => {
   return (
@@ -44,15 +45,7 @@ export const TalkCard = ({ talk }: { talk: Talk }) => {
       <CardFooter className="mt-auto">
         <div className="flex h-full w-full justify-between gap-2">
           <MagicButtonView slug={talk.slug} nestedPath="talks" label="Talk" />
-          <div className="flex gap-2">
-            <SimpleTooltip content={'website'}>
-              <Button variant="outline" size="icon">
-                <a href={talk.site} target="_blank">
-                  <GlobeIcon className={cn('size-4', {})} />
-                </a>
-              </Button>
-            </SimpleTooltip>
-          </div>
+          <LinkButton talk={talk} />
         </div>
       </CardFooter>
     </Card>

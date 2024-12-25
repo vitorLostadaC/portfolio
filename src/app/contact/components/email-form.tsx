@@ -19,6 +19,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { anim } from '@/lib/utils'
 import { useState } from 'react'
 import { sendTemplate as sendEmail } from '../actions/send-contact-email'
+import posthog from 'posthog-js'
 
 const textAnim = anim({
   initial: { opacity: 0, y: 20 },
@@ -44,6 +45,7 @@ export const EmailForm = () => {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    posthog.capture('contact_form_submitted')
     setFormState('loading')
     await sendEmail({
       message: values.message,

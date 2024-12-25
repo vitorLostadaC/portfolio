@@ -41,6 +41,7 @@ export default function Consai() {
             image={item}
             alt={`antrol-ai-${index}`}
             className={cn('rounded-md border')}
+            slug="base64-to-image"
           />
         ))}
       </div>

@@ -12,6 +12,7 @@ import {
   RoughNotation as RN,
   RoughNotationGroup as RG
 } from 'react-rough-notation'
+import posthog from 'posthog-js'
 
 const social = [
   {
@@ -121,7 +122,15 @@ export const Hero = () => {
             </p>
             <div className="flex gap-4">
               {social.map((item, index) => (
-                <Button key={index} variant="outline" size="icon" asChild>
+                <Button
+                  key={index}
+                  variant="outline"
+                  size="icon"
+                  asChild
+                  onClick={() =>
+                    posthog.capture('social_link_clicked', { link: item.url })
+                  }
+                >
                   <a href={item.url} target="_blank">
                     <item.icon />
                   </a>

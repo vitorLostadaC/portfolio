@@ -34,17 +34,20 @@ export const Hobbies = () => {
         </div>
         <div className="grid w-72 grid-cols-2 gap-2">
           <ModalImage
+            slug="about"
             image={beatchTennis}
             alt="Beatch Tennis"
             className="h-64 rounded-lg object-cover"
           />
           <ModalImage
+            slug="about"
             image={gym}
             alt="Gym"
             className="h-64 rounded-lg object-cover"
           />
           {/* <img src={girlfriend.src} alt="Girlfriend" /> */}
           <ModalImage
+            slug="about"
             image={lanscape}
             alt="Lanscape"
             className="col-span-2 w-full rounded-lg object-cover"
