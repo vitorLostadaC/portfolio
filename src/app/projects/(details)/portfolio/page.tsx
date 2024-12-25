@@ -12,9 +12,9 @@ export default function Portfolio() {
         <li className="line-through">Recommendations Page</li>
         <li className="line-through">Feedback Button</li>
         <li className="line-through">About Page </li>
-        <li>Contact Page [in progress]</li>
+        <li className="line-through">Contact Page</li>
+        <li>Analytics [in progress]</li>
         <li>Responsive</li>
-        <li>Analytics</li>
         <li>Some micro animations and improvements</li>
         <li>SEO</li>
         <li>Adjusts on design (redesign somethings)</li>
