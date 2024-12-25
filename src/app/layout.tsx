@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/layout/Header'
 import { Feedback } from '@/components/feedback/feedback'
+import { PostHogProviderWrapper } from '@/contexts/PosthogWrapper'
 
 const geistMono = Inter({
   subsets: ['latin']
@@ -22,18 +23,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistMono.className} dark m-auto max-w-screen-xl antialiased`}
-      >
-        <SpeedInsights />
-        <Analytics />
-        <Feedback />
+      <PostHogProviderWrapper>
+        <body
+          className={`${geistMono.className} dark m-auto max-w-screen-xl antialiased`}
+        >
+          <SpeedInsights />
+          <Analytics />
+          <Feedback />
 
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1 py-16">{children}</main>
-        </div>
-      </body>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1 py-16">{children}</main>
+          </div>
+        </body>
+      </PostHogProviderWrapper>
     </html>
   )
 }

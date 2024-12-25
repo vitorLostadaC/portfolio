@@ -5,6 +5,7 @@ import { anim, CustomVariant } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 const Gradient = dynamic(
   () => import('./components/gradient').then((mod) => mod.Gradient),
@@ -73,12 +74,24 @@ export default function Home() {
           {...anim(buttonsAnim)}
         >
           <Button asChild variant={'outline'} size={'lg'}>
-            <MotionLink href={'about'} variants={buttonChild}>
+            <MotionLink
+              href={'about'}
+              variants={buttonChild}
+              onClick={() => {
+                posthog.capture('about_me_clicked')
+              }}
+            >
               About me
             </MotionLink>
           </Button>
           <Button asChild size={'lg'}>
-            <MotionLink href={'projects'} variants={buttonChild}>
+            <MotionLink
+              href={'projects'}
+              variants={buttonChild}
+              onClick={() => {
+                posthog.capture('projects_clicked')
+              }}
+            >
               Projects
             </MotionLink>
           </Button>

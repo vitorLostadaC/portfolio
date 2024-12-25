@@ -6,9 +6,12 @@ export const env = createEnv({
     RESEND_API_KEY: z.string().min(1)
   },
 
-  clientPrefix: 'PUBLIC_',
+  clientPrefix: 'NEXT_PUBLIC_',
 
-  client: {},
+  client: {
+    NEXT_PUBLIC_POSTHOG_KEY: z.string().min(1),
+    NEXT_PUBLIC_POSTHOG_HOST: z.string().min(1)
+  },
 
   runtimeEnv: process.env,
 
