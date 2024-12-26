@@ -44,7 +44,12 @@ export const TalkCard = ({ talk }: { talk: Talk }) => {
       </CardContent>
       <CardFooter className="mt-auto">
         <div className="flex h-full w-full justify-between gap-2">
-          <MagicButtonView slug={talk.slug} nestedPath="talks" label="Talk" />
+          <MagicButtonView
+            slug={talk.slug}
+            nestedPath="talks"
+            label="Talk"
+            isTalk
+          />
           <LinkButton talk={talk} />
         </div>
       </CardFooter>

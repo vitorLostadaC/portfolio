@@ -52,10 +52,10 @@ export const EmailForm = () => {
       email: values.email
     })
     setFormState('sent')
+    form.reset()
     setTimeout(() => {
       setFormState('send')
-      form.reset()
-    }, 2000)
+    }, 1500)
   }
 
   return (

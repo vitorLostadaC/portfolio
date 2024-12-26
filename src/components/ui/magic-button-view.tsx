@@ -10,12 +10,14 @@ interface MagicButtonProps {
   slug: string
   nestedPath: string
   label: string
+  isTalk?: boolean
 }
 
 export const MagicButtonView = ({
   slug,
   nestedPath,
-  label
+  label,
+  isTalk = false
 }: MagicButtonProps) => {
   const router = useRouter()
   const pathname = usePathname()
@@ -30,7 +32,7 @@ export const MagicButtonView = ({
   const handleClick = () => {
     localStorage.setItem(slug, 'seen')
     router.push(`/${nestedPath}/${slug}`)
-    posthog.capture('magic_button_clicked', { slug, pathname })
+    posthog.capture('magic_button_clicked', { slug, pathname, isTalk })
   }
 
   if (alreadySeenProject)

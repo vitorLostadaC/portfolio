@@ -39,7 +39,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           {project.description}
         </p>
 
-        <ProjectStack stack={project.tags} />
+        <ProjectStack slug={project.slug} stack={project.tags} />
       </CardContent>
       <CardFooter className="mt-auto">
         <div className="flex h-full w-full justify-between gap-2">

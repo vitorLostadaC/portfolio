@@ -13,7 +13,13 @@ const ButtonMotion = motion.create(Button)
 
 const SHOWED_BADGES = 3
 
-export const ProjectStack = ({ stack }: { stack: ProjectTag[] }) => {
+export const ProjectStack = ({
+  stack,
+  slug
+}: {
+  stack: ProjectTag[]
+  slug: string
+}) => {
   const [showMore, setShowMore] = useState(false)
   const alreadyInteracted = useRef(false)
 
@@ -86,7 +92,9 @@ export const ProjectStack = ({ stack }: { stack: ProjectTag[] }) => {
             onClick={() => {
               setShowMore(!showMore)
               if (!showMore) {
-                posthog.capture('project_stack_clicked')
+                posthog.capture('project_stack_clicked', {
+                  slug
+                })
               }
               alreadyInteracted.current = true
             }}
