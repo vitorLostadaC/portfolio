@@ -54,7 +54,7 @@ export default function Home() {
           transition={{
             duration: 0.3
           }}
-          className="text-nowrap text-4xl font-bold sm:text-6xl md:text-7xl lg:text-8xl"
+          className="text-nowrap text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl"
         >
           Vitor Lostada
         </motion.h1>
