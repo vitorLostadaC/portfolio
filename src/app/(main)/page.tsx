@@ -54,12 +54,12 @@ export default function Home() {
           transition={{
             duration: 0.3
           }}
-          className="text-8xl font-bold"
+          className="text-nowrap text-6xl font-bold md:text-7xl lg:text-8xl"
         >
           Vitor Lostada
         </motion.h1>
         <motion.h4
-          className="text-4xl text-muted-foreground"
+          className="text-2xl text-muted-foreground md:text-3xl lg:text-4xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{

@@ -1,4 +1,5 @@
 'use client'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -8,7 +9,8 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/talks', label: 'Talks' },
-  { href: '/contact', label: 'Contact' }
+  { href: '/contact', label: 'Contact' },
+  { href: '/recommendations', label: 'Recommendations' }
 ]
 
 export const Header = () => {
@@ -24,7 +26,7 @@ export const Header = () => {
         Vitor Lostada
       </Link>
 
-      <nav className="flex gap-8 text-muted-foreground">
+      <nav className="hidden gap-8 text-muted-foreground md:flex">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -42,7 +44,6 @@ export const Header = () => {
             {link.label}
           </Link>
         ))}
-        <Link href="/recommendations">Recommendations</Link>
       </nav>
     </header>
   )
