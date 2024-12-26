@@ -1,6 +1,8 @@
 import { useEffect, useState, RefObject } from 'react'
 
-export function useResizeObserver<T extends HTMLElement>(ref: RefObject<T>) {
+export function useResizeObserver<T extends HTMLElement | null>(
+  ref: RefObject<T>
+) {
   const [height, setHeight] = useState<number | 'auto'>('auto')
 
   useEffect(() => {

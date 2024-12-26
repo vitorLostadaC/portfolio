@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { useInView, UseInViewOptions } from 'framer-motion'
-import { useRef } from 'react'
+import { JSX, useRef } from 'react'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
 
 interface TextProps {

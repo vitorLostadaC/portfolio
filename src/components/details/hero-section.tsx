@@ -6,6 +6,7 @@ import Image, { StaticImageData } from 'next/image'
 import { ProjectTag } from '@/app/projects/data/projectTag'
 import { ModalImage } from '@/app/projects/components/modal-image'
 import { motion } from 'framer-motion'
+import { JSX } from 'react'
 
 interface HeroProps {
   title: string

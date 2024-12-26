@@ -1,12 +1,9 @@
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Project } from '../data/project'
 import { ProjectStack } from './components/project-stack'
-import { Button } from '@/components/ui/button'
-import { CalendarIcon, GithubIcon, PlayIcon } from 'lucide-react'
-import { SimpleTooltip } from '@/components/ui/simple-tooltip'
+import { CalendarIcon } from 'lucide-react'
 import { MagicButtonView } from '../../../components/ui/magic-button-view'
 import { DynamicTitle } from '../../../components/ui/dynamic-title'
-import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { LinkButtons } from './components/link-buttons'
 

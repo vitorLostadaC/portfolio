@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { type ReactNode } from 'react'
+import { JSX, type ReactNode } from 'react'
 import {
   Tooltip,
   TooltipContent,
