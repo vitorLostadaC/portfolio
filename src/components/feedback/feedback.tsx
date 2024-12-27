@@ -53,8 +53,6 @@ export const FeedbackButton = ({
   alreadyInteracted,
   setAlreadyInterected
 }: FeedbackButtonProps) => {
-  const pathname = usePathname()
-
   const mainAnim: CustomVariant = {
     initial: {
       opacity: 0,
@@ -94,9 +92,8 @@ export const FeedbackButton = ({
       layoutId="container"
       onClick={() => {
         setIsOpen(true)
-        posthog.capture('feedback_button_clicked', {
-          pathname
-        })
+        posthog.capture('feedback_button_clicked')
+
         if (!alreadyInteracted) setAlreadyInterected(true)
       }}
       {...anim(mainAnim)}
@@ -164,7 +161,8 @@ export const FeedbackDialog = ({
 
     const response = await sendTemplate({
       feedback,
-      email: userEmail
+      email: userEmail,
+      pathname: window.location.pathname
     })
 
     setResult(response.success ? 'success' : 'error')

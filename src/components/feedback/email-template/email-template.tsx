@@ -3,9 +3,14 @@ import * as React from 'react'
 interface EmailTemplateProps {
   feedback: string
   email?: string
+  pathname?: string
 }
 
-export const EmailTemplate = ({ feedback, email }: EmailTemplateProps) => (
+export const EmailTemplate = ({
+  feedback,
+  email,
+  pathname
+}: EmailTemplateProps) => (
   <div
     style={{
       padding: '20px',
@@ -20,6 +25,9 @@ export const EmailTemplate = ({ feedback, email }: EmailTemplateProps) => (
     <p style={{ fontSize: '16px', lineHeight: '1.5' }}>{feedback}</p>
     {email && (
       <p style={{ fontStyle: 'italic', color: '#555' }}>Email: {email}</p>
+    )}
+    {pathname && (
+      <p style={{ fontStyle: 'italic', color: '#555' }}>Pathname: {pathname}</p>
     )}
   </div>
 )
