@@ -87,7 +87,7 @@ export const EmailForm = () => {
               <FormControl>
                 <Textarea
                   placeholder="Hi Vitor, lets talk about..."
-                  className="min-h-60 resize-none"
+                  className="min-h-40 resize-none lg:min-h-60"
                   {...field}
                 />
               </FormControl>
