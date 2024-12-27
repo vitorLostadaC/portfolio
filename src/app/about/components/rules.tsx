@@ -34,11 +34,9 @@ const rules: {
   }
 ]
 
-//! add here a sticky animation
-
 export const Rules = () => {
   return (
-    <div className="flex w-full flex-col gap-8">
+    <div className="relative mt-20 flex w-full flex-col gap-8 lg:mt-0">
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Rules of my life</h1>
         <p className="max-w-2xl text-muted-foreground">
@@ -48,6 +46,7 @@ export const Rules = () => {
           personal and professional endeavors.
         </p>
       </div>
+
       <div className="flex gap-4">
         <div className="flex max-w-2xl flex-col gap-8">
           {rules.map((rule) => (
@@ -62,7 +61,7 @@ export const Rules = () => {
         <motion.img
           src={statue.src}
           alt="statue"
-          className="sticky top-40 h-full w-1/2"
+          className="sticky top-40 float-start hidden h-full w-1/2 lg:block"
           initial={{ opacity: 0, scale: 0.8, rotateX: 45 }}
           animate={{ opacity: 1, scale: 1, rotateX: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}

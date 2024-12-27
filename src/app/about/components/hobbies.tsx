@@ -9,7 +9,7 @@ export const Hobbies = () => {
   return (
     <div className="mt-20 flex flex-col gap-4">
       <h1 className="text-3xl font-bold">Hobbies</h1>
-      <div className="flex gap-32">
+      <div className="flex flex-col gap-32 lg:flex-row">
         <div className="flex max-w-2xl flex-col gap-4 text-lg text-muted-foreground">
           <p>
             In my childhood, I spent a lot of time playing games, and my
@@ -32,27 +32,25 @@ export const Hobbies = () => {
             desire, all while creating things I can be proud of.
           </p>{' '}
         </div>
-        <div className="grid w-72 grid-cols-2 gap-2">
+        <div className="mx-auto grid w-72 grid-cols-2 gap-2 lg:mx-0">
           <ModalImage
             slug="about"
             image={beatchTennis}
             alt="Beatch Tennis"
-            className="h-64 rounded-lg object-cover"
+            className="h-80 rounded-lg object-cover lg:h-64"
           />
           <ModalImage
             slug="about"
             image={gym}
             alt="Gym"
-            className="h-64 rounded-lg object-cover"
+            className="h-80 rounded-lg object-cover lg:h-64"
           />
-          {/* <img src={girlfriend.src} alt="Girlfriend" /> */}
           <ModalImage
             slug="about"
             image={lanscape}
             alt="Lanscape"
-            className="col-span-2 w-full rounded-lg object-cover"
+            className="col-span-2 w-full rounded-lg object-cover lg:h-80"
           />
-          {/* <img src={kingDownTwoCrowns.src} alt="Kingdown Two Crowns" /> */}
         </div>
       </div>
     </div>

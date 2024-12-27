@@ -35,10 +35,10 @@ const social = [
 
 export const Hero = () => {
   return (
-    <div className="flex h-[calc(100vh-8.3rem)] w-full flex-col gap-4">
+    <div className="flex w-full flex-col gap-4 lg:h-[calc(100vh-8.3rem)]">
       <h1 className="text-3xl font-bold">Hello, I&apos;m Vitor! 👋</h1>
 
-      <div className="flex w-full items-start justify-between gap-24">
+      <div className="flex w-full items-start justify-between gap-12 xl:gap-24">
         <RG show>
           <div className="flex max-w-4xl flex-col gap-4 text-justify text-lg text-muted-foreground">
             <p>
@@ -144,7 +144,7 @@ export const Hero = () => {
           alt="Vitor"
           width={384}
           height={433}
-          className="w-96 rounded-xl border"
+          className="hidden w-80 rounded-xl border lg:block xl:w-96"
         />
       </div>
 
@@ -157,7 +157,7 @@ export const Hero = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="mx-auto mb-16 mt-auto text-muted-foreground"
+        className="mx-auto mb-16 mt-auto hidden text-muted-foreground lg:block"
         animate={{
           y: [0, 10, 0]
         }}
