@@ -32,7 +32,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </div>
 
-        <p className="mb-2 h-10 text-sm text-muted-foreground">
+        <p className="mb-2 text-sm text-muted-foreground xl:h-10">
           {project.description}
         </p>
 
