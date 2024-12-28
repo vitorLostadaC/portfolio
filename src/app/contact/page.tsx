@@ -3,7 +3,7 @@ import { ContactsLinks } from './components/contacts-links'
 
 export default function Contact() {
   return (
-    <div className="flex h-full flex-1 flex-col gap-10 lg:flex-row lg:gap-0">
+    <div className="flex h-full flex-1 flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-0">
       <div className="flex flex-1 flex-col gap-4">
         <h1 className="text-3xl font-bold">Get in touch</h1>
         <p className="font-semibold text-muted-foreground">Contact me </p>
@@ -15,7 +15,7 @@ export default function Contact() {
 
         <ContactsLinks />
       </div>
-      <div className="flex-1">
+      <div className="w-full flex-1">
         <EmailForm />
       </div>
     </div>
