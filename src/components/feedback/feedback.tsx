@@ -9,7 +9,6 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { sendTemplate } from './actions/send-template'
 import posthog from 'posthog-js'
-import { usePathname } from 'next/navigation'
 
 const MessageCircleMotion = motion.create(MessageCircle)
 const Loader2Motion = motion.create(Loader2)

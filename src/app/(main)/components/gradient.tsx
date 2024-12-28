@@ -60,6 +60,7 @@ const ShaderPlane = () => {
       uColor2: { value: hexToRGB(color2) },
       uColor3: { value: hexToRGB(color3) }
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   )
 
