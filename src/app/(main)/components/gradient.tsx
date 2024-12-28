@@ -156,27 +156,28 @@ const fragmentShader = `
   }
 
   void main() {
-    vec2 uv = vUv;
+    // Center the UV coordinates
+    vec2 uv = vUv - 0.5;
     float time = uTime * uTimeSpeed;
     
-    // Create flowing distortion
+    // Create flowing distortion from center
     vec2 flow = vec2(
-      fbm(uv + vec2(0.0, time * uFlowSpeed)),
-      fbm(uv + vec2(time * uFlowSpeed * 0.6, 0.0))
+      fbm(uv + vec2(time * uFlowSpeed)),
+      fbm(uv + vec2(time * uFlowSpeed))
     );
     
-    // Add second layer of flow
+    // Add second layer of flow with centered motion
     vec2 flow2 = vec2(
-      fbm(uv + flow + vec2(time * -uFlowSpeed, time * uFlowSpeed * 0.8)),
-      fbm(uv + flow + vec2(time * uFlowSpeed * 0.8, time * -uFlowSpeed))
+      fbm(uv + flow + vec2(time * -uFlowSpeed)),
+      fbm(uv + flow + vec2(time * -uFlowSpeed))
     );
     
-    // Create main pattern
+    // Create main pattern with centered origin
     float pattern = fbm(uv + flow * uFlowIntensity + flow2 * (uFlowIntensity * 0.5));
     
-    // Create layers for depth
-    float layer1 = fbm(uv * uNoiseScale + flow * 0.3);
-    float layer2 = fbm(uv * (uNoiseScale * 1.5) - flow2 * 0.5);
+    // Create layers for depth from center
+    float layer1 = fbm((uv + 0.5) * uNoiseScale + flow * 0.3);
+    float layer2 = fbm((uv + 0.5) * (uNoiseScale * 1.5) - flow2 * 0.5);
     
     // Create translucent layering effect
     vec3 finalColor = mix(uColor1, uColor2, pattern);
