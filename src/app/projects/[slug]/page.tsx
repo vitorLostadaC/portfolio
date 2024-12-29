@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteTitle = project.name + ' | Vitor Lostada'
   const siteDescription = project.description.slice(0, 150)
   const siteImage = {
-    url: `/assets/projects/${project.name}.webp`,
+    url: `/assets/projects/${project.slug}.webp`,
     width: 1200,
     height: 630,
     alt: project.name
