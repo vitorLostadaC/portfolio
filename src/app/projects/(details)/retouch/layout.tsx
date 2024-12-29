@@ -1,11 +1,7 @@
 import { Metadata } from 'next'
 import { projects } from '../../data/project'
 
-type Props = {
-  params: Promise<{ slug: string }>
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const project = projects.find((project) => project.slug === 'retouch')
 
   if (!project) return {}
