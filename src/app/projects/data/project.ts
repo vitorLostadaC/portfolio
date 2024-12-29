@@ -1,13 +1,26 @@
-import { tags as antrolAiTags } from '../(details)/antrol-ai/data/project'
-import { tags as consaiTags } from '../(details)/consai/data/project'
-import { tags as retouchTags } from '../(details)/retouch/data/project'
+import {
+  antrolAiDetails,
+  tags as antrolAiTags
+} from '../[slug]/details/antrol-ai/antrol-ai-details'
+import {
+  consaiDetails,
+  tags as consaiTags
+} from '../[slug]/details/consai/consai-details'
+import {
+  retouchDetails,
+  tags as retouchTags
+} from '../[slug]/details/retouch/retouch-details'
 import antrolAi from '../assets/antrol-ai.webp'
 import consai from '../assets/consai.webp'
 import portfolio from '../assets/portfolio.webp'
 import retouch from '../assets/retouch.webp'
 import base64toImage from '../assets/base64-to-image.webp'
-import { ProjectTag } from './projectTag'
-import { ProjectType } from './projectType'
+import { ProjectTag } from './project-tag'
+import { ProjectType } from './project-type'
+import { JSX } from 'react'
+import { portfolioDetails } from '../[slug]/details/portfolio/portfolio-details'
+import { base64ToImageDetails } from '../[slug]/details/base64-to-image/base-64-to-image-details'
+import { ProjectSlug } from './project-slug'
 
 export interface Project {
   slug: string
@@ -21,11 +34,12 @@ export interface Project {
   image: string
   type: ProjectType
   tags: ProjectTag[]
+  details: JSX.Element[]
 }
 
 export const projects: Project[] = [
   {
-    slug: 'antrol-ai',
+    slug: ProjectSlug.AntrolAi,
     date: new Date('2024-05-01'),
     name: 'Antrol AI',
     description:
@@ -35,10 +49,11 @@ export const projects: Project[] = [
     tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
     sourceCode: 'https://github.com/vitorLostadaC/antrol-generate',
-    type: ProjectType.PersonalProject
+    type: ProjectType.PersonalProject,
+    details: antrolAiDetails
   },
   {
-    slug: 'consai',
+    slug: ProjectSlug.Consai,
     date: new Date('2024-08-01'),
     name: 'Consai',
     description:
@@ -47,10 +62,11 @@ export const projects: Project[] = [
     image: consai.src,
     tags: consaiTags,
     demo: 'https://consai.com.br/',
-    type: ProjectType.SideProject
+    type: ProjectType.SideProject,
+    details: consaiDetails
   },
   {
-    slug: 'portfolio',
+    slug: ProjectSlug.Portfolio,
     date: new Date('2024-11-01'),
     name: 'Portfolio',
     description:
@@ -60,10 +76,11 @@ export const projects: Project[] = [
     tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
     demo: 'https://vitorlostada.com',
     sourceCode: 'https://github.com/vitorLostadaC/portfolio',
-    type: ProjectType.PersonalProject
+    type: ProjectType.PersonalProject,
+    details: portfolioDetails
   },
   {
-    slug: 'retouch',
+    slug: ProjectSlug.Retouch,
     date: new Date('2024-09-01'),
     name: 'Retouch',
     description:
@@ -72,10 +89,11 @@ export const projects: Project[] = [
     image: retouch.src,
     tags: retouchTags,
     type: ProjectType.Job,
-    demo: 'https://resleeve.ai'
+    demo: 'https://resleeve.ai',
+    details: retouchDetails
   },
   {
-    slug: 'base64-to-image',
+    slug: ProjectSlug.Base64ToImage,
     date: new Date('2024-10-01'),
     name: 'Base 64 to Image',
     description:
@@ -85,6 +103,7 @@ export const projects: Project[] = [
     tags: [],
     type: ProjectType.OpenSource,
     demo: 'https://www.raycast.com/vitorlostada/image-base64',
-    sourceCode: 'https://github.com/vitorLostadaC/image-base64'
+    sourceCode: 'https://github.com/vitorLostadaC/image-base64',
+    details: base64ToImageDetails
   }
 ]

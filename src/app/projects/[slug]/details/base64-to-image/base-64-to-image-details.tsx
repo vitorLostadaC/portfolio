@@ -1,5 +1,15 @@
-import { ProjectTag } from '@/app/projects/data/projectTag'
+import { ModalImage } from '@/app/projects/components/modal-image'
+import { Hero } from '@/components/details/hero-section'
+import { TextSection } from '@/components/details/text-section'
+import { cn } from '@/lib/utils'
 import { RoughNotation as RN } from 'react-rough-notation'
+import hero from './assets/hero.webp'
+import a from './assets/a.webp'
+import b from './assets/b.webp'
+import c from './assets/c.webp'
+import d from './assets/d.webp'
+import { ProjectTag } from '@/app/projects/data/project-tag'
+import { ProjectSlug } from '@/app/projects/data/project-slug'
 
 export const heroTitle = 'Base 64 to Image'
 
@@ -59,4 +69,39 @@ export const lessonsDescription = [
     </RN>{' '}
     whenever I find a need for them.
   </>
+]
+
+export const base64ToImageDetails = [
+  <Hero
+    title={heroTitle}
+    description={heroDescription}
+    stack={tags}
+    image={hero}
+    slug={ProjectSlug.Base64ToImage}
+  />,
+
+  <TextSection
+    side="center"
+    title={problemsTitle}
+    description={problemsDescription}
+  />,
+
+  <div className="grid grid-cols-2 items-center gap-6">
+    {[a, b, c, d].map((item, index) => (
+      <ModalImage
+        key={index}
+        image={item}
+        alt={`antrol-ai-${index}`}
+        className={cn('rounded-md border')}
+        slug={ProjectSlug.Base64ToImage}
+      />
+    ))}
+  </div>,
+
+  <TextSection
+    title={lessonsTitle}
+    description={lessonsDescription}
+    side="left"
+    marginView="0px"
+  />
 ]

@@ -1,8 +1,16 @@
+import { notFound } from 'next/navigation'
+import { projects } from '../data/project'
 import { Metadata } from 'next'
-import { projects } from '../../data/project'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const project = projects.find((project) => project.slug === 'retouch')
+type Props = {
+  params: Promise<{
+    slug: string
+  }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = (await params).slug
+  const project = projects.find((project) => project.slug === slug)
 
   if (!project) return {}
 
@@ -37,6 +45,14 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default async function ProjectPage({ params }: Props) {
+  const slug = (await params).slug
+
+  const project = projects.find((project) => project.slug === slug)
+
+  if (!project) {
+    notFound()
+  }
+
+  return <div className="flex flex-col gap-10">{project.details}</div>
 }

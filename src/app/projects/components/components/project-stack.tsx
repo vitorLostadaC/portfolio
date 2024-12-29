@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ProjectTag } from '../../data/projectTag'
+import { ProjectTag } from '../../data/project-tag'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
 import posthog from 'posthog-js'
