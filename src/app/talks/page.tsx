@@ -1,4 +1,4 @@
-import { ChatIcon } from './components/ChatIcon'
+import { ChatIcon } from './components/chat-icon'
 import { TalkCard } from './components/talk-card'
 import { talks } from './data/talks'
 
