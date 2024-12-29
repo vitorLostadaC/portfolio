@@ -14,8 +14,8 @@ export const portfolioDetails = [
       <li className="line-through">Contact Page</li>
       <li className="line-through">Analytics</li>
       <li className="line-through">Responsive </li>
-      <li>SEO [in progress]</li>
-      <li>Some micro animations and improvements</li>
+      <li className="line-through">SEO</li>
+      <li>Some micro animations and improvements [in progress] </li>
       <li>Add toasts to comunicate with user</li>
       <li>Adjusts on design (redesign somethings)</li>
     </ul>
