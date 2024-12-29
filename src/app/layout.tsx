@@ -12,21 +12,26 @@ const geistMono = Inter({
 })
 
 const siteTitle = 'Vitor Lostada'
-const siteDescription = 'This is my personal website'
-const siteImage = '/SEO/hero.png'
+const siteDescription =
+  'Frontend Developer crafting pixel-perfect and type-safe web experiences with React and Next.js.'
+const siteImage = {
+  url: '/SEO/hero.png',
+  width: 1200,
+  height: 630,
+  alt: 'Vitor Lostada - Frontend Developer'
+}
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
   openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    type: 'website',
-    locale: 'en_US',
     images: [siteImage]
   },
+  metadataBase: new URL('https://vitorlostada.com'),
   twitter: {
     card: 'summary_large_image',
+    site: 'https://vitorlostada.com',
+    creator: 'https://vitorlostada.com',
     title: siteTitle,
     description: siteDescription,
     images: [siteImage]
