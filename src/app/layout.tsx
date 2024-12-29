@@ -11,29 +11,25 @@ const geistMono = Inter({
   subsets: ['latin']
 })
 
+const siteTitle = 'Vitor Lostada'
+const siteDescription = 'This is my personal website'
+const siteImage = '/SEO/hero.png'
+
 export const metadata: Metadata = {
-  title: 'Vitor Lostada',
-  description: 'This is my personal website',
-  metadataBase: new URL('https://vitorlostada.com'),
+  title: siteTitle,
+  description: siteDescription,
   openGraph: {
-    title: 'Vitor Lostada',
-    description: 'This is my personal website',
+    title: siteTitle,
+    description: siteDescription,
     type: 'website',
     locale: 'en_US',
-    images: [
-      {
-        url: '/SEO/hero.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vitor Lostada'
-      }
-    ]
+    images: [siteImage]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vitor Lostada',
-    description: 'This is my personal website',
-    images: ['/SEO/hero.png']
+    title: siteTitle,
+    description: siteDescription,
+    images: [siteImage]
   },
   robots: {
     index: true,
