@@ -15,7 +15,7 @@ const siteTitle = 'Vitor Lostada'
 const siteDescription =
   'Frontend Developer crafting pixel-perfect and type-safe web experiences with React and Next.js.'
 const siteImage = {
-  url: 'https://vitorlostada.com/SEO/hero.png',
+  url: '/SEO/hero.png',
   width: 1200,
   height: 630,
   alt: 'Vitor Lostada - Frontend Developer'
