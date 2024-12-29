@@ -1,12 +1,14 @@
 import { Metadata } from 'next'
 import { projects } from '../data/project'
 
-export async function generateMetadata({
-  params
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const project = projects.find((project) => project.slug === params.slug)
+type Props = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = (await params).slug
+  const project = projects.find((project) => project.slug === slug)
 
   if (!project) return {}
 
