@@ -20,7 +20,8 @@ export const talks: Talk[] = [
     description:
       'I talk about how an infinite canvas works, starting from the math behind it, to understand and recreate one with interactions',
     date: new Date('2024-11-16'),
-    image: '/assets/talks/ao-canvas-infinito-e-alem.webp',
+    image:
+      'https://vitorlostada.com/assets/talks/ao-canvas-infinito-e-alem.webp',
     site: 'https://frontin.floripa.br/',
     conference: 'Front in Floripa',
     details: aoCanvasInfinitoEAlemDetails
