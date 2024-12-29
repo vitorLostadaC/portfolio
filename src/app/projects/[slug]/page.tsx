@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { projects } from '../data/project'
 import { Metadata } from 'next'
+import { Fragment } from 'react'
 
 type Props = {
   params: Promise<{
@@ -54,5 +55,11 @@ export default async function ProjectPage({ params }: Props) {
     notFound()
   }
 
-  return <div className="flex flex-col gap-10">{project.details}</div>
+  return (
+    <div className="flex flex-col gap-10">
+      {project.details.map((detail, index) => (
+        <Fragment key={project.slug + index}>{detail}</Fragment>
+      ))}
+    </div>
+  )
 }
