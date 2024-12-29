@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import posthog from 'posthog-js'
-
+const MotionLink = motion.create(Link)
 const Gradient = dynamic(
   () => import('./components/gradient').then((mod) => mod.Gradient),
   {
@@ -14,8 +14,6 @@ const Gradient = dynamic(
     loading: () => <div>Loading...</div>
   }
 )
-
-const MotionLink = motion.create(Link)
 
 const buttonsAnim: CustomVariant = {
   animate: {
