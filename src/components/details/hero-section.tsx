@@ -3,10 +3,10 @@ import { Badge } from '@/components/ui/badge'
 import { RoughNotationGroup as RNG } from 'react-rough-notation'
 import { Title } from './title'
 import Image, { StaticImageData } from 'next/image'
-import { ProjectTag } from '@/app/projects/data/projectTag'
 import { ModalImage } from '@/app/projects/components/modal-image'
 import { motion } from 'framer-motion'
 import { JSX } from 'react'
+import { ProjectTag } from '@/app/projects/data/project-tag'
 
 interface HeroProps {
   title: string
