@@ -41,9 +41,7 @@ const buttonChild: CustomVariant = {
 }
 
 export default function Home() {
-  console.log(
-    'Hello! This is my portfolio. If you want to discuss anything I implemented, please send me an email at vitorlostada@hotmail.com'
-  )
+  console.log('Hey! What are you doing here? 👀. Send on feedback.')
 
   return (
     <>

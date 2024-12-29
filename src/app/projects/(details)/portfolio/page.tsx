@@ -14,9 +14,10 @@ export default function Portfolio() {
         <li className="line-through">About Page </li>
         <li className="line-through">Contact Page</li>
         <li className="line-through">Analytics</li>
-        <li>Responsive [in progress]</li>
+        <li className="line-through">Responsive </li>
+        <li>SEO [in progress]</li>
         <li>Some micro animations and improvements</li>
-        <li>SEO</li>
+        <li>Add toasts to comunicate with user</li>
         <li>Adjusts on design (redesign somethings)</li>
       </ul>
     </div>
