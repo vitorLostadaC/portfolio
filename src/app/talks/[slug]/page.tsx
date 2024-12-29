@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteTitle = talk.title + ' | Vitor Lostada'
   const siteDescription = talk.description.slice(0, 150) + '...'
   const siteImage = {
-    url: `https://vitorlostada.com/assets/talks/${talk.slug}.webp`,
+    url: talk.image,
     width: 1200,
     height: 630,
     alt: talk.title
