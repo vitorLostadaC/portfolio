@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!project) return {}
 
-  const siteTitle = project.name
+  const siteTitle = 'hahahaha | ' + project.name
   const siteDescription = project.description.slice(0, 150)
   const siteImage = {
     url: project.image,
