@@ -9,6 +9,12 @@ type Props = {
   }>
 }
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug
+  }))
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = (await params).slug
   const project = projects.find((project) => project.slug === slug)
