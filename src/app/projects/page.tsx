@@ -1,6 +1,6 @@
 import { ProjectCard } from './components/project-card'
 import { Star } from './components/star-icon'
-import { projects } from './data/project'
+import { projects } from './data/projects'
 
 export default function ProjectsPage() {
   return (

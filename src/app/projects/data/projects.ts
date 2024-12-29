@@ -10,11 +10,6 @@ import {
   retouchDetails,
   tags as retouchTags
 } from '../[slug]/details/retouch/retouch-details'
-import antrolAi from '../assets/antrol-ai.webp'
-import consai from '../assets/consai.webp'
-import portfolio from '../assets/portfolio.webp'
-import retouch from '../assets/retouch.webp'
-import base64toImage from '../assets/base64-to-image.webp'
 import { ProjectTag } from './project-tag'
 import { ProjectType } from './project-type'
 import { JSX } from 'react'
@@ -45,7 +40,7 @@ export const projects: Project[] = [
     description:
       'An AI-powered platform that creates custom icons for your projects',
     pinned: false,
-    image: antrolAi.src,
+    image: '/assets/projects/antrol-ai.webp',
     tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
     sourceCode: 'https://github.com/vitorLostadaC/antrol-generate',
@@ -59,7 +54,7 @@ export const projects: Project[] = [
     description:
       'A smart chatbot that helps visitors find information on your website',
     pinned: true,
-    image: consai.src,
+    image: '/assets/projects/consai.webp',
     tags: consaiTags,
     demo: 'https://consai.com.br/',
     type: ProjectType.SideProject,
@@ -72,7 +67,7 @@ export const projects: Project[] = [
     description:
       'My personal portfolio showcasing my experience with modern technologies',
     pinned: true,
-    image: portfolio.src,
+    image: '/assets/projects/portfolio.webp',
     tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
     demo: 'https://vitorlostada.com',
     sourceCode: 'https://github.com/vitorLostadaC/portfolio',
@@ -86,7 +81,7 @@ export const projects: Project[] = [
     description:
       'An infinite canvas with an AI powered image editor, built for Resleeve as a core feature',
     pinned: true,
-    image: retouch.src,
+    image: '/assets/projects/retouch.webp',
     tags: retouchTags,
     type: ProjectType.Job,
     demo: 'https://resleeve.ai',
@@ -98,7 +93,7 @@ export const projects: Project[] = [
     name: 'Base 64 to Image',
     description:
       'A Raycast extension to convert between base64 and image formats',
-    image: base64toImage.src,
+    image: '/assets/projects/base64-to-image.webp',
     pinned: false,
     tags: [],
     type: ProjectType.OpenSource,

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Project } from '../data/project'
+import { Project } from '../data/projects'
 import { ProjectStack } from './components/project-stack'
 import { CalendarIcon } from 'lucide-react'
 import { MagicButtonView } from '../../../components/ui/magic-button-view'

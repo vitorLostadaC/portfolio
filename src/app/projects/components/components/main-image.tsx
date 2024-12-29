@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Project } from '../../data/project'
+import { Project } from '../../data/projects'
 
 export const MainImage = ({ project }: { project: Project }) => {
   return (

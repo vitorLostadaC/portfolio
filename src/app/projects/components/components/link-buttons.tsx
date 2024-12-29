@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { SimpleTooltip } from '@/components/ui/simple-tooltip'
 import { cn } from '@/lib/utils'
-import { Project } from '../../data/project'
+import { Project } from '../../data/projects'
 import { PlayIcon, GithubIcon } from 'lucide-react'
 import posthog from 'posthog-js'
 
