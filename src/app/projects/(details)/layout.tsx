@@ -3,7 +3,6 @@ import { projects } from '../data/project'
 
 type Props = {
   params: Promise<{ slug: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
