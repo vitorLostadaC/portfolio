@@ -43,5 +43,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <h1>oiii</h1>
+      {children}
+    </>
+  )
 }
