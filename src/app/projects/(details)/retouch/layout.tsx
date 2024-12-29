@@ -1,17 +1,16 @@
 import { Metadata } from 'next'
-import { projects } from '../data/project'
+import { projects } from '../../data/project'
 
 type Props = {
   params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = (await params).slug
-  const project = projects.find((project) => project.slug === slug)
+  const project = projects.find((project) => project.slug === 'retouch')
 
   if (!project) return {}
 
-  const siteTitle = 'hahahaha | ' + project.name
+  const siteTitle = project.name + ' | Vitor Lostada'
   const siteDescription = project.description.slice(0, 150)
   const siteImage = {
     url: project.image,
@@ -43,10 +42,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <h1>oiii</h1>
-      {children}
-    </>
-  )
+  return <>{children}</>
 }
