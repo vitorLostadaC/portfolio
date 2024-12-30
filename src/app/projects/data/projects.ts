@@ -13,7 +13,7 @@ import {
 import { ProjectTag } from './project-tag'
 import { ProjectType } from './project-type'
 import { JSX } from 'react'
-import { portfolioDetails } from '../[slug]/details/portfolio/portfolio-details'
+// import { portfolioDetails } from '../[slug]/details/portfolio/portfolio-details'
 import { base64ToImageDetails } from '../[slug]/details/base64-to-image/base-64-to-image-details'
 import { ProjectSlug } from './project-slug'
 
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     name: 'Antrol AI',
     description:
       'An AI-powered platform that creates custom icons for your projects',
-    pinned: false,
+    pinned: true,
     image: 'https://vitorlostada.com/assets/projects/antrol-ai.webp',
     tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
@@ -60,20 +60,20 @@ export const projects: Project[] = [
     type: ProjectType.SideProject,
     details: consaiDetails
   },
-  {
-    slug: ProjectSlug.Portfolio,
-    date: new Date('2024-11-01'),
-    name: 'Portfolio',
-    description:
-      'My personal portfolio showcasing my experience with modern technologies',
-    pinned: true,
-    image: 'https://vitorlostada.com/assets/projects/portfolio.webp',
-    tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
-    demo: 'https://vitorlostada.com',
-    sourceCode: 'https://github.com/vitorLostadaC/portfolio',
-    type: ProjectType.PersonalProject,
-    details: portfolioDetails
-  },
+  // {
+  //   slug: ProjectSlug.Portfolio,
+  //   date: new Date('2024-11-01'),
+  //   name: 'Portfolio',
+  //   description:
+  //     'My personal portfolio showcasing my experience with modern technologies',
+  //   pinned: true,
+  //   image: 'https://vitorlostada.com/assets/projects/portfolio.webp',
+  //   tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
+  //   demo: 'https://vitorlostada.com',
+  //   sourceCode: 'https://github.com/vitorLostadaC/portfolio',
+  //   type: ProjectType.PersonalProject,
+  //   details: portfolioDetails
+  // },
   {
     slug: ProjectSlug.Retouch,
     date: new Date('2024-09-01'),
