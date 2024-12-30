@@ -104,65 +104,65 @@ export const keyFeaturesDescription = [
     </RN>{' '}
     on front-end.
   </>,
-  <>
-    Starting with the{' '}
-    <RN type="box" multiline color="var(--highlight-2)">
-      infinite canvas
-    </RN>
-    : you can generate images with a loading state and organize them into
-    several frames.
-  </>,
-
-  <>
-    You can access a frame using the retouch view (double-click on the frame).
-    There, you have a lot of tools, like:
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-2)">
-      Draw tools
-    </RN>
-    : These let you directly edit the pixels of the image, and you can erase
-    parts of it too.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      Selection tools
-    </RN>
-    : These allow you to select a part of the image to create a mask or send it
-    to AI.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      Layers
-    </RN>
-    : Work with multiple images at the same time and perform operations like
-    merge, duplicate, etc.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-2)">
-      Masks
-    </RN>
-    : Create masks for specific parts of your image to isolate areas you want
-    the AI to modify.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-2)">
-      Undo/Redo system
-    </RN>
-    : This allows you to undo and redo your actions.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-1)">
-      Colors
-    </RN>
-    : Adjust and change the colors of the image.
-  </>,
-  <>
-    <RN type="underline" multiline color="var(--highlight-2)">
-      Clipping mask
-    </RN>
-    : A tool to easily place your logo on images.
-  </>,
+  <ul className="grid list-disc grid-cols-1 gap-4 text-left md:grid-cols-2">
+    <li>
+      <RN type="box" multiline color="var(--highlight-2)">
+        Infinite canvas
+      </RN>
+      : you can generate images with a loading state and organize them into
+      several frames.
+    </li>
+    <li>
+      You can access a frame using the retouch view (double-click on the frame).
+      There, you have a lot of tools, like:
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-2)">
+        Draw tools
+      </RN>
+      : These let you directly edit the pixels of the image, and you can erase
+      parts of it too.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-1)">
+        Selection tools
+      </RN>
+      : These allow you to select a part of the image to create a mask or send
+      it to AI.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-1)">
+        Layers
+      </RN>
+      : Work with multiple images at the same time and perform operations like
+      merge, duplicate, etc.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-2)">
+        Masks
+      </RN>
+      : Create masks for specific parts of your image to isolate areas you want
+      the AI to modify.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-2)">
+        Undo/Redo system
+      </RN>
+      : This allows you to undo and redo your actions.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-1)">
+        Colors
+      </RN>
+      : Adjust and change the colors of the image.
+    </li>
+    <li>
+      <RN type="underline" multiline color="var(--highlight-2)">
+        Clipping mask
+      </RN>
+      : A tool to easily place your logo on images.
+    </li>
+  </ul>,
   <>
     And there&apos;s more! Of course, there&apos;s a lot happening{' '}
     <RN type="underline" multiline color="var(--highlight-1)">
