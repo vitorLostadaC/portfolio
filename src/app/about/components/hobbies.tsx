@@ -49,7 +49,7 @@ export const Hobbies = () => {
             slug="about"
             image={lanscape}
             alt="Lanscape"
-            className="col-span-2 w-full rounded-lg object-cover lg:h-80"
+            className="col-span-2 w-full rounded-lg object-cover lg:h-40"
           />
         </div>
       </div>
