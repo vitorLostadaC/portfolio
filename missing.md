@@ -1,7 +1,3 @@
-# Missing to ship
-
-- [ ] add toasts to comunicate with user
-
 # in the future
 
 - [ ] sand simulator
