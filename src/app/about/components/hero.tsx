@@ -46,79 +46,54 @@ export const Hero = () => {
               <RN type="underline" color="var(--highlight-1)">
                 Brazil
               </RN>
-              . I&apos;m really passionate with UI and build beautiful things
-              with{' '}
-              {Array.from('great animations').map((char, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  initial={{ y: 0 }}
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1
-                  }}
-                >
-                  {char === ' ' ? '\u00A0' : char}
-                </motion.span>
-              ))}
-              😍, I started my journey like most developers, I wanted to{' '}
+              I started my journey like most developers, I wanted to{' '}
               <RN type="underline" multiline color="var(--highlight-2)">
                 create games
               </RN>{' '}
               , but as you&apos;re looking at this portfolio, maybe some things
-              have changed, haha. I still love games, and probably will create
-              games one day, but just on the veeery distant future.
+              have changed, haha.
             </p>
 
             <p>
-              I have a{' '}
+              I follow a daily{' '}
               <RN type="box" multiline color="var(--highlight-1)">
                 routine
               </RN>{' '}
-              to do{' '}
-              <RN type="underline" multiline color="var(--highlight-2)">
-                all the things
-              </RN>{' '}
-              without it, I&apos;m lost so I always take a time do anything that
-              I want like work, time to study, reading, going to the gym,
-              resting, play a game, recording videos... and this is a pretty
-              good summary of my last years.
+              to keep everything in order. Without it, I feel lost (really
+              haha). My routine includes time for work, studying, reading, going
+              to the gym, resting and recording videos. This routine has been a
+              pretty good summary of my last few years.
             </p>
             <p>
-              when I&apos;m not learning about development, I try improve my
-              soft skill, mainly studing about{' '}
+              When I’m not learning about development, I focus on improving my
+              soft skills, mainly by studying
               <RN type="underline" multiline color="var(--highlight-1)">
                 psychology
               </RN>
-              . These knowledge really help me to have a different perspective
-              from the world, understand more about people and how they work.
-              Also helping me to be{' '}
+              . This knowledge helps me see the world from different
+              perspectives, understand people better, and learn how they think.
+              It also helps me build{' '}
               <RN type="underline" multiline color="var(--highlight-2)">
-                more dicipline
+                dicipline,
               </RN>{' '}
-              and{' '}
-              <RN type="underline" multiline color="var(--highlight-2)">
-                mental control
-              </RN>
-              , focus on the things that I want.
+              mental control, and focus on the things I want to achieve.
             </p>
 
             <p>
-              I always{' '}
+              I love{' '}
               <RN type="underline" multiline color="var(--highlight-1)">
                 teaching
               </RN>{' '}
-              what I learn, these is one of the reasons to me created a{' '}
+              what I learn. That’s one of the reasons I created a{' '}
               <a
                 href="https://www.youtube.com/@vitorlostada"
                 target="_blank"
                 className="underline"
               >
-                youtube channel
+                youtube channel.
               </a>
-              , I really like to teach and share my knowledge with others and as
-              a bonus I can learn more when I teach
+              Sharing knowledge with others is something I truly enjoy, and as a
+              bonus, I learn even more when I teach.
             </p>
             <div className="flex gap-4">
               {social.map((item, index) => (
