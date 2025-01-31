@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import vitor from '../assets/VitorLostada.webp'
+import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import {
   GithubIcon,
@@ -7,12 +6,13 @@ import {
   LinkedinIcon,
   YoutubeIcon
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import {
-  RoughNotation as RN,
-  RoughNotationGroup as RG
-} from 'react-rough-notation'
+import Image from 'next/image'
 import posthog from 'posthog-js'
+import {
+  RoughNotationGroup as RG,
+  RoughNotation as RN
+} from 'react-rough-notation'
+import vitor from '../assets/VitorLostada.webp'
 
 const social = [
   {
@@ -66,7 +66,7 @@ export const Hero = () => {
             </p>
             <p>
               When I’m not learning about development, I focus on improving my
-              soft skills, mainly by studying
+              soft skills, mainly by studying{' '}
               <RN type="underline" multiline color="var(--highlight-1)">
                 psychology
               </RN>
