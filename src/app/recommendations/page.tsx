@@ -1,8 +1,8 @@
 'use client'
 
+import { anim, CustomVariant } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { Recommendation, recommendations } from './data/recommendations'
-import { anim, CustomVariant } from '@/lib/utils'
 
 export default function Recommendations() {
   const recommendationsAnim: CustomVariant = {
