@@ -1,64 +1,24 @@
-'use client'
-
 import { cn } from '@/lib/utils'
-import { useInView, UseInViewOptions } from 'framer-motion'
-import { JSX, useRef } from 'react'
-import { RoughNotationGroup as RNG } from 'react-rough-notation'
+import { JSX } from 'react'
 
 interface TextProps {
   title: string
   description: JSX.Element | string | (JSX.Element | string)[]
-  side?: 'left' | 'right' | 'center'
-  marginView?: UseInViewOptions['margin']
 }
 
-export const TextSection = ({
-  title,
-  description,
-  side,
-  marginView: margin
-}: TextProps) => {
-  const divRef = useRef<HTMLLIElement | HTMLParagraphElement | null>(null)
-  const inView = useInView(divRef, {
-    once: true,
-    margin: margin ?? '-150px'
-  })
-
+export const TextSection = ({ title, description }: TextProps) => {
   return (
-    <div
-      className={cn('flex max-w-4xl flex-col gap-4', {
-        'ml-auto': side === 'right',
-        'mx-auto text-center': side === 'center'
-      })}
-    >
+    <div className={cn('mx-auto flex max-w-4xl flex-col gap-4', {})}>
       <h2 className="text-2xl font-bold">{title}</h2>
-      <RNG show={inView}>
-        {Array.isArray(description) ? (
-          <ul className="flex flex-col gap-4 text-lg text-muted-foreground">
-            {description.map((item, index) => (
-              <li
-                key={index}
-                ref={(e) => {
-                  if (index === 0) {
-                    divRef.current = e
-                  }
-                }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p
-            className="text-lg text-muted-foreground"
-            ref={(e) => {
-              divRef.current = e
-            }}
-          >
-            {description}
-          </p>
-        )}
-      </RNG>
+      {Array.isArray(description) ? (
+        <ul className="flex flex-col gap-4 leading-8 text-muted-foreground">
+          {description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-lg text-muted-foreground">{description}</p>
+      )}
     </div>
   )
 }

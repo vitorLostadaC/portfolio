@@ -1,3 +1,8 @@
+import { ModalImage } from '@/app/projects/components/modal-image'
+import { TalkSlug } from '@/app/talks/data/talk-slug'
+import { Hero } from '@/components/details/hero-section'
+import { TextSection } from '@/components/details/text-section'
+import { cn } from '@/lib/utils'
 import { RoughNotation as RN } from 'react-rough-notation'
 import a from './assets/a.webp'
 import b from './assets/b.webp'
@@ -5,11 +10,6 @@ import c from './assets/c.webp'
 import d from './assets/d.webp'
 import e from './assets/e.webp'
 import hero from './assets/hero.webp'
-import { ModalImage } from '@/app/projects/components/modal-image'
-import { Hero } from '@/components/details/hero-section'
-import { TextSection } from '@/components/details/text-section'
-import { cn } from '@/lib/utils'
-import { TalkSlug } from '@/app/talks/data/talk-slug'
 
 export const heroTitle = 'Ao Canvas infinito e além'
 
@@ -95,11 +95,7 @@ export const aoCanvasInfinitoEAlemDetails = [
     image={hero}
     slug={TalkSlug.AoCanvasInfinitoEAlem}
   />,
-  <TextSection
-    title={keyInsigthsTitle}
-    description={keyInsigthsDescription}
-    side="center"
-  />,
+  <TextSection title={keyInsigthsTitle} description={keyInsigthsDescription} />,
 
   <div className="grid grid-cols-2 items-center gap-6">
     {[a, c, b, d].map((item, index) => (
@@ -112,11 +108,7 @@ export const aoCanvasInfinitoEAlemDetails = [
       />
     ))}
   </div>,
-  <TextSection
-    title={aboutTitle}
-    description={aboutDescription}
-    side="center"
-  />,
+  <TextSection title={aboutTitle} description={aboutDescription} />,
 
   <div className="flex flex-col gap-2">
     <ModalImage

@@ -197,12 +197,8 @@ export const retouchDetails = [
     image={hero}
     slug={ProjectSlug.Retouch}
   />,
-  <TextSection side="center" title={goalTitle} description={goalDescription} />,
-  <TextSection
-    title={keyFeaturesTitle}
-    description={keyFeaturesDescription}
-    side="center"
-  />,
+  <TextSection title={goalTitle} description={goalDescription} />,
+  <TextSection title={keyFeaturesTitle} description={keyFeaturesDescription} />,
 
   <div className="grid grid-cols-2 items-center gap-6">
     {[a, b, c, d].map((item, index) => (
@@ -215,11 +211,7 @@ export const retouchDetails = [
       />
     ))}
   </div>,
-  <TextSection
-    side="center"
-    title={problemsTitle}
-    description={problemsDescription}
-  />,
+  <TextSection title={problemsTitle} description={problemsDescription} />,
   <div className="flex flex-col gap-2">
     <ModalImage
       image={e}
@@ -228,9 +220,5 @@ export const retouchDetails = [
       slug={ProjectSlug.Retouch}
     />
   </div>,
-  <TextSection
-    title={lessonsTitle}
-    description={lessonsDescription}
-    side="left"
-  />
+  <TextSection title={lessonsTitle} description={lessonsDescription} />
 ]

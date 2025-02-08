@@ -170,11 +170,7 @@ export const antrolAiDetails = [
       />
     ))}
   </div>,
-  <TextSection
-    side="center"
-    title={problemsTitle}
-    description={problemsDescription}
-  />,
+  <TextSection title={problemsTitle} description={problemsDescription} />,
   <div className="flex flex-col gap-2">
     <ModalImage
       image={d}
@@ -193,9 +189,5 @@ export const antrolAiDetails = [
       </a>
     </p>
   </div>,
-  <TextSection
-    title={lessonsTitle}
-    description={lessonsDescription}
-    side="left"
-  />
+  <TextSection title={lessonsTitle} description={lessonsDescription} />
 ]

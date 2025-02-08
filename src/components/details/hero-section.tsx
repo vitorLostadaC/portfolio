@@ -1,12 +1,12 @@
 'use client'
-import { Badge } from '@/components/ui/badge'
-import { RoughNotationGroup as RNG } from 'react-rough-notation'
-import { Title } from './title'
-import Image, { StaticImageData } from 'next/image'
+
 import { ModalImage } from '@/app/projects/components/modal-image'
-import { motion } from 'framer-motion'
-import { JSX } from 'react'
 import { ProjectTag } from '@/app/projects/data/project-tag'
+import { Badge } from '@/components/ui/badge'
+import { motion } from 'framer-motion'
+import Image, { StaticImageData } from 'next/image'
+import { JSX } from 'react'
+import { Title } from './title'
 
 interface HeroProps {
   title: string
@@ -26,15 +26,13 @@ export const Hero = ({ title, description, stack, image, slug }: HeroProps) => {
   return (
     <div className="flex flex-col gap-10">
       <Title title={title} slug={slug} />
-      <RNG show>
-        <div className="flex flex-col gap-4">
-          {descriptionElements.map((element, index) => (
-            <p className="max-w-3xl text-lg text-muted-foreground" key={index}>
-              {element}
-            </p>
-          ))}
-        </div>
-      </RNG>
+      <div className="flex flex-col gap-4">
+        {descriptionElements.map((element, index) => (
+          <p className="max-w-3xl leading-8 text-muted-foreground" key={index}>
+            {element}
+          </p>
+        ))}
+      </div>
       {stack && (
         <div className="flex max-w-xl flex-wrap gap-2">
           {stack.map((tag, index) => (

@@ -59,11 +59,7 @@ export const base64ToImageDetails = [
     slug={ProjectSlug.Base64ToImage}
   />,
 
-  <TextSection
-    side="center"
-    title={problemsTitle}
-    description={problemsDescription}
-  />,
+  <TextSection title={problemsTitle} description={problemsDescription} />,
 
   <div className="grid grid-cols-2 items-center gap-6">
     {[a, b, c, d].map((item, index) => (
@@ -77,10 +73,5 @@ export const base64ToImageDetails = [
     ))}
   </div>,
 
-  <TextSection
-    title={lessonsTitle}
-    description={lessonsDescription}
-    side="left"
-    marginView="0px"
-  />
+  <TextSection title={lessonsTitle} description={lessonsDescription} />
 ]
