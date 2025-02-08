@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import posthog from 'posthog-js'
 import { useRef, useState } from 'react'
-import { Social } from '../../hero'
+import { Social } from '../hero'
 
 interface SocialButtonProps {
   socialMidia: Social
