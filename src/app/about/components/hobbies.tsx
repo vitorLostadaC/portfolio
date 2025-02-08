@@ -1,5 +1,3 @@
-'use client'
-
 import beatchTennis from '../assets/beatch-tennis.webp'
 // import kingDownTwoCrowns from '../assets/kingdom.webp'
 import lanscape from '../assets/landscape.webp'

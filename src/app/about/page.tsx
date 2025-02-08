@@ -1,6 +1,6 @@
 import { Hero } from './components/hero/hero'
 import { Hobbies } from './components/hobbies'
-import { Rules } from './components/rules'
+import { Rules } from './components/rules/rules'
 
 export default function About() {
   return (
