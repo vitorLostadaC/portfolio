@@ -1,5 +1,7 @@
-import statue from '../assets/statue.webp'
+'use client'
+import { Highlight } from '@/components/hightlight'
 import { motion } from 'framer-motion'
+import statue from '../assets/statue.webp'
 
 const rules: {
   title: string
@@ -9,7 +11,7 @@ const rules: {
     title:
       'The most impressive human feats are, in reality, the aggregate of innumerable isolated elements, each of which, in a certain sense, is not extraordinary in itself.',
     description:
-      "My main focus has always been and still is to keep improving every day, even if it's just baby steps—learning one new thing, doing something different—but never stopping. In my mind, the key to success is not doing a lot of things in a short time but doing the same thing consistently over a long period."
+      "My main focus has always been and still is to keep improving every day, even if it's just baby steps learning one new thing, doing something different but never stopping. In my mind, the key to success is not doing a lot of things in a short time but doing the same thing consistently over a long period."
   },
   {
     title: 'The only way to go fast, is to go well.',
@@ -20,7 +22,7 @@ const rules: {
   {
     title: 'Just focus on one thing at a time.',
     description:
-      "I already tried doing a lot of things at the same time, but what I noticed is that if you try to do everything at once, you'll be like a duck—flying, walking, and swimming, but not doing any of them well. So, I just focus on one thing at a time."
+      "I already tried doing a lot of things at the same time, but what I noticed is that if you try to do everything at once, you'll be like a duck flying, walking, and swimming, but not doing any of them well. So, I just focus on one thing at a time."
   },
   {
     title: 'Less but better.',
@@ -36,25 +38,29 @@ const rules: {
 
 export const Rules = () => {
   return (
-    <div className="relative mt-20 flex w-full flex-col gap-8 lg:mt-0">
-      <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">Rules of my life</h1>
-        <p className="max-w-2xl text-muted-foreground">
-          Some phrases that summarize my way of thinking and approaching life.
-          These are principles I&apos;ve developed over time through experience
-          and reflection, helping me stay focused and productive in both
-          personal and professional endeavors.
+    <div className="relative flex w-full flex-col gap-16 lg:mt-0">
+      <div className="flex flex-col gap-8">
+        <h1 className="text-2xl font-bold">Rules of my life</h1>
+        <p className="max-w-2xl leading-8 text-muted-foreground">
+          Some phrases that summarize <Highlight>my way of thinking</Highlight>{' '}
+          and approaching life. These are principles I&apos;ve developed over
+          time through experience and reflection, helping me{' '}
+          <Highlight>stay focused</Highlight> and{' '}
+          <Highlight>productive</Highlight> in both personal and professional
+          endeavors.
         </p>
       </div>
 
       <div className="flex gap-4">
         <div className="flex max-w-2xl flex-col gap-8">
           {rules.map((rule) => (
-            <div key={rule.title}>
-              <blockquote className="my-4 border-l-4 border-muted-foreground pl-4 text-lg font-semibold italic">
+            <div key={rule.title} className="flex flex-col gap-2">
+              <blockquote className="my-4 border-l-4 border-muted-foreground pl-4 text-lg font-semibold italic leading-8">
                 {rule.title}
               </blockquote>
-              <p className="text-muted-foreground">{rule.description}</p>
+              <p className="text-justify leading-8 text-muted-foreground">
+                {rule.description}
+              </p>
             </div>
           ))}
         </div>

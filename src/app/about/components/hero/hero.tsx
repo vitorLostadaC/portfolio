@@ -1,5 +1,3 @@
-'use client'
-
 import twitterLottie from '@/../public/assets/icons/twitter.json'
 import twitter from '@/../public/assets/icons/twitter.svg'
 
@@ -15,14 +13,10 @@ import youtube from '@/../public/assets/icons/youtube.svg'
 import instagramLottie from '@/../public/assets/icons/instagram.json'
 import instagram from '@/../public/assets/icons/instagram.svg'
 
-import thumbUpLottie from '@/../public/assets/icons/thumb-up.json'
-
 import { Highlight } from '@/components/hightlight'
 import Image from 'next/image'
-import vitor from '../assets/VitorLostada.webp'
-import { SocialButton } from './hero/components/social-button'
-
-import Lottie from 'lottie-react'
+import vitor from '../../assets/VitorLostada.webp'
+import { SocialButton } from './components/social-button'
 
 export interface Social {
   name: string
@@ -74,8 +68,7 @@ export const Hero = () => {
   return (
     <div className="flex w-full flex-col gap-8">
       <h1 className="flex items-center gap-2 text-2xl font-bold">
-        Hello, I&apos;m Vitor!{' '}
-        <Lottie animationData={thumbUpLottie} className="size-8" loop={false} />
+        Hello, I&apos;m Vitor!
       </h1>
 
       <div className="flex w-full items-start justify-between gap-12 xl:gap-24">
