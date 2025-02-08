@@ -1,8 +1,6 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -13,13 +11,15 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import { CheckIcon, Loader2Icon } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
 import { anim } from '@/lib/utils'
-import { useState } from 'react'
-import { sendTemplate as sendEmail } from '../actions/send-contact-email'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { AnimatePresence, motion } from 'framer-motion'
+import { CheckIcon, Loader2Icon } from 'lucide-react'
 import posthog from 'posthog-js'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { sendTemplate as sendEmail } from '../actions/send-contact-email'
 
 const textAnim = anim({
   initial: { opacity: 0, y: 20 },
