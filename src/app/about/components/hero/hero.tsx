@@ -59,7 +59,7 @@ const social: Social[] = [
     name: 'Instagram',
     icon: instagram.src,
     animation: instagramLottie,
-    url: 'https://www.instagram.com/vitorlostada/',
+    url: 'https://www.instagram.com/vitor.lostada/',
     loop: false
   }
 ]
