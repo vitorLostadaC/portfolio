@@ -18,8 +18,7 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/talks', label: 'Talks' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/recommendations', label: 'Recommendations' }
+  { href: '/contact', label: 'Contact' }
 ]
 
 export const Header = () => {

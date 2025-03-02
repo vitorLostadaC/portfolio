@@ -64,8 +64,7 @@ export const FeedbackButton = ({
       scale: 1,
       borderRadius: '20px',
       transition: {
-        delay: alreadyInteracted ? 0 : 2,
-        type: 'spring'
+        delay: alreadyInteracted ? 0 : 2
       }
     }
   }
@@ -80,7 +79,8 @@ export const FeedbackButton = ({
       transition: {
         delay: 2.2,
         type: 'spring',
-        mass: 1
+        duration: 0.5,
+        bounce: 0.2
       }
     }
   }
@@ -88,7 +88,6 @@ export const FeedbackButton = ({
   return (
     <motion.div
       className="fixed bottom-5 right-5 z-10 flex cursor-pointer items-center gap-2 border bg-background px-4 py-2 shadow-lg transition-colors"
-      layoutId="container"
       onClick={() => {
         setIsOpen(true)
         posthog.capture('feedback_button_clicked')

@@ -4,7 +4,7 @@ import { anim, CustomVariant } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { Recommendation, recommendations } from './data/recommendations'
 
-export default function Recommendations() {
+export function Recommendations() {
   const recommendationsAnim: CustomVariant = {
     animate: {
       transition: {
