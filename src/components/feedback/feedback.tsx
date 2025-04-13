@@ -3,12 +3,12 @@
 import { anim, CustomVariant } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { CheckIcon, Loader2, MessageCircle, XIcon } from 'lucide-react'
-import { Dispatch, SetStateAction, useState } from 'react'
-import { Textarea } from '../ui/textarea'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
-import { sendTemplate } from './actions/send-template'
 import posthog from 'posthog-js'
+import { Dispatch, SetStateAction, useState } from 'react'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
+import { Textarea } from '../ui/textarea'
+import { sendTemplate } from './actions/send-template'
 
 const MessageCircleMotion = motion.create(MessageCircle)
 const Loader2Motion = motion.create(Loader2)
@@ -88,6 +88,7 @@ export const FeedbackButton = ({
   return (
     <motion.div
       className="fixed bottom-5 right-5 z-10 flex cursor-pointer items-center gap-2 border bg-background px-4 py-2 shadow-lg transition-colors"
+      layoutId="container"
       onClick={() => {
         setIsOpen(true)
         posthog.capture('feedback_button_clicked')
