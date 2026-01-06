@@ -1,3 +1,4 @@
+import { JSX } from 'react'
 import {
   antrolAiDetails,
   tags as antrolAiTags
@@ -12,7 +13,6 @@ import {
 } from '../[slug]/details/retouch/retouch-details'
 import { ProjectTag } from './project-tag'
 import { ProjectType } from './project-type'
-import { JSX } from 'react'
 // import { portfolioDetails } from '../[slug]/details/portfolio/portfolio-details'
 import { base64ToImageDetails } from '../[slug]/details/base64-to-image/base-64-to-image-details'
 import { ProjectSlug } from './project-slug'
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     description:
       'An AI-powered platform that creates custom icons for your projects',
     pinned: true,
-    image: 'https://vitorlostada.com/assets/projects/antrol-ai.webp',
+    image: 'https://old.vitorlostada.com/assets/projects/antrol-ai.webp',
     tags: antrolAiTags,
     demo: 'https://antrolai.com/en',
     sourceCode: 'https://github.com/vitorLostadaC/antrol-generate',
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description:
       'A smart chatbot that helps visitors find information on your website',
     pinned: true,
-    image: 'https://vitorlostada.com/assets/projects/consai.webp',
+    image: 'https://old.vitorlostada.com/assets/projects/consai.webp',
     tags: consaiTags,
     demo: 'https://consai.com.br/',
     type: ProjectType.SideProject,
@@ -67,9 +67,9 @@ export const projects: Project[] = [
   //   description:
   //     'My personal portfolio showcasing my experience with modern technologies',
   //   pinned: true,
-  //   image: 'https://vitorlostada.com/assets/projects/portfolio.webp',
+  //   image: 'https://old.vitorlostada.com/assets/projects/portfolio.webp',
   //   tags: [ProjectTag.NextJs, ProjectTag.Typescript, ProjectTag.PostHog],
-  //   demo: 'https://vitorlostada.com',
+  //   demo: 'https://old.vitorlostada.com',
   //   sourceCode: 'https://github.com/vitorLostadaC/portfolio',
   //   type: ProjectType.PersonalProject,
   //   details: portfolioDetails
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     description:
       'An infinite canvas with an AI powered image editor, built for Resleeve as a core feature',
     pinned: true,
-    image: 'https://vitorlostada.com/assets/projects/retouch.webp',
+    image: 'https://old.vitorlostada.com/assets/projects/retouch.webp',
     tags: retouchTags,
     type: ProjectType.Job,
     demo: 'https://resleeve.ai',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     name: 'Base 64 to Image',
     description:
       'A Raycast extension to convert between base64 and image formats',
-    image: 'https://vitorlostada.com/assets/projects/base64-to-image.webp',
+    image: 'https://old.vitorlostada.com/assets/projects/base64-to-image.webp',
     pinned: false,
     tags: [],
     type: ProjectType.OpenSource,

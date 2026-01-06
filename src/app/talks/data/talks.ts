@@ -1,6 +1,6 @@
 import { JSX } from 'react'
-import { TalkSlug } from './talk-slug'
 import { aoCanvasInfinitoEAlemDetails } from '../[slug]/details/ao-canvas-infinito-e-alem/ao-canvas-infinito-e-alem-details'
+import { TalkSlug } from './talk-slug'
 
 export type Talk = {
   slug: string
@@ -21,7 +21,7 @@ export const talks: Talk[] = [
       'I talk about how an infinite canvas works, starting from the math behind it, to understand and recreate one with interactions',
     date: new Date('2024-11-16'),
     image:
-      'https://vitorlostada.com/assets/talks/ao-canvas-infinito-e-alem.webp',
+      'https://old.vitorlostada.com/assets/talks/ao-canvas-infinito-e-alem.webp',
     site: 'https://frontin.floripa.br/',
     conference: 'Front in Floripa',
     details: aoCanvasInfinitoEAlemDetails

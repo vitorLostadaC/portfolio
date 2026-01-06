@@ -29,11 +29,11 @@ export const metadata: Metadata = {
   openGraph: {
     images: [siteImage]
   },
-  metadataBase: new URL('https://vitorlostada.com'),
+  metadataBase: new URL('https://old.vitorlostada.com'),
   twitter: {
     card: 'summary_large_image',
-    site: 'https://vitorlostada.com',
-    creator: 'https://vitorlostada.com',
+    site: 'https://old.vitorlostada.com',
+    creator: 'https://old.vitorlostada.com',
     title: siteTitle,
     description: siteDescription,
     images: [siteImage]

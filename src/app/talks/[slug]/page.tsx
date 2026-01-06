@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation'
-import { talks } from '../data/talks'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { Fragment } from 'react'
+import { talks } from '../data/talks'
 
 type Props = {
   params: Promise<{
@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       images: [siteImage]
     },
-    metadataBase: new URL(`https://vitorlostada.com/talks/${talk.slug}`),
+    metadataBase: new URL(`https://old.vitorlostada.com/talks/${talk.slug}`),
     twitter: {
       card: 'summary_large_image',
-      site: 'https://vitorlostada.com',
-      creator: 'https://vitorlostada.com',
+      site: 'https://old.vitorlostada.com',
+      creator: 'https://old.vitorlostada.com',
       title: siteTitle,
       description: siteDescription,
       images: [siteImage]
